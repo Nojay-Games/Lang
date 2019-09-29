@@ -1,0 +1,19 @@
+{
+  "name": "@amanda/lang",
+  "version": "1.0.0",
+  "description": "A package which has translations for strings used by the Discord bot; Amanda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PapiOphidian/Amanda-Lang.git"
+  },
+  "author": "PapiOphidian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PapiOphidian/Amanda-Lang/issues"
+  },
+  "homepage": "https://github.com/PapiOphidian/Amanda-Lang#readme"
+}
