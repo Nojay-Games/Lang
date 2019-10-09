@@ -214,7 +214,8 @@ module.exports = {
 				gameInProgress: "%username, there's a game already in progress for this channel.",
 				APIError: "There was an error from the api",
 				parsingError: "There was an error parsing the data returned by the api"
-			}
+			},
+			returns: {}
 		},
 		minesweeper: {
 			help: {
