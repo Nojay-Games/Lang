@@ -1,6 +1,7 @@
 declare module '@amanda/lang' {
 
 	export const english: Lang;
+	export const owo: Lang;
 
 	export type Lang = {
 		admin: {
