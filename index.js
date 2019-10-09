@@ -1,3 +1,4 @@
 module.exports = {
-	"english": require("./src/localizations/en-us")
+	"english": require("./src/localizations/en-us"),
+	"owo": require("./src/localizations/en-owo")
 }
