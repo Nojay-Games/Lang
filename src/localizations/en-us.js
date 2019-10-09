@@ -70,7 +70,8 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidAmount: `%username, ${generic.command.input.invalid} amount to award.`,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} user.`,
+				dmFailed: generic.dm.blocked
 			},
 			returns: {
 				channel: "%mention1 has awarded %number Discoins to %mention2",
@@ -175,6 +176,7 @@ module.exports = {
 				invalidGift: `%username, ${generic.command.input.invalid} gift.`,
 				giftSmall: `%username, you must give at least 1 ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				dmFailed: generic.dm.blocked
 			},
 			returns: {
 				channel: "%mention1 has given %number Discoins to %mention2",
@@ -195,7 +197,7 @@ module.exports = {
 				invalidAmount: `%username, ${generic.command.input.invalid} amount.`,
 			},
 			returns: {
-				winnings: `%username bet %number1 Discoins and got %number2 back ${generic.emoji.discoin}`
+				winnings: `%tag bet %number1 Discoins and got %number2 back ${generic.emoji.discoin}`
 			}
 		}
 	},
@@ -213,7 +215,8 @@ module.exports = {
 				multipleCategories: "%username, there are multiple categories with that name: %string",
 				gameInProgress: "%username, there's a game already in progress for this channel.",
 				APIError: "There was an error from the api",
-				parsingError: "There was an error parsing the data returned by the api"
+				parsingError: "There was an error parsing the data returned by the api",
+				permissionDenied: `${generic.command.permPre} add reactions`
 			},
 			returns: {}
 		},
@@ -309,7 +312,8 @@ module.exports = {
 				noWaifu: "%username, you don't even have a waifu to gift Discoins to, silly",
 				noGift: "%username, you didn't provide a gift amount",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
-				invalidGift: `%username, ${generic.command.input.invalid} gift.`
+				invalidGift: `%username, ${generic.command.input.invalid} gift.`,
+				giftSmall: `%username, you must gift someone at least 1 ${generic.emoji.discoin}`
 			},
 			returns: {
 				gifted: "%tag2 has gifted %number Discoins towards %tag2's price"

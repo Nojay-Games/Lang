@@ -16,7 +16,7 @@ declare module '@amanda/lang' {
 			};
 			award: {
 				help: CommandHelp;
-				prompts: { guildOnly: string; invalidAmount: string; invalidUser: string; };
+				prompts: { guildOnly: string; invalidAmount: string; invalidUser: string; dmFailed: string; };
 				returns: { channel: string; dm: string; };
 			};
 		};
@@ -54,7 +54,7 @@ declare module '@amanda/lang' {
 			};
 			give: {
 				help: CommandHelp;
-				prompts: { guildOnly: string; invalidAmountandUser: string; invalidUser: string; cannotGiveSelf: string; invalidGift: string; giftSmall: string; moneyInsufficient: string; };
+				prompts: { guildOnly: string; invalidAmountandUser: string; invalidUser: string; cannotGiveSelf: string; invalidGift: string; giftSmall: string; moneyInsufficient: string; dmFailed: string; };
 				returns: { channel: string; dm: string; };
 			};
 			wheel: {
@@ -67,7 +67,7 @@ declare module '@amanda/lang' {
 		games: {
 			trivia: {
 				help: CommandHelp;
-				prompts: { categorySelect: string; dm: string; noCategory: string; multipleCategories: string; gameInProgress: string; APIError: string; parsingError: string; };
+				prompts: { categorySelect: string; dm: string; noCategory: string; multipleCategories: string; gameInProgress: string; APIError: string; parsingError: string; permissionDenied: string; };
 				returns: {};
 			};
 			minesweeper: {
@@ -100,7 +100,7 @@ declare module '@amanda/lang' {
 			};
 			gift: {
 				help: CommandHelp;
-				prompts: { guildOnly: string; noWaifu: string; noGift: string; moneyInsufficient: string; invalidGift: string; };
+				prompts: { guildOnly: string; noWaifu: string; noGift: string; moneyInsufficient: string; invalidGift: string; giftSmall: string; };
 				returns: { gifted: string; };
 			};
 			bean: {
