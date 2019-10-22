@@ -207,7 +207,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				info: `%difficulty -- %number1 boom booms, %number2 x %number2 bowoard`,
+				info: `%difficulty -- %number1 boom booms, %number2 x %number3 bowoard`,
 				error: "da minimum size is 4 and da max is 14. Da bowoard has been adjusted (=゜ω゜)",
 				rawTooLarge: "Da raw content exceeded the 2000 character limit (◎_◎;) Pwease use a smaller bowoard size"
 			}

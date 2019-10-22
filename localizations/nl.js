@@ -247,7 +247,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				info: `%difficulty -- %number1 bommen, %number2 x %number2 bord`,
+				info: `%difficulty -- %number1 bommen, %number2 x %number3 bord`,
 				error:
 					'De minimale grootte is 4 en de maximale grootte is 14. De grenzen zijn aangepast aan het normale',
 				rawTooLarge:

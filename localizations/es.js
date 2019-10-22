@@ -227,7 +227,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				info: `%difficulty -- %number1 minas, tabla %number2 x %number2`,
+				info: `%difficulty -- %number1 minas, tabla %number2 x %number3`,
 				error: "El tamaño minimo es 4 y el maximo es 14.",
 				rawTooLarge: "El contenido excede mas de 2000 palabras, por favor usa una tabla mas pequeña."
 			}
