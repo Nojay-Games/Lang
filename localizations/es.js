@@ -31,7 +31,7 @@ const generic = {
 		permPre: "No tengo permiso para",
 		permPost: "Trabajo al 100 si tengo todos los permisos que pedi cuando me añadiste. Por favor modifica mis permisos.",
 		input: {
-			invalid: "esto no es disponible",
+			invalid: "eso no es valido",
 			insufficient: "Tu no tienes suficiente"
 		}
 	},
@@ -70,7 +70,7 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidAmount: `%username, ${generic.command.input.invalid} cantidad para premiar.`,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
+				invalidUser: `%username, ${generic.command.input.invalid}`,
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
@@ -89,7 +89,7 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`,
-				invalidBet: `%username, ${generic.command.input.invalid} bet.`,
+				invalidBet: `%username, ${generic.command.input.invalid}`,
 				betSmall: `%username, nesesitar que apostar por lo menos 2 ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`
 			},
@@ -104,7 +104,7 @@ module.exports = {
 		flip: {
 			help: {
 				usage: "Ninguno",
-				description: "Voltear una moneda"
+				description: "Voltea una moneda"
 			},
 			prompts: {},
 			returns: {}
@@ -116,22 +116,22 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidBetandSide: "%username, nesesitas que proporcionar una apuesta y elegir un lado para apostar.",
-				invalidBet: `%username, ${generic.command.input.invalid} bet.`,
-				betSmall: `%username, you must bet at least 1 ${generic.emoji.discoin}`,
+				invalidBetandSide: "%username, nesesitas que apostar una cantidad de discoins y elegir un lado para apostar.",
+				invalidBet: `%username, ${generic.command.input.invalid}.`,
+				betSmall: `%username, nesesitas que apostar por lo menos 1 discoin ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
 				invalidSide: "%username, ese no es un lado disponible para apostar."
 			},
 			returns: {
-				autoChoose: "No eligiste ningun lado, so elegi uno para ti:",
+				autoChoose: "No eligiste ningun lado, elegi uno para ti:",
 				guess: "Tu elegiste %string1 Voltie %string2",
 				win: `Bien hecho! Ganaste %number ${generic.emoji.discoin}`,
-				lost: `Lo siento pero no elegieste correctamente. Para la proxima.`
+				lost: `Lo siento pero no elegiste correctamente. Para la proxima.`
 			}
 		},
 		coins: {
 			help: {
-				usage: "[usario]",
+				usage: "[usuario]",
 				description: "Regresa la cantidad de discoins que tienes tu o el usuario"
 			},
 			prompts: {
@@ -157,7 +157,7 @@ module.exports = {
 		},
 		leaderboard: {
 			help: {
-				usage: "[page]",
+				usage: "[pagina]",
 				description: "Enseña una tabla de clasificaciones de usuarios con mas monedas"
 			},
 			prompts: {},
@@ -170,11 +170,11 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidAmountandUser: "%username, nesesitas que escribir la cantidad y el usuario.",
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
+				invalidAmountandUser: "%username, nesesitas que escribir una cantidad de discoins y el nombre del usuario.",
+				invalidUser: `%username, ${generic.command.input.invalid}`,
 				cannotGiveSelf: "No puedes dar monedas a ti menso.",
-				invalidGift: `%username, ${generic.command.input.invalid} gift.`,
-				giftSmall: `%username, nesesitas que regalar por lo menos 1 moneda ${generic.emoji.discoin}`,
+				invalidGift: `%username, ${generic.command.input.invalid}`,
+				giftSmall: `%username, nesesitas que regalar por lo menos 1 discoin ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
 				dmFailed: generic.dm.blocked
 			},
@@ -194,7 +194,7 @@ module.exports = {
 				invalidAmountWheel: "%username, nesesitas que escribir una cantidad para girar la rueda",
 				betSmall: `%username, nesesitas que apostar por lo menos 1 moneda ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
-				invalidAmount: `%username, ${generic.command.input.invalid} amount.`,
+				invalidAmount: `%username, ${generic.command.input.invalid}`,
 			},
 			returns: {
 				winnings: `%tag aposto %number1 Discoins y recibio %number2 de regreso ${generic.emoji.discoin}`
@@ -205,15 +205,15 @@ module.exports = {
 	games: {
 		trivia: {
 			help: {
-				usage: "[category]",
+				usage: "[categoria]",
 				description: "Juega un juego de trivia con otros usuarios para ganar discoins"
 			},
 			prompts: {
-				categorySelect: "para seleccionar una categoria usa `&trivia <category name>`.",
+				categorySelect: "para seleccionar una categoria usa `&trivia <nombre de la categoria>`.",
 				dm: "%username, Te mande un mensaje privado con la lista de categorias.",
-				noCategory: "%username, No encontre ninguna categoria con ese nombre. Usa `&trivia categories`para ver una lista de categorias.",
-				multipleCategories: "%username, there are multiple categories with that name: %string",
-				gameInProgress: "%username, ya esta un juego en seccion.",
+				noCategory: "%username, No encontre ninguna categoria con ese nombre. Usa `&trivia categories` para ver una lista de categorias.",
+				multipleCategories: "%username, hay multiples categorias con ese nombre: %string",
+				gameInProgress: "%username, ya hay un juego en seccion.",
 				APIError: "Ha ocurrido un error en el api",
 				parsingError: "Ha ocurrido un error analizando los datos regresado por el api",
 				permissionDenied: `${generic.command.permPre} añadir reacciones`
@@ -223,13 +223,13 @@ module.exports = {
 		minesweeper: {
 			help: {
 				usage: "[easy|medium|hard] [--raw] [--size:numero]",
-				description: "Comienza un juego de minesweeper con el sistema de revelaciones de discord"
+				description: "Empienza un juego de minesweeper con el sistema de revelaciones de discord"
 			},
 			prompts: {},
 			returns: {
-				info: `%difficulty -- %number1 bombs, %number2x%number2 board`,
-				error: "El tamaño minimo es 4 y el maximo es 14. Bounds have been adjusted to normals",
-				rawTooLarge: "El contenido excede mas de 2000 palabras, por favor usa una tabla mas pequeña"
+				info: `%difficulty -- %number1 minas, tabla %number2x%number2`,
+				error: "El tamaño minimo es 4 y el maximo es 14.",
+				rawTooLarge: "El contenido excede mas de 2000 palabras, por favor usa una tabla mas pequeña."
 			}
 		}
 	},
@@ -238,7 +238,7 @@ module.exports = {
 		ship: {
 			help: {
 				usage: "<usuario 1> <usuario 2>",
-				description: "Ship a dos usuarios"
+				description: "Ships a dos usuarios"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -259,7 +259,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: `%username, ${generic.command.input.invalid}`
 			},
 			returns: {
 				price: "Precio:",
@@ -278,7 +278,7 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
 				selfClaim: "%username, no puedes reclamar a ti mismo menso :v",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
-				claimSmall: `%username, you must claim someone with at least 1 ${generic.emoji.discoin}`,
+				claimSmall: `%username, nesesitas que reclamar a aguien por lo menos 1 ${generic.emoji.discoin}`,
 				claimedByOther: `%username, este usuario ya fue reclamado por alguien mas, y por un precio mas alto. nesesitas que gastar mas de %number Discoins para reclamar a este usuario.`,
 				doubleClaim: "%username, ya reclamaste a ese usuario como tu waifu. Si quieres subir su precio, usa `&gift <cantidad>`",
 				dmFailed: generic.dm.blocked
@@ -294,7 +294,7 @@ module.exports = {
 				description: "Divorcia a tu waifu"
 			},
 			prompts: {
-				noWaifu: "%username, no tiene a ningun waifu menso :v",
+				noWaifu: "%username, no tienes waifu menso :v",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
@@ -305,14 +305,14 @@ module.exports = {
 		gift: {
 			help: {
 				usage: "<cantidad: numbero|all|half>",
-				description: "Regala una cantidad de Discoins a el precio de tu waifu"
+				description: "Regala una cantidad de Discoins para subir el costo de tu waifu"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				noWaifu: "%username, tu no tienes ningun waifu para regalar discoins menso",
+				noWaifu: "%username, tu no tienes a un waifu para regalar discoins menso",
 				noGift: "%username, no escribiste una cantidad para regalar",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
-				invalidGift: `%username, ${generic.command.input.invalid} regalo.`,
+				invalidGift: `%username, ${generic.command.input.invalid}`,
 				giftSmall: `%username, nesesitas que regalar por lo menos 1 ${generic.emoji.discoin}`
 			},
 			returns: {
@@ -326,7 +326,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: "%username, no puedes darle ban a alguien en mensajes privados menso",
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
+				invalidUser: `%username, ${generic.command.input.invalid}`,
 				selfBean: "%username, no puedes darle ban a ti mismo menso"
 			},
 			returns: {
@@ -354,7 +354,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				thanks: "Gracias por ser mi amigo(a)! :heart:\nHere's a little bit of info about me...",
+				thanks: "Gracias por ser mi amigo(a)! :heart:\nAqui esta mi informacion...",
 				creators: "Creador:",
 				links: "Visita el sitio web de amanda [sitio web](%website) o su servidor de soporte [servidor de soporte](https://discord.gg/zhthQjH)\nQuieres donar? Visita mi pagina de patreon [Patreon](https://www.patreon.com/papiophidian) o puedes dar una donacion de 1 vez aqui [PayPal](https://paypal.me/papiophidian)."
 			}
