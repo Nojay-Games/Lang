@@ -227,7 +227,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				info: `%difficulty -- %number1 bombs, %number2x%number2 board`,
+				info: `%difficulty -- %number1 bombs, %number2 x %number2 board`,
 				error: "The minimum size is 4 and the max is 14. Bounds have been adjusted to normals",
 				rawTooLarge: "The raw content exceeded the 2000 character limit. Consider using a smaller board size"
 			}
