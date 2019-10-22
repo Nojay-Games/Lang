@@ -1,8 +1,9 @@
 declare module '@amanda/lang' {
 
-	export const english: Lang;
-	export const owo: Lang;
+	export const en_us: Lang;
+	export const en_owo: Lang;
 	export const es: Lang;
+	export const nl: Lang;
 
 	export type Lang = {
 		admin: {
@@ -129,6 +130,16 @@ declare module '@amanda/lang' {
 			};
 		};
 	};
+
+	export type LangCommand = {
+		help: CommandHelp;
+		prompts: {
+			[key: string]: string;
+		},
+		returns: {
+			[key: string]: string;
+		}
+	}
 
 	type CommandHelp = {
 		usage: string;
