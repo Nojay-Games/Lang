@@ -119,7 +119,7 @@ module.exports = {
 				invalidUser: `%username, ${genewic.command.input.invalid} user, baka`,
 			},
 			returns: {
-				coins: `Coins for %display`
+				coins: `amandollars for %display`
 			}
 		},
 		daily: {
@@ -129,7 +129,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
-				cooldown: "%username, yowor daiwy coins will wefwesh in %number. (⊙﹏⊙✿)",
+				cooldown: "%username, yowor daiwy amandollars will wefwesh in %number. (⊙﹏⊙✿)",
 			},
 			returns: {
 				claimed: `%username cwaimed their daily and got %number ${genewic.emoji.discoin} ヽ(´▽｀)ノ`
@@ -138,7 +138,7 @@ module.exports = {
 		leaderboard: {
 			help: {
 				usage: "[page]",
-				description: "Gets the leaderboard for people with da most coins uvu"
+				description: "Gets the leaderboard for people with da most amandollars uvu"
 			},
 			prompts: {},
 			returns: {}
@@ -152,7 +152,7 @@ module.exports = {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
 				invalidAmountandUser: "%username, yowo have to pwovide an amowont towo give and den a user.",
 				invalidUser: `%username, ${genewic.command.input.invalid} user, baka.`,
-				cannotGiveSelf: "Yowo can't give coins to urself, baka. ˇ︿ˇ",
+				cannotGiveSelf: "Yowo can't give amandollars to urself, baka. ˇ︿ˇ",
 				invalidGift: `%username, ${genewic.command.input.invalid} gift ヾ(ﾟдﾟ)ﾉ`,
 				giftSmall: `%username, yowo must give at weast 1 ${genewic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,

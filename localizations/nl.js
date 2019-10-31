@@ -183,7 +183,7 @@ module.exports = {
 				invalidAmountandUser:
 					'%username, je moet een hoeveelheid geven en dan een gebruiker.',
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
-				cannotGiveSelf: 'Je kan jezelf geen coins geven, onnozele.',
+				cannotGiveSelf: 'Je kan jezelf geen amandollars geven, onnozele.',
 				invalidGift: `%username, ${generic.command.input.invalid} cadeau.`,
 				giftSmall: `%username, je moet tenminste 1 ${generic.emoji.discoin} geven`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,

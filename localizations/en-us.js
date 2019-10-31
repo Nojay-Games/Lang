@@ -139,7 +139,7 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`,
 			},
 			returns: {
-				coins: `Coins for %display`
+				coins: `amandollars for %display`
 			}
 		},
 		daily: {
@@ -149,7 +149,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				cooldown: "%username, your daily coins will refresh in %number.",
+				cooldown: "%username, your daily amandollars will refresh in %number.",
 			},
 			returns: {
 				claimed: `%username claimed their daily and got %number ${generic.emoji.discoin}`
@@ -158,7 +158,7 @@ module.exports = {
 		leaderboard: {
 			help: {
 				usage: "[page]",
-				description: "Gets the leaderboard for people with the most coins"
+				description: "Gets the leaderboard for people with the most amandollars"
 			},
 			prompts: {},
 			returns: {}
@@ -172,7 +172,7 @@ module.exports = {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidAmountandUser: "%username, you have to provide an amount to give and then a user.",
 				invalidUser: `%username, ${generic.command.input.invalid} user.`,
-				cannotGiveSelf: "You can't give coins to yourself, silly.",
+				cannotGiveSelf: "You can't give amandollars to yourself, silly.",
 				invalidGift: `%username, ${generic.command.input.invalid} gift.`,
 				giftSmall: `%username, you must give at least 1 ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
