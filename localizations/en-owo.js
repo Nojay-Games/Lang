@@ -54,7 +54,7 @@ module.exports = {
 				dmFailed: genewic.dm.blocked
 			},
 			returns: {
-				channel: "%mention1 has awarded %number Discoins towo %mention2",
+				channel: "%mention1 has awarded %number amandollars towo %mention2",
 				dm: `%mention has awarded yowo %number ${genewic.emoji.discoin}`
 			}
 		}
@@ -64,14 +64,14 @@ module.exports = {
 		slot: {
 			help: {
 				usage: "[amount: numbwer|all|half]",
-				description: "Wuns a wandom swot machine for a chance at Discoins"
+				description: "Wuns a wandom swot machine for a chance at amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
 				permissionDenied: `${genewic.command.permPre} atwach files. ${genewic.command.permPost}`,
 				invalidBet: `%username, ${genewic.command.input.invalid} bet, baka`,
 				betSmall: `%username, yowo must bet at weast 2 ${genewic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} Discoins.`
+				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`
 			},
 			returns: {
 				lost: `Sowwy. Yowo didn't get a mwatch. Yowo wost %number ${genewic.emoji.discoin} (*´д｀*)`,
@@ -92,14 +92,14 @@ module.exports = {
 		betflip: {
 			help: {
 				usage: "<amount: numbwer|all|half> [h|t]",
-				description: "Place a bet on a random flip for a chance of Discoins"
+				description: "Place a bet on a random flip for a chance of amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
 				invalidBetandSide: "%username, yowo need to provide a bet and a side to bet on, baka",
 				invalidBet: `%username, ${genewic.command.input.invalid} bet.`,
 				betSmall: `%username, yowo must bet at least 1 ${genewic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
 				invalidSide: "%username, that is not a valid side to bet on."
 			},
 			returns: {
@@ -112,7 +112,7 @@ module.exports = {
 		coins: {
 			help: {
 				usage: "[user]",
-				description: "Weturns the amount of Discoins yowo or another user has"
+				description: "Weturns the amount of amandollars yowo or another user has"
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
@@ -125,7 +125,7 @@ module.exports = {
 		daily: {
 			help: {
 				usage: "None",
-				description: "A daiwy command that gives a wandom amount of Discoins",
+				description: "A daiwy command that gives a wandom amount of amandollars",
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
@@ -146,7 +146,7 @@ module.exports = {
 		give: {
 			help: {
 				usage: "<amount: numbwer|all|half> <user>",
-				description: "Gives discoins towo a user from ur account"
+				description: "Gives amandollars towo a user from ur account"
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
@@ -155,29 +155,29 @@ module.exports = {
 				cannotGiveSelf: "Yowo can't give coins to urself, baka. ˇ︿ˇ",
 				invalidGift: `%username, ${genewic.command.input.invalid} gift ヾ(ﾟдﾟ)ﾉ`,
 				giftSmall: `%username, yowo must give at weast 1 ${genewic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
 				dmFailed: genewic.dm.blocked
 			},
 			returns: {
-				channel: "%mention1 has given %number Discoins to %mention2 (´･ω･`)",
+				channel: "%mention1 has given %number amandollars to %mention2 (´･ω･`)",
 				dm: `%mention has given yowo %number ${genewic.emoji.discoin}`
 			}
 		},
 		wheel: {
 			help: {
 				usage: "[amount: numbwer|all|half]",
-				description: "A Wheel of Fortune for a chance at making more Discoins uwu"
+				description: "A Wheel of Fortune for a chance at making more amandollars uwu"
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
 				permissionDenied: `${genewic.command.permPre} attach fwiles. ${genewic.command.permPost}`,
 				invalidAmountWheel: "%username, yowo need to pwovide an amount to spin da wheel with (´ヘ｀()",
 				betSmall: `%username, yowo must bet at weast 1 ${genewic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
 				invalidAmount: `%username, ${genewic.command.input.invalid} amount.`,
 			},
 			returns: {
-				winnings: `%tag bet %number1 Discoins and got %number2 back ${genewic.emoji.discoin} owo`
+				winnings: `%tag bet %number1 amandollars and got %number2 back ${genewic.emoji.discoin} owo`
 			}
 		}
 	},
@@ -186,7 +186,7 @@ module.exports = {
 		trivia: {
 			help: {
 				usage: "[categowy]",
-				description: "Pway a game of twivia with other members and win Discoins"
+				description: "Pway a game of twivia with other members and win amandollars"
 			},
 			prompts: {
 				categorySelect: "To sewect a category, use `&trivia <category name>`.",
@@ -250,16 +250,16 @@ module.exports = {
 		claim: {
 			help: {
 				usage: "<amowount: numbwer|all|half> <user>",
-				description: "Claims someone as a waifu uwu. Requires Discoins"
+				description: "Claims someone as a waifu uwu. Requires amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
 				badFormat: "%username, da cowwect format is `&claim <amount> <user>`. Amount comes first, user comes last.",
 				invalidUser: `%username, ${genewic.command.input.invalid} user ( ﾟдﾟ)`,
 				selfClaim: "%username, yowo can't cwaim yoworself, siwwy biwwy >.<",
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
 				claimSmall: `%username, yowo must cwaim someone with at least 1 ${genewic.emoji.discoin}`,
-				claimedByOther: `%username, dis person has already been claimed by somebody else, for a higher price (╯°□°）╯︵ ┻━┻ You'll need to spend at weast %number Discoins to steal them.`,
+				claimedByOther: `%username, dis person has already been claimed by somebody else, for a higher price (╯°□°）╯︵ ┻━┻ You'll need to spend at weast %number amandollars to steal them.`,
 				doubleClaim: "%username, yowo've already cwaimed dat person as yowor waifu. If yowo'd wike to increase deir pwice, use `&gift <amount>`",
 				dmFailed: genewic.dm.blocked
 			},
@@ -285,18 +285,18 @@ module.exports = {
 		gift: {
 			help: {
 				usage: "<amwount: numbwer|all|half>",
-				description: "Gifts an amwount of Discoins towoards yowor waifu's price"
+				description: "Gifts an amwount of amandollars towoards yowor waifu's price"
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
-				noWaifu: "%username, yowo don't even have a waifu to gift Discoins to, baka",
+				noWaifu: "%username, yowo don't even have a waifu to gift amandollars to, baka",
 				noGift: "%username, yowo didn't pwovide a gift amount (◕︿◕✿)",
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
 				invalidGift: `%username, ${genewic.command.input.invalid} gift.`,
 				giftSmall: `%username, yowo must gift someone at weast 1 ${genewic.emoji.discoin}`
 			},
 			returns: {
-				gifted: "%tag2 has gifted %number Discoins towoards %tag2's pwice"
+				gifted: "%tag2 has gifted %number amandollars towoards %tag2's pwice"
 			}
 		},
 		bean: {

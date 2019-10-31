@@ -74,7 +74,7 @@ module.exports = {
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				channel: "%mention1 a regalado %number Discoins a %mention2",
+				channel: "%mention1 a regalado %number amandollars a %mention2",
 				dm: `%mention te regalo %number ${generic.emoji.discoin}`
 			}
 		}
@@ -84,14 +84,14 @@ module.exports = {
 		slot: {
 			help: {
 				usage: "[cantidad: numero|all|half]",
-				description: "Gira una maquina para la oportunidad de ganar discoins"
+				description: "Gira una maquina para la oportunidad de ganar amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`,
 				invalidBet: `%username, ${generic.command.input.invalid}`,
 				betSmall: `%username, nesesitar que apostar por lo menos 2 ${generic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`
 			},
 			returns: {
 				lost: `Lo siento. You didn't get a match. Has perdido %number ${generic.emoji.discoin}`,
@@ -112,14 +112,14 @@ module.exports = {
 		betflip: {
 			help: {
 				usage: "<cantidad: numero|all|half> [h|t]",
-				description: "Apuesta con una moneda para la opportunidad de ganar Discoins"
+				description: "Apuesta con una moneda para la opportunidad de ganar amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidBetandSide: "%username, nesesitas que apostar una cantidad de discoins y elegir un lado para apostar.",
+				invalidBetandSide: "%username, nesesitas que apostar una cantidad de amandollars y elegir un lado para apostar.",
 				invalidBet: `%username, ${generic.command.input.invalid}.`,
-				betSmall: `%username, nesesitas que apostar por lo menos 1 discoin ${generic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				betSmall: `%username, nesesitas que apostar por lo menos 1 amandollar ${generic.emoji.discoin}`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidSide: "%username, ese no es un lado disponible para apostar."
 			},
 			returns: {
@@ -132,20 +132,20 @@ module.exports = {
 		coins: {
 			help: {
 				usage: "[usuario]",
-				description: "Regresa la cantidad de discoins que tienes tu o el usuario"
+				description: "Regresa la cantidad de amandollars que tienes tu o el usuario"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
 			},
 			returns: {
-				coins: `Discoins para %display`
+				coins: `amandollars para %display`
 			}
 		},
 		daily: {
 			help: {
 				usage: "Ninguno",
-				description: "un comando que te regala discoins diariamente",
+				description: "un comando que te regala amandollars diariamente",
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -170,34 +170,34 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidAmountandUser: "%username, nesesitas que escribir una cantidad de discoins y el nombre del usuario.",
+				invalidAmountandUser: "%username, nesesitas que escribir una cantidad de amandollars y el nombre del usuario.",
 				invalidUser: `%username, ${generic.command.input.invalid}`,
 				cannotGiveSelf: "No puedes dar monedas a ti menso.",
 				invalidGift: `%username, ${generic.command.input.invalid}`,
-				giftSmall: `%username, nesesitas que regalar por lo menos 1 discoin ${generic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				giftSmall: `%username, nesesitas que regalar por lo menos 1 amandollar ${generic.emoji.discoin}`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollar.`,
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				channel: "%mention1 regalo %number Discoins a %mention2",
+				channel: "%mention1 regalo %number amandollar a %mention2",
 				dm: `%mention te regalo %number ${generic.emoji.discoin}`
 			}
 		},
 		wheel: {
 			help: {
 				usage: "[cantidad: numero|all|half]",
-				description: "Gira una rueda para la oportunidad de ganar discoins"
+				description: "Gira una rueda para la oportunidad de ganar amandollar"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`,
 				invalidAmountWheel: "%username, nesesitas que escribir una cantidad para girar la rueda",
 				betSmall: `%username, nesesitas que apostar por lo menos 1 moneda ${generic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollar.`,
 				invalidAmount: `%username, ${generic.command.input.invalid}`,
 			},
 			returns: {
-				winnings: `%tag aposto %number1 Discoins y recibio %number2 de regreso ${generic.emoji.discoin}`
+				winnings: `%tag aposto %number1 amandollar y recibio %number2 de regreso ${generic.emoji.discoin}`
 			}
 		}
 	},
@@ -206,7 +206,7 @@ module.exports = {
 		trivia: {
 			help: {
 				usage: "[categoria]",
-				description: "Juega un juego de trivia con otros usuarios para ganar discoins"
+				description: "Juega un juego de trivia con otros usuarios para ganar amandollar"
 			},
 			prompts: {
 				categorySelect: "para seleccionar una categoria usa `&trivia <nombre de la categoria>`.",
@@ -270,16 +270,16 @@ module.exports = {
 		claim: {
 			help: {
 				usage: "<cantidad: numero|all|half> <usuario>",
-				description: "Reclama a un usuario como tu waifu. Requiere Discoins"
+				description: "Reclama a un usuario como tu waifu. Requiere amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				badFormat: "%username, se escribe `&claim <cantidad> <usuario>`. Amount comes first, usuario comes last.",
 				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
 				selfClaim: "%username, no puedes reclamar a ti mismo menso :v",
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				claimSmall: `%username, nesesitas que reclamar a aguien por lo menos 1 ${generic.emoji.discoin}`,
-				claimedByOther: `%username, este usuario ya fue reclamado por alguien mas, y por un precio mas alto. nesesitas que gastar mas de %number Discoins para reclamar a este usuario.`,
+				claimedByOther: `%username, este usuario ya fue reclamado por alguien mas, y por un precio mas alto. nesesitas que gastar mas de %number amandollars para reclamar a este usuario.`,
 				doubleClaim: "%username, ya reclamaste a ese usuario como tu waifu. Si quieres subir su precio, usa `&gift <cantidad>`",
 				dmFailed: generic.dm.blocked
 			},
@@ -305,18 +305,18 @@ module.exports = {
 		gift: {
 			help: {
 				usage: "<cantidad: numbero|all|half>",
-				description: "Regala una cantidad de Discoins para subir el costo de tu waifu"
+				description: "Regala una cantidad de amandollars para subir el costo de tu waifu"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				noWaifu: "%username, tu no tienes a un waifu para regalar discoins menso",
+				noWaifu: "%username, tu no tienes a un waifu para regalar amandollars menso",
 				noGift: "%username, no escribiste una cantidad para regalar",
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidGift: `%username, ${generic.command.input.invalid}`,
 				giftSmall: `%username, nesesitas que regalar por lo menos 1 ${generic.emoji.discoin}`
 			},
 			returns: {
-				gifted: "%tag2 regalo %number Discoins para el precio de %tag2"
+				gifted: "%tag2 regalo %number amandollars para el precio de %tag2"
 			}
 		},
 		bean: {

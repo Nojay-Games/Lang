@@ -77,7 +77,7 @@ module.exports = {
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				channel: '%mention1 heeft %number Discoins gegeven aan %mention2',
+				channel: '%mention1 heeft %number amandollars gegeven aan %mention2',
 				dm: `%mention heeft je %number ${generic.emoji.discoin} gegeven`
 			}
 		}
@@ -88,14 +88,14 @@ module.exports = {
 			help: {
 				usage: '[hoeveelheid: nummer|all|half]',
 				description:
-					'Runt een willekeurige gokautomaat en maakt kans op Discoins'
+					'Runt een willekeurige gokautomaat en maakt kans op amandollars'
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				permissionDenied: `${generic.command.permPre} voeg bestanden toe. ${generic.command.permPost}`,
 				invalidBet: `%username, ${generic.command.input.invalid} heeft gegokt.`,
 				betSmall: `%username, je moet tenminste 2 ${generic.emoji.discoin} gokken`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`
 			},
 			returns: {
 				lost: `Sorry. Je hebt geen match gekregen. Je bent %number ${generic.emoji.discoin} verloren`,
@@ -117,7 +117,7 @@ module.exports = {
 			help: {
 				usage: '<hoeveelheid: nummer|all|half> [h|t]',
 				description:
-					'Plaats een gok op een willekeurige gooi voor een kans op Discoins'
+					'Plaats een gok op een willekeurige gooi voor een kans op amandollars'
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -125,7 +125,7 @@ module.exports = {
 					'%username, je moet een gok geven en een kant om op te gokken.',
 				invalidBet: `%username, ${generic.command.input.invalid} heeft gegokt.`,
 				betSmall: `%username, je moet tenminste 1 ${generic.emoji.discoin} gokken`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidSide: '%username, dat is geen geldige kant om op te gokken.'
 			},
 			returns: {
@@ -140,7 +140,7 @@ module.exports = {
 			help: {
 				usage: '[gebruiker]',
 				description:
-					'Retourneerd de hoeveelheid Discoins die jij of een andere gebruiker heeft'
+					'Retourneerd de hoeveelheid amandollars die jij of een andere gebruiker heeft'
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -154,7 +154,7 @@ module.exports = {
 			help: {
 				usage: 'Geen',
 				description:
-					'Een dagelijks commando dat een willekeurige hoeveelheid Discoins geeft'
+					'Een dagelijks commando dat een willekeurige hoeveelheid amandollars geeft'
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -176,7 +176,7 @@ module.exports = {
 		give: {
 			help: {
 				usage: '<hoeveelheid: nummer|all|half> <gebruiker>',
-				description: 'Geeft discoins aan een gebruiker vanaf jouw account'
+				description: 'Geeft amandollars aan een gebruiker vanaf jouw account'
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -186,11 +186,11 @@ module.exports = {
 				cannotGiveSelf: 'Je kan jezelf geen coins geven, onnozele.',
 				invalidGift: `%username, ${generic.command.input.invalid} cadeau.`,
 				giftSmall: `%username, je moet tenminste 1 ${generic.emoji.discoin} geven`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				channel: '%mention1 heeft %number Discoins gegeven aan %mention2',
+				channel: '%mention1 heeft %number amandollars gegeven aan %mention2',
 				dm: `%mention heeft je %number ${generic.emoji.discoin} gegeven`
 			}
 		},
@@ -198,7 +198,7 @@ module.exports = {
 			help: {
 				usage: '[hoeveelheid: nummer|all|half]',
 				description:
-					'Een Rad van Fortuin voor een kans om meer Discoins te krijgen'
+					'Een Rad van Fortuin voor een kans om meer amandollars te krijgen'
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -206,11 +206,11 @@ module.exports = {
 				invalidAmountWheel:
 					'%username, je moet een hoeveelheid geven om het rad mee te draaien',
 				betSmall: `%username, je moet tenminste 1 ${generic.emoji.discoin} gokken`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidAmount: `%username, ${generic.command.input.invalid} hoeveelheid.`
 			},
 			returns: {
-				winnings: `%tag heeft %number1 Discoins gegokt en heeft %number2 ${generic.emoji.discoin} teruggekregen`
+				winnings: `%tag heeft %number1 amandollars gegokt en heeft %number2 ${generic.emoji.discoin} teruggekregen`
 			}
 		}
 	},
@@ -220,7 +220,7 @@ module.exports = {
 			help: {
 				usage: '[categorie]',
 				description:
-					'Speelt een spel van trivia met andere leden en win Discoins'
+					'Speelt een spel van trivia met andere leden en win amandollars'
 			},
 			prompts: {
 				categorySelect:
@@ -294,7 +294,7 @@ module.exports = {
 		claim: {
 			help: {
 				usage: '<hoeveelheid: nummer|all|half> <gebruiker>',
-				description: 'Claimt iemand als een waifu. Vereist Discoins'
+				description: 'Claimt iemand als een waifu. Vereist amandollars'
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
@@ -302,9 +302,9 @@ module.exports = {
 					'%username, de juiste indeling is `&claim <hoeveelheid> <gebruiker>`. Hoeveelheid komt eerst, gebruiker komt laatst.',
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
 				selfClaim: '%username, je kan niet jezelf claimen, onnozele',
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				claimSmall: `%username, je moet iemand claimen met tenminste 1 ${generic.emoji.discoin}`,
-				claimedByOther: `%username, dit persoon is al door iemand anders geclaimd, voor een hogere prijs. Je zou tenminste %number Discoins moeten spenderen om degene te stelen.`,
+				claimedByOther: `%username, dit persoon is al door iemand anders geclaimd, voor een hogere prijs. Je zou tenminste %number amandollars moeten spenderen om degene te stelen.`,
 				doubleClaim:
 					'%username, je hebt deze persoon al geclaimd als je waifu. Als je hun prijs wilt verhogen, gebruik `&gift <hoeveelheid>`',
 				dmFailed: generic.dm.blocked
@@ -332,19 +332,19 @@ module.exports = {
 			help: {
 				usage: '<hoeveelheid: nummer|all|half>',
 				description:
-					"Schenkt een hoeveelheid van Discoins naar je waifu's prijs"
+					"Schenkt een hoeveelheid van amandollars naar je waifu's prijs"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				noWaifu:
-					'%username, je hebt geen waifu om Discoins te schenken, onnozele',
+					'%username, je hebt geen waifu om amandollars te schenken, onnozele',
 				noGift: '%username, je hebt geen hoeveelheid voor een geschenk gegeven',
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} Discoins.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidGift: `%username, ${generic.command.input.invalid} cadeau.`,
 				giftSmall: `%username, je moet iemand tenminste 1 ${generic.emoji.discoin} schenken`
 			},
 			returns: {
-				gifted: "%tag2 heeft %number Discoins geschonken naar %tag2's prijs"
+				gifted: "%tag2 heeft %number amandollars geschonken naar %tag2's prijs"
 			}
 		},
 		bean: {
