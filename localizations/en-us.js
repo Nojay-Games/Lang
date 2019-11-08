@@ -316,7 +316,7 @@ module.exports = {
 				giftSmall: `%username, you must gift someone at least 1 ${generic.emoji.discoin}`
 			},
 			returns: {
-				gifted: "%tag2 has gifted %number amandollars towards %tag2's price"
+				gifted: "%tag1 has gifted %number amandollars towards %tag2's price"
 			}
 		},
 		bean: {

@@ -344,7 +344,7 @@ module.exports = {
 				giftSmall: `%username, je moet iemand tenminste 1 ${generic.emoji.discoin} schenken`
 			},
 			returns: {
-				gifted: "%tag2 heeft %number amandollars geschonken naar %tag2's prijs"
+				gifted: "%tag1 heeft %number amandollars geschonken naar %tag2's prijs"
 			}
 		},
 		bean: {

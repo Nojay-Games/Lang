@@ -296,7 +296,7 @@ module.exports = {
 				giftSmall: `%username, yowo must gift someone at weast 1 ${genewic.emoji.discoin}`
 			},
 			returns: {
-				gifted: "%tag2 has gifted %number amandollars towoards %tag2's pwice"
+				gifted: "%tag1 has gifted %number amandollars towoards %tag2's pwice"
 			}
 		},
 		bean: {
