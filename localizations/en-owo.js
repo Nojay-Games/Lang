@@ -510,6 +510,7 @@ module.exports = {
 				none: "Yowo do not cuwwently have any tokens. Use `&musictoken new` to genewate a new one."
 			},
 			returns: {
+				dmSuccess: genewic.dm.success,
 				deleted: "Deweted aww your tokens. Use `&musictoken new` to genewate a new one.",
 				new: "Yowor existing tokens were deweted, and a new one was cweated."
 				+"\nDo not shawe this token with anyone. If you do accidentawwy shawe it, you can use `&musictoken delete` to dewete it and keep you safe."
@@ -575,7 +576,6 @@ module.exports = {
 				usePlaylistAdd: "Do not use pwaywist importing with `playlist add`. Use `playlist import` instead",
 				youtubeLinkInvalid: "%username, That is not a vawid YouTube wink",
 				indexRequired: "%username, Pwease pwovide the index of the item to wemove",
-				playlistRemoved: "%username, Wemoved **%song** from pwaywist **%playlist**",
 				indexMoveRequired: "%username, Pwease pwovide an index to move from and an index to move to.",
 				playlistNotOwned: "%username, yowo do not own that pwaywist and so, yowo cannot modify it.",
 				playlistDuplicateSong: "%username, that song is alweady in the pwaywist.",
@@ -591,6 +591,8 @@ module.exports = {
 				+"<:bn_ti:327986149203116032> - ignore"
 			},
 			returns: {
+				playlistAdded: "%username, Added **%song** to pwaywist **%playlist**",
+				playlistRemoved: "%username, Wemoved **%song** from pwaywist **%playlist**",
 				playlistCreated: "%username, Cweated pwaywist **%playlist**",
 				playlistImportDone: "All done! Check out yowor pwaywist with **&music playlist %playlist**.",
 				playlistDeleted: "Pwaywist deweted.",

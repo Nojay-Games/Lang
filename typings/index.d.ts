@@ -179,7 +179,7 @@ declare module '@amanda/lang' {
 			musictoken: {
 				help: CommandHelp;
 				prompts: { dmFailed: string; none: string; };
-				returns: { deleted: string; new: string; generated: string; };
+				returns: { dmSuccess: string; deleted: string; new: string; generated: string; };
 			};
 			frisky: {
 				help: CommandHelp;
@@ -193,8 +193,8 @@ declare module '@amanda/lang' {
 			};
 			playlist: {
 				help: CommandHelp;
-				prompts: { playFromStart: string; playFromLinked: string; playOnlyLinked: string; userLinked: string; query: string; selectionInfo: string; playlistNameRequired: string; directPlaylist: string; playlistNameLimit: string; playlistNotExist: string; databaseFixed: string; usePlaylistAdd: string; youtubeLinkInvalid: string; indexRequired: string; playlistRemoved: string; indexMoveRequired: string; playlistNotOwned: string; playlistDuplicateSong: string; indexesEqual: string; playlistEmpty: string; playlistImporting: string; playlistImportAllExisting: string; playlistImportingDatabase: string; playlistDeleteConfirm: string; };
-				returns: { playlistCreated: string; playlistImportDone: string; playlistDeleted: string; playlistMoved: string; };
+				prompts: { playFromStart: string; playFromLinked: string; playOnlyLinked: string; userLinked: string; query: string; selectionInfo: string; playlistNameRequired: string; directPlaylist: string; playlistNameLimit: string; playlistNotExist: string; databaseFixed: string; usePlaylistAdd: string; youtubeLinkInvalid: string; indexRequired: string; indexMoveRequired: string; playlistNotOwned: string; playlistDuplicateSong: string; indexesEqual: string; playlistEmpty: string; playlistImporting: string; playlistImportAllExisting: string; playlistImportingDatabase: string; playlistDeleteConfirm: string; };
+				returns: { playlistAdded: string; playlistRemoved: string; playlistCreated: string; playlistImportDone: string; playlistDeleted: string; playlistMoved: string; };
 			}
 		}
 	};

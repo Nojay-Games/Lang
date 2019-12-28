@@ -559,6 +559,7 @@ module.exports = {
 				description: "Obtain a web dashboard login token"
 			},
 			prompts: {
+				dmSuccess: generic.dm.success,
 				dmFailed: generic.dm.fail,
 				none: "You do not currently have any tokens. Use `&musictoken new` to generate a new one."
 			},
@@ -628,7 +629,6 @@ module.exports = {
 				usePlaylistAdd: "Do not use playlist importing with `playlist add`. Use `playlist import` instead",
 				youtubeLinkInvalid: "%username, That is not a valid YouTube link",
 				indexRequired: "%username, Please provide the index of the item to remove",
-				playlistRemoved: "%username, Removed **%song** from playlist **%playlist**",
 				indexMoveRequired: "Please provide an index to move from and an index to move to.",
 				playlistNotOwned: "%username, you do not own that playlist and so cannot modify it.",
 				playlistDuplicateSong: "%username, that song is already in the playlist.",
@@ -644,6 +644,8 @@ module.exports = {
 				+"<:bn_ti:327986149203116032> - ignore"
 			},
 			returns: {
+				playlistAdded: "%username, Added **%song** to playlist **%playlist**",
+				playlistRemoved: "%username, Removed **%song** from playlist **%playlist**",
 				playlistCreated: "%username, Created playlist **%playlist**",
 				playlistImportDone: "All done! Check out your playlist with **&music playlist %playlist**.",
 				playlistDeleted: "Playlist deleted.",

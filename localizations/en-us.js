@@ -530,6 +530,7 @@ module.exports = {
 				none: "You do not currently have any tokens. Use `&musictoken new` to generate a new one."
 			},
 			returns: {
+				dmSuccess: generic.dm.success,
 				deleted: "Deleted all your tokens. Use `&musictoken new` to generate a new one.",
 				new: "Your existing tokens were deleted, and a new one was created."
 				+"\nDo not share this token with anyone. If you do accidentally share it, you can use `&musictoken delete` to delete it and keep you safe."
@@ -595,7 +596,6 @@ module.exports = {
 				usePlaylistAdd: "Do not use playlist importing with `playlist add`. Use `playlist import` instead",
 				youtubeLinkInvalid: "%username, That is not a valid YouTube link",
 				indexRequired: "%username, Please provide the index of the item to remove",
-				playlistRemoved: "%username, Removed **%song** from playlist **%playlist**",
 				indexMoveRequired: "Please provide an index to move from and an index to move to.",
 				playlistNotOwned: "%username, you do not own that playlist and so cannot modify it.",
 				playlistDuplicateSong: "%username, that song is already in the playlist.",
@@ -611,6 +611,8 @@ module.exports = {
 				+"<:bn_ti:327986149203116032> - ignore"
 			},
 			returns: {
+				playlistAdded: "%username, Added **%song** to playlist **%playlist**",
+				playlistRemoved: "%username, Removed **%song** from playlist **%playlist**",
 				playlistCreated: "%username, Created playlist **%playlist**",
 				playlistImportDone: "All done! Check out your playlist with **&music playlist %playlist**.",
 				playlistDeleted: "Playlist deleted.",
