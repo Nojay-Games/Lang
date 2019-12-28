@@ -15,10 +15,14 @@ const genewic = {
 			insufficient: "yowo do not have dat many"
 		}
 	},
+	image: {
+		dm: "Why would yowo want to %action someone in DMs?",
+		noUser: "Yowo have to tell me who yowo wanna %action"
+	},
 	emoji: {
 		discoin: "<a:Discoin:422523472128901140>"
 	}
-};
+}
 
 module.exports = {
 	admin: {
@@ -87,7 +91,9 @@ module.exports = {
 				description: "Fwips a coin"
 			},
 			prompts: {},
-			returns: {}
+			returns: {
+				flip: "You fwipped %flip"
+			}
 		},
 		betflip: {
 			help: {
@@ -312,6 +318,126 @@ module.exports = {
 			returns: {
 				beaned: "%tag has been banned! (=゜ω゜)"
 			}
+		},
+		hug: {
+			help: {
+				usage: "<user>",
+				description: "Hugs someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Hugs %username back** :heart:",
+				action: "%username hugged %mention"
+			}
+		},
+		nom: {
+			help: {
+				usage: "<user>",
+				description: "Noms someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "owie",
+				action: "%username nommed %mention"
+			}
+		},
+		kiss: {
+			help: {
+				usage: "<user>",
+				description: "Kisses someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Kisses %username back** :heart:",
+				action: "%username kissed %mention"
+			}
+		},
+		cuddle: {
+			help: {
+				usage: "<user>",
+				description: "Cuddles someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Cuddles %username back** :heart:",
+				action: "%username cuddled %mention"
+			}
+		},
+		poke: {
+			help: {
+				usage: "<user>",
+				description: "Pokes someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "Dun poke me ; ^ ;",
+				action: "%username poked %mention"
+			}
+		},
+		slap: {
+			help: {
+				usage: "<user>",
+				description: "Slaps someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Slaps %username back** That hurt me ; ^ ;",
+				action: "%username slapped %mention"
+			}
+		},
+		boop: {
+			help: {
+				usage: "<user>",
+				description: "Boops someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "Dun boop me ; ^ ;",
+				action: "%username booped %mention"
+			}
+		},
+		pat: {
+			help: {
+				usage: "<user>",
+				description: "Pats someone"
+			},
+			prompts: {
+				dm: genewic.image.dm,
+				noUser: genewic.image.noUser,
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "≥ w ≤",
+				action: "%username patted %mention"
+			}
 		}
 	},
 
@@ -335,8 +461,8 @@ module.exports = {
 			prompts: {},
 			returns: {
 				thanks: "Thank yowo for choosing me as yowor companion! :heart:\nHere's a wittle bit of info about me...",
-				creators: "Cweators:",
-				links: "Visit Amanda's [website](%website) or her [support server](https://discord.gg/zhthQjH)\nWanna donate? Check out her [Patreon](https://www.patreon.com/papiophidian) or mwake a 1 time donation thwough [PayPal](https://paypal.me/papiophidian)."
+				creators: "Cweators",
+				links: "Visit Amanda's [website](%website) or her [support server](https://discord.gg/zhthQjH)\nWanna donate? Check out her [Patreon](https://www.patreon.com/papiophidian) or mwake a 1 time donation thwough [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's gwowth over time? You can [here](https://cheweyz.github.io/discord-bot-analytics-dash/index.html?id=320067006521147393)"
 			}
 		},
 		donate: {
@@ -356,6 +482,120 @@ module.exports = {
 				+" and get a distingwishing donor badge on &profile."
 			}
 		},
-		
+		help: {
+			help: {
+				usage: "[Command|Categowy]",
+				description: "Your avewage hewp command"
+			},
+			prompts: {
+				invalidCommand: "**%tag**, I couldn't find the help pwanel for that command"
+			},
+			returns: {
+				footer: "Type `&help [command]` to see more infowmation about a command",
+				mobile: "Cwick the weaction for a mobile-compwatible view",
+				main: "Type `&help [categowy]` to see all commands in that categowy."
+				+"\nType `&help [command]` to see more infowmation about a command."
+			}
+		}
+	},
+
+	audio: {
+		musictoken: {
+			help: {
+				usage: "[new|delete]",
+				description: "Obtain a web dashboawd wogin token"
+			},
+			prompts: {
+				dmFailed: genewic.dm.blocked,
+				none: "Yowo do not cuwwently have any tokens. Use `&musictoken new` to genewate a new one."
+			},
+			returns: {
+				deleted: "Deweted aww your tokens. Use `&musictoken new` to genewate a new one.",
+				new: "Yowor existing tokens were deweted, and a new one was cweated."
+				+"\nDo not shawe this token with anyone. If you do accidentawwy shawe it, you can use `&musictoken delete` to dewete it and keep you safe."
+				+"\nYowo can now wog in! %website",
+				generated: "Here is the token yowo genewated pweviously:"
+				+"\nYowo can use `&musictoken delete` to dewete it, and `&musictoken new` to wegenewate it."
+			}
+		},
+		frisky: {
+			help: {
+				usage: "[original|deep|chill|classics]",
+				description: "Pway Frisky Radio: https://friskyradio.com"
+			},
+			prompts: {},
+			returns: {
+				schedule: "Frisky Radio ­— Schedule",
+				footer: "Use &frisky [station] to pway a station"
+			}
+		},
+		music: {
+			help: {
+				usage: "None. You're not supposed to see this.",
+				description: "None. You're not supposed to see this."
+			},
+			prompts: {
+				guildOnly: genewic.command.guildOnly,
+				invalidSkips: "That is not a vawid amount of songs to skip",
+				invalidSkipsAmount: "Yowo have to skip 1 or more songs",
+				tooManySkips: "Yowo cannot skip mowe songs than are in the queue!",
+				invalidAction: "%username, that's not a vawid action. If yowo want to pway something, try `&music play <song>`.\nCheck out `&help music` and `&help playlists` for more things yowo can do!",
+				nothingPlaying: "%username, nothing is cuwwently pwaying.",
+				voiceChannelRequired: "%username, yoow need to join a voice channel to do that.",
+				voiceCantJoin: "%username, I don't have permission to join yowor voice channel.",
+				voiceCantSpeak: "%username, I don't have permission to speak in yowor voice channel.",
+				playableRequired: "%username, please pwovide either a YouTube video wink or some words for me to search for.",
+				youtubeRequired: "%username, please pwovide a YouTube wink or video ID.",
+				queueCannotDo: "The cuwwent queue cannot be %action at this time.",
+				voiceChannelWaiting: "%username, yowo need to join a voice channel to do that. Waiting for yowo to connect..."
+			},
+			returns: {
+				queueClear: "Cweared the queue, removing %number",
+				queueIn: "The cuwwent music session is over in %channel. Go there to see what's pwaying!"
+			}
+		},
+		playlist: {
+			help: {
+				usage: "None. You're not supposed to see this.",
+				description: "None. You're not supposed to see this."
+			},
+			prompts: {
+				playFromStart: "Pway the entire pwaywist from the start",
+				playFromLinked: "Pway the pwaywist, starting at the winked song",
+				playOnlyLinked: "Only pway the winked song",
+				userLinked: "Yowo winked to this song in the pwaywist: %title",
+				query: "What would yowo wike to do?",
+				selectionInfo: "To pway a more specific wange from the pwaywist, use `&music play <link> <start> <end>`. See `&help playlist` for mowe information.",
+				playlistNameRequired: "%username, yowo must name a pwaywist. Use `&music playlists show` to show aww pwaywists.",
+				directPlaylist: "%username, yowo can pway a pwaywist diwectly! Just pass it to \`&music play\` like so:"
+				+"%info\n\n\n\nIf you stiww want to import a pwaywist into Amanda, you must give it a fwiendly name first, like `bobs_songs`.",
+				playlistNameLimit: "%username, the pwaywist name must be 24 characters or wess.",
+				playlistNotExist: "%username, That pwaywist does not exist. Use \`&music playlist %playlist create\` to cweate it.",
+				databaseFixed: "%username, The database entwies for that pwaywist are inconsistent. The inconsistencies have been wesolved by wesetting the order of the songs in that pwaywist. Apart fwom the song order, no data was wost. Other pwaywists were not affected.",
+				usePlaylistAdd: "Do not use pwaywist importing with `playlist add`. Use `playlist import` instead",
+				youtubeLinkInvalid: "%username, That is not a vawid YouTube wink",
+				indexRequired: "%username, Pwease pwovide the index of the item to wemove",
+				playlistRemoved: "%username, Wemoved **%song** from pwaywist **%playlist**",
+				indexMoveRequired: "%username, Pwease pwovide an index to move from and an index to move to.",
+				playlistNotOwned: "%username, yowo do not own that pwaywist and so, yowo cannot modify it.",
+				playlistDuplicateSong: "%username, that song is alweady in the pwaywist.",
+				indexesEqual: "%username, Those two indexes are eqwal.",
+				playlistEmpty: "That pwaywist is empty. Add some songs with `&music playlist %playlist add <song>`!",
+				playlistImporting: "Importing pwaywist. This could take a moment...\n(Fetching song info)",
+				playlistImportAllExisting: "%username, all videos in that pwaywist have already been imported.",
+				playlistImportingDatabase: "Importing pwaywist. This could take a moment...\n(Updating database)",
+				playlistDeleteConfirm: "This action will permanently dewete the pwaywist `%playlist`. "
+				+"After dewetion, yowo will not be able to pway, dispway, or modify the pwaywist, and anyone will be able to create a new pwaywist with the same name."
+				+"\nYowo will not be abwe to undo this action.\n\n"
+				+"<:bn_del:331164186790854656> - confirm dewetion\n"
+				+"<:bn_ti:327986149203116032> - ignore"
+			},
+			returns: {
+				playlistCreated: "%username, Cweated pwaywist **%playlist**",
+				playlistImportDone: "All done! Check out yowor pwaywist with **&music playlist %playlist**.",
+				playlistDeleted: "Pwaywist deweted.",
+				playlistMoved: "%username, Moved **%song** to position **%index**"
+			}
+		}
 	}
 };

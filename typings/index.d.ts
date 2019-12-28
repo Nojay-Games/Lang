@@ -33,7 +33,7 @@ declare module '@amanda/lang' {
 			flip: {
 				help: CommandHelp;
 				prompts: {};
-				returns: {};
+				returns: { flip: string; };
 			};
 			betflip: {
 				help: CommandHelp;
@@ -111,6 +111,46 @@ declare module '@amanda/lang' {
 				prompts: { guildOnly: string; invalidUser: string; selfBean: string; };
 				returns: { beaned: string; };
 			};
+			hug: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
+			nom: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
+			kiss: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
+			cuddle: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
+			poke: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
+			slap: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
+			boop: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
+			pat: {
+				help: CommandHelp;
+				prompts: { dm: string; noUser: string; invalidUser: string; };
+				returns: { amanda: string; action: string; };
+			};
 		};
 	
 		meta: {
@@ -128,7 +168,35 @@ declare module '@amanda/lang' {
 				prompts: {};
 				returns: { intro: string; description: string; };
 			};
+			help: {
+				help: CommandHelp;
+				prompts: { invalidCommand: string; };
+				returns: { footer: string; mobile: string; main: string; };
+			}
 		};
+
+		audio: {
+			musictoken: {
+				help: CommandHelp;
+				prompts: { dmFailed: string; none: string; };
+				returns: { deleted: string; new: string; generated: string; };
+			};
+			frisky: {
+				help: CommandHelp;
+				prompts: {};
+				returns: { schedule: string; footer: string; };
+			};
+			music: {
+				help: CommandHelp;
+				prompts: { guildOnly: string; invalidSkips: string; invalidSkipsAmount: string; tooManySkips: string; invalidAction: string; nothingPlaying: string; voiceChannelRequired: string; voiceCantJoin:string; voiceCantSpeak: string; playableRequired: string; youtubeRequired: string; queueCannotDo: string; voiceChannelWaiting: string; };
+				returns: { queueClear: string; queueIn: string; };
+			};
+			playlist: {
+				help: CommandHelp;
+				prompts: { playFromStart: string; playFromLinked: string; playOnlyLinked: string; userLinked: string; query: string; selectionInfo: string; playlistNameRequired: string; directPlaylist: string; playlistNameLimit: string; playlistNotExist: string; databaseFixed: string; usePlaylistAdd: string; youtubeLinkInvalid: string; indexRequired: string; playlistRemoved: string; indexMoveRequired: string; playlistNotOwned: string; playlistDuplicateSong: string; indexesEqual: string; playlistEmpty: string; playlistImporting: string; playlistImportAllExisting: string; playlistImportingDatabase: string; playlistDeleteConfirm: string; };
+				returns: { playlistCreated: string; playlistImportDone: string; playlistDeleted: string; playlistMoved: string; };
+			}
+		}
 	};
 
 	export type LangCommand = {

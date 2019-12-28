@@ -35,10 +35,14 @@ const generic = {
 			insufficient: "Tu no tienes suficiente"
 		}
 	},
+	image: {
+		dm: "Why would you want to %action someone in DMs?",
+		noUser: "You have to tell me who you wanna %action"
+	},
 	emoji: {
 		discoin: "<a:Discoin:422523472128901140>"
 	}
-};
+}
 
 module.exports = {
 	admin: {
@@ -107,7 +111,9 @@ module.exports = {
 				description: "Voltea una moneda"
 			},
 			prompts: {},
-			returns: {}
+			returns: {
+				flip: "You flipped %flip"
+			}
 		},
 		betflip: {
 			help: {
@@ -332,6 +338,126 @@ module.exports = {
 			returns: {
 				beaned: "%tag fue baneado!"
 			}
+		},
+		hug: {
+			help: {
+				usage: "<user>",
+				description: "Hugs someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Hugs %username back** :heart:",
+				action: "%username hugged %mention"
+			}
+		},
+		nom: {
+			help: {
+				usage: "<user>",
+				description: "Noms someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "owie",
+				action: "%username nommed %mention"
+			}
+		},
+		kiss: {
+			help: {
+				usage: "<user>",
+				description: "Kisses someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Kisses %username back** :heart:",
+				action: "%username kissed %mention"
+			}
+		},
+		cuddle: {
+			help: {
+				usage: "<user>",
+				description: "Cuddles someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Cuddles %username back** :heart:",
+				action: "%username cuddled %mention"
+			}
+		},
+		poke: {
+			help: {
+				usage: "<user>",
+				description: "Pokes someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "Dun poke me ; ^ ;",
+				action: "%username poked %mention"
+			}
+		},
+		slap: {
+			help: {
+				usage: "<user>",
+				description: "Slaps someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "**Slaps %username back** That hurt me ; ^ ;",
+				action: "%username slapped %mention"
+			}
+		},
+		boop: {
+			help: {
+				usage: "<user>",
+				description: "Boops someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "Dun boop me ; ^ ;",
+				action: "%username booped %mention"
+			}
+		},
+		pat: {
+			help: {
+				usage: "<user>",
+				description: "Pats someone"
+			},
+			prompts: {
+				dm: generic.image.dm,
+				noUser: generic.image.noUser,
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {
+				amanda: "≥ w ≤",
+				action: "%username patted %mention"
+			}
 		}
 	},
 
@@ -355,8 +481,8 @@ module.exports = {
 			prompts: {},
 			returns: {
 				thanks: "Gracias por ser mi amigo(a)! :heart:\nAqui esta mi informacion...",
-				creators: "Creador:",
-				links: "Visita el sitio web de amanda [sitio web](%website) o su servidor de soporte [servidor de soporte](https://discord.gg/zhthQjH)\nQuieres donar? Visita mi pagina de patreon [Patreon](https://www.patreon.com/papiophidian) o puedes dar una donacion de 1 vez aqui [PayPal](https://paypal.me/papiophidian)."
+				creators: "Creador",
+				links: "Visita el sitio web de amanda [sitio web](%website) o su servidor de soporte [servidor de soporte](https://discord.gg/zhthQjH)\nQuieres donar? Visita mi pagina de patreon [Patreon](https://www.patreon.com/papiophidian) o puedes dar una donacion de 1 vez aqui [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](https://cheweyz.github.io/discord-bot-analytics-dash/index.html?id=320067006521147393)"
 			}
 		},
 		donate: {
@@ -376,6 +502,120 @@ module.exports = {
 				+" y recibes una medalla de donador en &profile."
 			}
 		},
-		
+		help: {
+			help: {
+				usage: "[Command|Category]",
+				description: "Your average help command"
+			},
+			prompts: {
+				invalidCommand: "**%tag**, I couldn't find the help panel for that command"
+			},
+			returns: {
+				footer: "Type `&help [command]` to see more information about a command",
+				mobile: "Click the reaction for a mobile-compatible view",
+				main: "Type `&help [category]` to see all commands in that category."
+				+"\nType `&help [command]` to see more information about a command."
+			}
+		}
+	},
+
+	audio: {
+		musictoken: {
+			help: {
+				usage: "[new|delete]",
+				description: "Obtain a web dashboard login token"
+			},
+			prompts: {
+				dmFailed: generic.dm.blocked,
+				none: "You do not currently have any tokens. Use `&musictoken new` to generate a new one."
+			},
+			returns: {
+				deleted: "Deleted all your tokens. Use `&musictoken new` to generate a new one.",
+				new: "Your existing tokens were deleted, and a new one was created."
+				+"\nDo not share this token with anyone. If you do accidentally share it, you can use `&musictoken delete` to delete it and keep you safe."
+				+"\nYou can now log in! %website",
+				generated: "Here is the token you generated previously:"
+				+"\nYou can use `&musictoken delete` to delete it, and `&musictoken new` to regenerate it."
+			}
+		},
+		frisky: {
+			help: {
+				usage: "[original|deep|chill|classics]",
+				description: "Play Frisky Radio: https://friskyradio.com"
+			},
+			prompts: {},
+			returns: {
+				schedule: "Frisky Radio ­— Schedule",
+				footer: "Use &frisky [station] to play a station"
+			}
+		},
+		music: {
+			help: {
+				usage: "None. You're not supposed to see this.",
+				description: "None. You're not supposed to see this."
+			},
+			prompts: {
+				guildOnly: generic.command.guildOnly,
+				invalidSkips: "That is not a valid amount of songs to skip",
+				invalidSkipsAmount: "You have to skip 1 or more songs",
+				tooManySkips: "You cannot skip more songs than are in the queue!",
+				invalidAction: "%username, that's not a valid action. If you want to play something, try `&music play <song>`.\nCheck out `&help music` and `&help playlists` for more things you can do!",
+				nothingPlaying: "%username, nothing is currently playing.",
+				voiceChannelRequired: "%username, you need to join a voice channel to do that.",
+				voiceCantJoin: "%username, I don't have permission to join your voice channel.",
+				voiceCantSpeak: "%username, I don't have permission to speak in your voice channel.",
+				playableRequired: "%username, please provide either a YouTube video link or some words for me to search for.",
+				youtubeRequired: "%username, please provide a YouTube link or video ID.",
+				queueCannotDo: "The current queue cannot be %action at this time.",
+				voiceChannelWaiting: "%username, you need to join a voice channel to do that. Waiting for you to connect..."
+			},
+			returns: {
+				queueClear: "Cleared the queue, removing %number",
+				queueIn: "The current music session is over in %channel. Go there to see what's playing!"
+			}
+		},
+		playlist: {
+			help: {
+				usage: "None. You're not supposed to see this.",
+				description: "None. You're not supposed to see this."
+			},
+			prompts: {
+				playFromStart: "Play the entire playlist from the start",
+				playFromLinked: "Play the playlist, starting at the linked song",
+				playOnlyLinked: "Only play the linked song",
+				userLinked: "You linked to this song in the playlist: %title",
+				query: "What would you like to do?",
+				selectionInfo: "To play a more specific range from the playlist, use `&music play <link> <start> <end>`. See `&help playlist` for more information.",
+				playlistNameRequired: "%username, you must name a playlist. Use `&music playlists show` to show all playlists.",
+				directPlaylist: "%username, you can play a playlist directly! Just pass it to \`&music play\` like so:"
+				+"%info\n\n\n\nIf you still want to import a playlist into Amanda, you must give it a friendly name first, like `bobs_songs`.",
+				playlistNameLimit: "%username, the playlist name must be 24 characters or less.",
+				playlistNotExist: "%username, That playlist does not exist. Use \`&music playlist %playlist create\` to create it.",
+				databaseFixed: "%username, The database entries for that playlist are inconsistent. The inconsistencies have been resolved by resetting the order of the songs in that playlist. Apart from the song order, no data was lost. Other playlists were not affected.",
+				usePlaylistAdd: "Do not use playlist importing with `playlist add`. Use `playlist import` instead",
+				youtubeLinkInvalid: "%username, That is not a valid YouTube link",
+				indexRequired: "%username, Please provide the index of the item to remove",
+				playlistRemoved: "%username, Removed **%song** from playlist **%playlist**",
+				indexMoveRequired: "Please provide an index to move from and an index to move to.",
+				playlistNotOwned: "%username, you do not own that playlist and so cannot modify it.",
+				playlistDuplicateSong: "%username, that song is already in the playlist.",
+				indexesEqual: "%username, Those two indexes are equal.",
+				playlistEmpty: "That playlist is empty. Add some songs with `&music playlist %playlist add <song>`!",
+				playlistImporting: "Importing playlist. This could take a moment...\n(Fetching song info)",
+				playlistImportAllExisting: "%username, all videos in that playlist have already been imported.",
+				playlistImportingDatabase: "Importing playlist. This could take a moment...\n(Updating database)",
+				playlistDeleteConfirm: "This action will permanently delete the playlist `%playlist`. "
+				+"After deletion, you will not be able to play, display, or modify the playlist, and anyone will be able to create a new playlist with the same name."
+				+"\nYou will not be able to undo this action.\n\n"
+				+"<:bn_del:331164186790854656> - confirm deletion\n"
+				+"<:bn_ti:327986149203116032> - ignore"
+			},
+			returns: {
+				playlistCreated: "%username, Created playlist **%playlist**",
+				playlistImportDone: "All done! Check out your playlist with **&music playlist %playlist**.",
+				playlistDeleted: "Playlist deleted.",
+				playlistMoved: "%username, Moved **%song** to position **%index**"
+			}
+		}
 	}
 };
