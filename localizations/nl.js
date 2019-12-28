@@ -559,7 +559,7 @@ module.exports = {
 				description: "Obtain a web dashboard login token"
 			},
 			prompts: {
-				dmFailed: generic.dm.blocked,
+				dmFailed: generic.dm.fail,
 				none: "You do not currently have any tokens. Use `&musictoken new` to generate a new one."
 			},
 			returns: {

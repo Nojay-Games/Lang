@@ -506,7 +506,7 @@ module.exports = {
 				description: "Obtain a web dashboawd wogin token"
 			},
 			prompts: {
-				dmFailed: genewic.dm.blocked,
+				dmFailed: genewic.dm.fail,
 				none: "Yowo do not cuwwently have any tokens. Use `&musictoken new` to genewate a new one."
 			},
 			returns: {
