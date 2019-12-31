@@ -462,7 +462,7 @@ module.exports = {
 			returns: {
 				thanks: "Thank yowo for choosing me as yowor companion! :heart:\nHere's a wittle bit of info about me...",
 				creators: "Cweators",
-				links: "Visit Amanda's [website](%website) or her [support server](https://discord.gg/zhthQjH)\nWanna donate? Check out her [Patreon](https://www.patreon.com/papiophidian) or mwake a 1 time donation thwough [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's gwowth over time? You can [here](https://cheweyz.github.io/discord-bot-analytics-dash/index.html?id=320067006521147393)"
+				links: "Visit Amanda's [website](%website) or her [support server](https://discord.gg/zhthQjH)\nWanna donate? Check out her [Patreon](https://www.patreon.com/papiophidian) or mwake a 1 time donation thwough [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's gwowth over time? You can [here](%stats)"
 			}
 		},
 		donate: {

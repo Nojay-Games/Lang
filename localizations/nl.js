@@ -514,7 +514,7 @@ module.exports = {
 					'Dank je voor het kiezen van mij als je metgezel! :heart:\nHier is een beetje informatie over mij a...',
 				creators: 'Makers',
 				links:
-					"Bezoek Amanda's [website](%website) of haar [ondersteuningsserver](https://discord.gg/zhthQjH)\nWil je doneren? Bekijk haar [Patreon](https://www.patreon.com/papiophidian) of maak een eenmalige donatie door [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](https://cheweyz.github.io/discord-bot-analytics-dash/index.html?id=320067006521147393)"
+					"Bezoek Amanda's [website](%website) of haar [ondersteuningsserver](https://discord.gg/zhthQjH)\nWil je doneren? Bekijk haar [Patreon](https://www.patreon.com/papiophidian) of maak een eenmalige donatie door [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](%stats)"
 			}
 		},
 		donate: {

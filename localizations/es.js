@@ -482,7 +482,7 @@ module.exports = {
 			returns: {
 				thanks: "Gracias por ser mi amigo(a)! :heart:\nAqui esta mi informacion...",
 				creators: "Creador",
-				links: "Visita el sitio web de amanda [sitio web](%website) o su servidor de soporte [servidor de soporte](https://discord.gg/zhthQjH)\nQuieres donar? Visita mi pagina de patreon [Patreon](https://www.patreon.com/papiophidian) o puedes dar una donacion de 1 vez aqui [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](https://cheweyz.github.io/discord-bot-analytics-dash/index.html?id=320067006521147393)"
+				links: "Visita el sitio web de amanda [sitio web](%website) o su servidor de soporte [servidor de soporte](https://discord.gg/zhthQjH)\nQuieres donar? Visita mi pagina de patreon [Patreon](https://www.patreon.com/papiophidian) o puedes dar una donacion de 1 vez aqui [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](%stats)"
 			}
 		},
 		donate: {
