@@ -462,7 +462,7 @@ module.exports = {
 			returns: {
 				thanks: "Thank yowo for choosing me as yowor companion! :heart:\nHere's a wittle bit of info about me...",
 				creators: "Cweators",
-				links: "Visit Amanda's [website](%website) or her [support server](https://discord.gg/zhthQjH)\nWanna donate? Check out her [Patreon](https://www.patreon.com/papiophidian) or mwake a 1 time donation thwough [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's gwowth over time? You can [here](%stats)"
+				links: "Visit Amanda's [website](%website) or her [support server](%server)\nWanna donate? Check out her [Patreon](%patreon) or mwake a 1 time donation thwough [PayPal](%paypal).\nWanna see Amanda's gwowth over time? You can [here](%stats)"
 			}
 		},
 		donate: {
@@ -474,11 +474,11 @@ module.exports = {
 			returns: {
 				intro: "Thinking of donating? owo ❤",
 				description: "I'm excited that yowo're interested in supporting my cweators!"
-				+"\n\nIf yowo're interested in mwaking monthwy donations, yowo can do so on [Patreon](https://www.patreon.com/papiophidian),"
-				+" or if yowo'd wike to make a one time donation, yowo can donate thwough [PayPal](https://paypal.me/papiophidian)."
+				+"\n\nIf yowo're interested in mwaking monthwy donations, yowo can do so on [Patreon](%patreon),"
+				+" or if yowo'd wike to make a one time donation, yowo can donate thwough [PayPal](%paypal)."
 				+"\n\nAww money donated will go back into devewopment."
 				+"\nAccess to Amanda's features will not change regardwess of yowor choice,"
-				+" but yowo will wecieve a donor role in our [Support Server](https://discord.gg/zhthQjH)"
+				+" but yowo will wecieve a donor role in our [Support Server](%server)"
 				+" and get a distingwishing donor badge on &profile."
 			}
 		},

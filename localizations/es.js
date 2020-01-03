@@ -482,7 +482,7 @@ module.exports = {
 			returns: {
 				thanks: "Gracias por ser mi amigo(a)! :heart:\nAqui esta mi informacion...",
 				creators: "Creador",
-				links: "Visita el sitio web de amanda [sitio web](%website) o su servidor de soporte [servidor de soporte](https://discord.gg/zhthQjH)\nQuieres donar? Visita mi pagina de patreon [Patreon](https://www.patreon.com/papiophidian) o puedes dar una donacion de 1 vez aqui [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](%stats)"
+				links: "Visita el sitio web de amanda [sitio web](%website) o su servidor de soporte [servidor de soporte](%server)\nQuieres donar? Visita mi pagina de patreon [Patreon](%patreon) o puedes dar una donacion de 1 vez aqui [PayPal](%paypal).\nWanna see Amanda's growth over time? You can [here](%stats)"
 			}
 		},
 		donate: {
@@ -494,11 +494,11 @@ module.exports = {
 			returns: {
 				intro: "Piensas en dar una donacion? ❤",
 				description: "Estoy muy feliz que quieres dar una donacion a mis creadores!"
-				+"\n\nSi te interesa hacer donaciones cada mes, visita [Patreon](https://www.patreon.com/papiophidian),"
-				+" o si quieres dar una donacion de 1 vez, visita [PayPal](https://paypal.me/papiophidian)."
+				+"\n\nSi te interesa hacer donaciones cada mes, visita [Patreon](%patreon),"
+				+" o si quieres dar una donacion de 1 vez, visita [PayPal](%paypal)."
 				+"\n\nTodas las donaciones van por mi desarrollo."
 				+"\nAcesso a mis funciones no cambiaran por tu elecciones,"
-				+" pero recibiras un rol de donacion en nuestro servidor de soporter [Servidor de soporte](https://discord.gg/zhthQjH)"
+				+" pero recibiras un rol de donacion en nuestro servidor de soporter [Servidor de soporte](%server)"
 				+" y recibes una medalla de donador en &profile."
 			}
 		},

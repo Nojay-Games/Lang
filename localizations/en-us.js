@@ -482,7 +482,7 @@ module.exports = {
 			returns: {
 				thanks: "Thank you for choosing me as your companion! :heart:\nHere's a little bit of info about me...",
 				creators: "Creators",
-				links: "Visit Amanda's [website](%website) or her [support server](https://discord.gg/zhthQjH)\nWanna donate? Check out her [Patreon](https://www.patreon.com/papiophidian) or make a 1 time donation through [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](%stats)"
+				links: "Visit Amanda's [website](%website) or her [support server](%server)\nWanna donate? Check out her [Patreon](%patreon) or make a 1 time donation through [PayPal](%paypal).\nWanna see Amanda's growth over time? You can [here](%stats)"
 			}
 		},
 		donate: {
@@ -494,11 +494,11 @@ module.exports = {
 			returns: {
 				intro: "Thinking of donating? ❤",
 				description: "I'm excited that you're interested in supporting my creators!"
-				+"\n\nIf you're interested in making monthly donations, you can do so on [Patreon](https://www.patreon.com/papiophidian),"
-				+" or if you'd like to make a one time donation, you can donate through [PayPal](https://paypal.me/papiophidian)."
+				+"\n\nIf you're interested in making monthly donations, you can do so on [Patreon](%patreon),"
+				+" or if you'd like to make a one time donation, you can donate through [PayPal](%paypal)."
 				+"\n\nAll money donated will go back into development."
 				+"\nAccess to Amanda's features will not change regardless of your choice,"
-				+" but you will recieve a donor role in our [Support Server](https://discord.gg/zhthQjH)"
+				+" but you will recieve a donor role in our [Support Server](%server)"
 				+" and get a distinguishing donor badge on &profile."
 			}
 		},

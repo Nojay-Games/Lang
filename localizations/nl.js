@@ -514,7 +514,7 @@ module.exports = {
 					'Dank je voor het kiezen van mij als je metgezel! :heart:\nHier is een beetje informatie over mij a...',
 				creators: 'Makers',
 				links:
-					"Bezoek Amanda's [website](%website) of haar [ondersteuningsserver](https://discord.gg/zhthQjH)\nWil je doneren? Bekijk haar [Patreon](https://www.patreon.com/papiophidian) of maak een eenmalige donatie door [PayPal](https://paypal.me/papiophidian).\nWanna see Amanda's growth over time? You can [here](%stats)"
+					"Bezoek Amanda's [website](%website) of haar [ondersteuningsserver](%server)\nWil je doneren? Bekijk haar [Patreon](%patreon) of maak een eenmalige donatie door [PayPal](%paypal).\nWanna see Amanda's growth over time? You can [here](%stats)"
 			}
 		},
 		donate: {
@@ -527,11 +527,11 @@ module.exports = {
 				intro: 'Aan het nadenken over doneren? ❤',
 				description:
 					'Ik ben opgewonden over dat je geïnteresseerd bent om mijn makers te ondersteunen!' +
-					'\n\nAls je bent geïnteresseerd in het maken van maandelijkse donaties, kan je dat doen op [Patreon](https://www.patreon.com/papiophidian),' +
-					' of als je een eenmalige donatie wilt maken, kan je doneren door [PayPal](https://paypal.me/papiophidian).' +
+					'\n\nAls je bent geïnteresseerd in het maken van maandelijkse donaties, kan je dat doen op [Patreon](%patreon),' +
+					' of als je een eenmalige donatie wilt maken, kan je doneren door [PayPal](%paypal).' +
 					'\n\nAl het gedoneerde geld gaat terug naar de ontwikkeling.' +
 					"\nToegang tot Amanda's kenmerken zullen niet veranderen, wat je keuze ook is," +
-					' maar je zult wel een donor rol krijgen in onze [Ondersteuningsserver](https://discord.gg/zhthQjH)' +
+					' maar je zult wel een donor rol krijgen in onze [Ondersteuningsserver](%server)' +
 					' en een onderscheidende donor badge krijgen op &profile.'
 			}
 		},
