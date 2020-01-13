@@ -23,7 +23,7 @@ declare module '@amanda/lang' {
 				returns: { channel: string; dm: string; };
 			};
 		};
-	
+
 		gambling: {
 			slot: {
 				help: CommandHelp;
@@ -52,8 +52,8 @@ declare module '@amanda/lang' {
 			};
 			leaderboard: {
 				help: CommandHelp;
-				prompts: {};
-				returns: {};
+				prompts: { guildOnly: string; pageLimit: string; };
+				returns: { emptyPage: string; };
 			};
 			give: {
 				help: CommandHelp;
@@ -66,7 +66,7 @@ declare module '@amanda/lang' {
 				returns: { winnings: string; };
 			};
 		};
-	
+
 		games: {
 			trivia: {
 				help: CommandHelp;
@@ -79,7 +79,7 @@ declare module '@amanda/lang' {
 				returns: { info: string; error: string; rawTooLarge: string; };
 			};
 		};
-	
+
 		interaction: {
 			ship: {
 				help: CommandHelp;
@@ -90,6 +90,11 @@ declare module '@amanda/lang' {
 				help: CommandHelp;
 				prompts: { guildOnly: string; invalidUser: string; };
 				returns: { price: string; claimedBy: string; gifts: string; };
+			};
+			waifuleaderboard: {
+				help: CommandHelp;
+				prompts: { guildOnly: string; pageLimit: string; };
+				returns: { emptyPage: string; };
 			};
 			claim: {
 				help: CommandHelp;
@@ -152,7 +157,7 @@ declare module '@amanda/lang' {
 				returns: { amanda: string; action: string; };
 			};
 		};
-	
+
 		meta: {
 			invite: {
 				help: CommandHelp;

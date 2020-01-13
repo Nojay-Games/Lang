@@ -173,11 +173,16 @@ module.exports = {
 		},
 		leaderboard: {
 			help: {
-				usage: '[pagina]',
+				usage: '[local] [pagina: nummer]',
 				description: 'Krijgt het scorebord voor mensen met de meeste munten'
 			},
-			prompts: {},
-			returns: {}
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "Out of pages! The last page is %lastPage."
+			}
 		},
 		give: {
 			help: {
@@ -295,6 +300,19 @@ module.exports = {
 				price: 'Prijs:',
 				claimedBy: 'Geclaimed Door:',
 				gifts: 'Cadeaus:'
+			}
+		},
+		waifuleaderboard: {
+			help: {
+				usage: "[local] [pagina: nummer]",
+				description: "Displays the leaderboard of the top waifus"
+			},
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "Out of pages! The last page is %lastPage."
 			}
 		},
 		claim: {

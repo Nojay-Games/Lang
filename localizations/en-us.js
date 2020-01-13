@@ -163,11 +163,16 @@ module.exports = {
 		},
 		leaderboard: {
 			help: {
-				usage: "[page]",
+				usage: "[local] [page: number]",
 				description: "Gets the leaderboard for people with the most amandollars"
 			},
-			prompts: {},
-			returns: {}
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "Out of pages! The last page is %lastPage."
+			}
 		},
 		give: {
 			help: {
@@ -271,6 +276,19 @@ module.exports = {
 				price: "Price:",
 				claimedBy: "Claimed By:",
 				gifts: "Gifts:"
+			}
+		},
+		waifuleaderboard: {
+			help: {
+				usage: "[local] [page: number]",
+				description: "Displays the leaderboard of the top waifus"
+			},
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "Out of pages! The last page is %lastPage."
 			}
 		},
 		claim: {

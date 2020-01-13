@@ -163,11 +163,16 @@ module.exports = {
 		},
 		leaderboard: {
 			help: {
-				usage: "[pagina]",
+				usage: "[local] [pagina: numero]",
 				description: "Enseña una tabla de clasificaciones de usuarios con mas monedas"
 			},
-			prompts: {},
-			returns: {}
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "Out of pages! The last page is %lastPage."
+			}
 		},
 		give: {
 			help: {
@@ -271,6 +276,19 @@ module.exports = {
 				price: "Precio:",
 				claimedBy: "Reclamado por:",
 				gifts: "Regalos:"
+			}
+		},
+		waifuleaderboard: {
+			help: {
+				usage: "[local] [pagina: numero]",
+				description: "Displays the leaderboard of the top waifus"
+			},
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "Out of pages! The last page is %lastPage."
 			}
 		},
 		claim: {
