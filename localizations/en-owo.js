@@ -151,7 +151,7 @@ module.exports = {
 				pageLimit: "%username, you may owonly browose up to page %maxPages."
 			},
 			returns: {
-				emptyPage: "Owout of pagws! The last page is %lastPage."
+				emptyPage: "There are onwy %lastPage pages to browose thwoogh."
 			}
 		},
 		give: {
@@ -268,7 +268,7 @@ module.exports = {
 				pageLimit: "%username, you may owonly browose up to page %maxPages."
 			},
 			returns: {
-				emptyPage: "Owout of pagws! The last page is %lastPage."
+				emptyPage: "There are onwy %lastPage pages to browose thwoogh."
 			}
 		},
 		claim: {

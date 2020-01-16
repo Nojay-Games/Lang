@@ -171,7 +171,7 @@ module.exports = {
 				pageLimit: "%username, you may only browse up to page %maxPages."
 			},
 			returns: {
-				emptyPage: "Out of pages! The last page is %lastPage."
+				emptyPage: "There are only %lastPage pages to browse through."
 			}
 		},
 		give: {
@@ -288,7 +288,7 @@ module.exports = {
 				pageLimit: "%username, you may only browse up to page %maxPages."
 			},
 			returns: {
-				emptyPage: "Out of pages! The last page is %lastPage."
+				emptyPage: "There are only %lastPage pages to browse through."
 			}
 		},
 		claim: {
