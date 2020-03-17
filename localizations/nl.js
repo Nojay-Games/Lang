@@ -619,7 +619,11 @@ module.exports = {
 				playableRequired: "%username, please provide either a YouTube video link or some words for me to search for.",
 				youtubeRequired: "%username, please provide a YouTube link or video ID.",
 				queueCannotDo: "The current queue cannot be %action at this time.",
-				voiceChannelWaiting: "%username, you need to join a voice channel to do that. Waiting for you to connect..."
+				voiceChannelWaiting: "%username, you need to join a voice channel to do that. Waiting for you to connect...",
+				songSelection: "Song selection",
+				songSelectionCanceled: "Song selection cancelled",
+				totalLength: "Total length: %number",
+				queueFor: "Queue for %server"
 			},
 			returns: {
 				queueClear: "Cleared the queue, removing %number",
@@ -668,6 +672,50 @@ module.exports = {
 				playlistImportDone: "All done! Check out your playlist with **&music playlist %playlist**.",
 				playlistDeleted: "Playlist deleted.",
 				playlistMoved: "%username, Moved **%song** to position **%index**"
+			}
+		},
+		debug: {
+			help: {
+				usage: "[Channel]",
+				description: "Provides debugging information for if audio commands are not working as intended"
+			},
+			prompts: {
+				guildOnly: "You cannot debug music in a DM channel",
+				invalidChannel: "Channel not found"
+			},
+			returns: {
+				tip: "Tip:",
+				tipValue: "On top of Read Message and Add Reaction permissions, bots must also have Read Message History permissions to add reactions to messages"
+			}
+		}
+	},
+
+	configuration: {
+		settings: {
+			help: {
+				usage: "<self|server> <view|setting name> [value]",
+				description: "Modify settings Amanda will use for yourself or server wide"
+			},
+			prompts: {
+				cantModifyInDM: "You cannot modify a server's settings if you don't use the command in a server",
+				backgroundRecommended: "Recommended to be a 800x500px png/jpeg",
+				invalidSyntaxScope: "Command syntax is `&settings <scope> <name> <value>`. Your value for `scope` was incorrect, it must be either `self` or `server`.",
+				noSettings: "There are no settings set for scope %scope",
+				manageServer: "You must have either the Manage Server or Administrator permission to modify Amanda's settings on this server.",
+				invalidSyntaxName: "Command syntax is `&settings %usage`. Your value for `name` was incorrect, it must be one of: %settings",
+				invalidSettingScope: "The setting `%setting` is not valid for the scope `%scope`.",
+				currentValueServer: "Current value of `%setting` is `%value`. This value was set for the server.",
+				currentValueInherited: "Current value of `%setting` is not set in this server, so it inherits the default value, which is `%value`.",
+				noBackground: "You didn't have a profile background image. No action was taken.",
+				donorRequired: "You must be a donor to modify this setting.",
+				invalidLink: "There was an error trying to fetch the data from the link provided. Please make sure the link is valid.",
+				invalidLangCode: "%username, that is not a valid or supported language code. Supported language codes are %codes",
+				invalidSyntaxBoolean: "Command syntax is `&settings <scope> <name> <value>`. The setting `%setting` is a boolean, and so your `%value` must be either `true` or `false`.",
+				tooLong: "That setting value is too long. It must not be more than 50 characters."
+			},
+			returns: {
+				updated: "Setting updated.",
+				deleted: "Setting deleted."
 			}
 		}
 	}

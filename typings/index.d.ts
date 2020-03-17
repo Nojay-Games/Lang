@@ -177,7 +177,7 @@ declare module '@amanda/lang' {
 				help: CommandHelp;
 				prompts: { invalidCommand: string; };
 				returns: { footer: string; mobile: string; main: string; };
-			}
+			};
 		};
 
 		audio: {
@@ -193,15 +193,28 @@ declare module '@amanda/lang' {
 			};
 			music: {
 				help: CommandHelp;
-				prompts: { guildOnly: string; invalidSkips: string; invalidSkipsAmount: string; tooManySkips: string; invalidAction: string; nothingPlaying: string; voiceChannelRequired: string; voiceCantJoin:string; voiceCantSpeak: string; playableRequired: string; youtubeRequired: string; queueCannotDo: string; voiceChannelWaiting: string; };
+				prompts: { guildOnly: string; invalidSkips: string; invalidSkipsAmount: string; tooManySkips: string; invalidAction: string; nothingPlaying: string; voiceChannelRequired: string; voiceCantJoin:string; voiceCantSpeak: string; playableRequired: string; youtubeRequired: string; queueCannotDo: string; voiceChannelWaiting: string; songSelection: string; songSelectionCancelled: string; totalLength: string; queueFor: string; };
 				returns: { queueClear: string; queueIn: string; };
 			};
 			playlist: {
 				help: CommandHelp;
 				prompts: { playFromStart: string; playFromLinked: string; playOnlyLinked: string; userLinked: string; query: string; selectionInfo: string; playlistNameRequired: string; directPlaylist: string; playlistNameLimit: string; playlistNotExist: string; databaseFixed: string; usePlaylistAdd: string; youtubeLinkInvalid: string; indexRequired: string; indexMoveRequired: string; playlistNotOwned: string; playlistDuplicateSong: string; indexesEqual: string; playlistEmpty: string; playlistImporting: string; playlistImportAllExisting: string; playlistImportingDatabase: string; playlistDeleteConfirm: string; };
 				returns: { playlistAdded: string; playlistRemoved: string; playlistCreated: string; playlistImportDone: string; playlistDeleted: string; playlistMoved: string; };
-			}
-		}
+			},
+			debug: {
+				help: CommandHelp;
+				prompts: { guildOnly: string; invalidChannel: string; };
+				returns: { tip: string; tipValue: string; };
+			};
+		};
+
+		configuration: {
+			settings: {
+				help: CommandHelp;
+				prompts: { cantModifyInDM: string; backgroundRecommended: string; invalidSyntaxScope: string; noSettings: string; manageServer: string; invalidSyntaxName: string; invalidSettingScope: string; currentValueServer: string; currentValueInherited: string; noBackground: string; donorRequired: string; invalidLink: string; invalidLangCode: string; invalidSyntaxBoolean: string; tooLong: string; };
+				returns: { updated: string; deleted: string; };
+			};
+		};
 	};
 
 	export type LangCommand = {

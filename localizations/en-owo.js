@@ -9,7 +9,7 @@ const genewic = {
 		dmOnly: "dis command can owonly be used in DMs. (⊙︿⊙✿)",
 		guildOnly: "dis command does not work in DMs. (⊙︿⊙✿)",
 		permPre: "I dowon't have permwission to",
-		permPost: "I work best when I have aww of da permissions I've asked for when inviting me. Pwease mwodify my permissions. (●´ω｀●)",
+		permPost: "I work best when I have aww of da permissions I've asked for when inviting me. Pwease mwodify my permissions. (●\´ω\｀●)",
 		input: {
 			invalid: "dat is not a vawid",
 			insufficient: "yowo do not have dat many"
@@ -78,7 +78,7 @@ module.exports = {
 				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`
 			},
 			returns: {
-				lost: `Sowwy. Yowo didn't get a mwatch. Yowo wost %number ${genewic.emoji.discoin} (*´д｀*)`,
+				lost: `Sowwy. Yowo didn't get a mwatch. Yowo wost %number ${genewic.emoji.discoin} (*\´д\｀*)`,
 				triple: `A twiple. Yowo won %number ${genewic.emoji.discoin}`,
 				heart1: `A single :heart: Yowo won %number ${genewic.emoji.discoin}`,
 				heart2: `Wow! Double :heart: Yowo won %number ${genewic.emoji.discoin}`,
@@ -111,8 +111,8 @@ module.exports = {
 			returns: {
 				autoChoose: "Yowo didn't choose a side (>.<), so I picked one for yowo:",
 				guess: "Yowo guessed %string1 I fwipped %string2",
-				win: `Yowo guessed it! You got %number ${genewic.emoji.discoin} (´･ω･\`)`,
-				lost: `Sowwy but yowo didn't guess cowwectly. Better wuck next time. (*´д｀*)`
+				win: `Yowo guessed it! You got %number ${genewic.emoji.discoin} (\´･ω･\`)`,
+				lost: `Sowwy but yowo didn't guess cowwectly. Better wuck next time. (*\´д\｀*)`
 			}
 		},
 		coins: {
@@ -138,7 +138,7 @@ module.exports = {
 				cooldown: "%username, yowor daiwy amandollars will wefwesh in %number. (⊙﹏⊙✿)",
 			},
 			returns: {
-				claimed: `%username cwaimed their daily and got %number ${genewic.emoji.discoin} ヽ(´▽｀)ノ`
+				claimed: `%username cwaimed their daily and got %number ${genewic.emoji.discoin} ヽ(\´▽\｀)ノ`
 			}
 		},
 		leaderboard: {
@@ -170,7 +170,7 @@ module.exports = {
 				dmFailed: genewic.dm.blocked
 			},
 			returns: {
-				channel: "%mention1 has given %number amandollars to %mention2 (´･ω･`)",
+				channel: "%mention1 has given %number amandollars to %mention2 (\´･ω･\`)",
 				dm: `%mention has given yowo %number ${genewic.emoji.discoin}`
 			}
 		},
@@ -182,7 +182,7 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`,
 				permissionDenied: `${genewic.command.permPre} attach fwiles. ${genewic.command.permPost}`,
-				invalidAmountWheel: "%username, yowo need to pwovide an amount to spin da wheel with (´ヘ｀()",
+				invalidAmountWheel: "%username, yowo need to pwovide an amount to spin da wheel with (\´ヘ｀()",
 				betSmall: `%username, yowo must bet at weast 1 ${genewic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
 				invalidAmount: `%username, ${genewic.command.input.invalid} amount.`,
@@ -201,12 +201,12 @@ module.exports = {
 			},
 			prompts: {
 				categorySelect: "To sewect a category, use `&trivia <category name>`.",
-				dm: "%username, I've sent yowo a DM with da list of categowies (`･ω･´)",
+				dm: "%username, I've sent yowo a DM with da list of categowies (\`･ω･´)",
 				noCategory: "%username, I found no categowies with that name ┐(‘～`；)┌ Use `&trivia categories` for da compwete wist of categowies.",
 				multipleCategories: "%username, dere are multipwe categowies with dat name (◑○◑): %string ",
 				gameInProgress: "%username, dere's a game awready in pwogress for dis channel, baka",
-				APIError: "dere was an ewwow from da api (´･_･`)",
-				parsingError: "dere was an ewwow parsing da data weturned by da api (´･_･`)",
+				APIError: "dere was an ewwow from da api (´･_･\`)",
+				parsingError: "dere was an ewwow parsing da data weturned by da api (´･_･\`)",
 				permissionDenied: `${genewic.command.permPre} add reactions`
 			},
 			returns: {}
@@ -566,7 +566,11 @@ module.exports = {
 				playableRequired: "%username, please pwovide either a YouTube video wink or some words for me to search for.",
 				youtubeRequired: "%username, please pwovide a YouTube wink or video ID.",
 				queueCannotDo: "The cuwwent queue cannot be %action at this time.",
-				voiceChannelWaiting: "%username, yowo need to join a voice channel to do that. Waiting for yowo to connect..."
+				voiceChannelWaiting: "%username, yowo need to join a voice channel to do that. Waiting for yowo to connect...",
+				songSelection: "Song sewection",
+				songSelectionCanceled: "Song sewection cancelled",
+				totalLength: "Total wength: %number",
+				queueFor: "Queue for %server"
 			},
 			returns: {
 				queueClear: "Cweared the queue, removing %number",
@@ -615,6 +619,50 @@ module.exports = {
 				playlistImportDone: "All done! Check out yowor pwaywist with **&music playlist %playlist**.",
 				playlistDeleted: "Pwaywist deweted.",
 				playlistMoved: "%username, Moved **%song** to position **%index**"
+			}
+		},
+		debug: {
+			help: {
+				usage: "[Channel]",
+				description: "Pwovides debugging infowmation for if audio commands are not working as intended"
+			},
+			prompts: {
+				guildOnly: "You cannot debug music in a DM channel",
+				invalidChannel: "Channel not fwound"
+			},
+			returns: {
+				tip: "Tip:",
+				tipValue: "On top of Wead Message and Add Weaction permissions, bots must also have Wead Message History permissions to add weactions to messages"
+			}
+		}
+	},
+
+	configuration: {
+		settings: {
+			help: {
+				usage: "<self|server> <view|setting name> [value]",
+				description: "Modify settings Amanda will use for yoursewf or server wide"
+			},
+			prompts: {
+				cantModifyInDM: "You cannot modify a server's settings if you don't use the command in a server",
+				backgroundRecommended: "Recommended to be a 800x500px png/jpeg",
+				invalidSyntaxScope: "Command syntax is `&settings <scope> <name> <value>`. Your value for `scope` was incorrect, it must be either `self` or `server`.",
+				noSettings: "There are no settings set for scope %scope",
+				manageServer: "You must have either the Manage Server or Administrator permission to modify Amanda's settings on this server.",
+				invalidSyntaxName: "Command syntax is `&settings %usage`. Your value for `name` was incorrect, it must be one of: %settings",
+				invalidSettingScope: "The setting `%setting` is not valid for the scope `%scope`.",
+				currentValueServer: "Current value of `%setting` is `%value`. This value was set for the server.",
+				currentValueInherited: "Current value of `%setting` is not set in this server, so it inherits the default value, which is `%value`.",
+				noBackground: "You didn't have a profile background image. No action was taken.",
+				donorRequired: "You must be a donor to modify this setting.",
+				invalidLink: "There was an error trying to fetch the data from the link provided. Please make sure the link is valid.",
+				invalidLangCode: "%username, that is not a valid or supported language code. Supported language codes are %codes",
+				invalidSyntaxBoolean: "Command syntax is `&settings <scope> <name> <value>`. The setting `%setting` is a boolean, and so your `%value` must be either `true` or `false`.",
+				tooLong: "That setting value is too long. It must not be more than 50 characters."
+			},
+			returns: {
+				updated: "Setting updated.",
+				deleted: "Setting deleted."
 			}
 		}
 	}
