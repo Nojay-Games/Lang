@@ -193,7 +193,7 @@ declare module '@amanda/lang' {
 			};
 			music: {
 				help: CommandHelp;
-				prompts: { guildOnly: string; invalidSkips: string; invalidSkipsAmount: string; tooManySkips: string; invalidAction: string; nothingPlaying: string; voiceChannelRequired: string; voiceCantJoin:string; voiceCantSpeak: string; playableRequired: string; youtubeRequired: string; queueCannotDo: string; voiceChannelWaiting: string; songSelection: string; songSelectionCancelled: string; totalLength: string; queueFor: string; };
+				prompts: { guildOnly: string; invalidSkips: string; invalidSkipsAmount: string; tooManySkips: string; invalidAction: string; nothingPlaying: string; voiceChannelRequired: string; voiceCantJoin:string; voiceCantSpeak: string; playableRequired: string; youtubeRequired: string; queueCannotDo: string; voiceChannelWaiting: string; songSelection: string; songSelectionCanceled: string; totalLength: string; queueFor: string; };
 				returns: { queueClear: string; queueIn: string; };
 			};
 			playlist: {
