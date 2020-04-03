@@ -1,7 +1,7 @@
 {
   "name": "@amanda/lang",
   "version": "1.0.0",
-  "description": "A package which has translations for strings used by the Discord bot; Amanda",
+  "description": "A package which has translations for strings used @AmandaDiscord",
   "main": "index.js",
   "types": "typings/index.d.ts",
   "scripts": {
