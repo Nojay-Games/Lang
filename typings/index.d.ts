@@ -22,6 +22,16 @@ declare module '@amanda/lang' {
 				prompts: { guildOnly: string; invalidAmount: string; invalidUser: string; dmFailed: string; };
 				returns: { channel: string; dm: string; };
 			};
+			forcestatusupdate: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			restartnotify: {
+				help: CommandHelp;
+				prompts: {};
+				returns: { confirmation: string; };
+			}
 		};
 
 		gambling: {
@@ -78,7 +88,45 @@ declare module '@amanda/lang' {
 				prompts: {};
 				returns: { info: string; error: string; rawTooLarge: string; };
 			};
+			cleverai: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
 		};
+
+		images: {
+			cat: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			dog: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			space: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			snek: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			birb: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			catgirl: {
+				help: CommandHelp;
+				prompts: {};
+				returns: { offline: string; };
+			};
+		}
 
 		interaction: {
 			ship: {
@@ -159,6 +207,16 @@ declare module '@amanda/lang' {
 		};
 
 		meta: {
+			statistics: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			ping: {
+				help: CommandHelp;
+				prompts: {};
+				returns: { footer: string; };
+			}
 			invite: {
 				help: CommandHelp;
 				prompts: {};
@@ -173,6 +231,35 @@ declare module '@amanda/lang' {
 				prompts: {};
 				returns: { intro: string; description: string; };
 			};
+			commits: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			privacy: {
+				help: CommandHelp;
+				prompts: { dmSuccess: string; };
+				returns: {};
+			};
+			user: {
+				help: CommandHelp;
+				prompts: { invalidUser: string; };
+				returns: {};
+			};
+			avatar: {
+				help: CommandHelp;
+				prompts: { invalidUser: string; };
+				returns: {};
+			};
+			wumbo: {
+				help: CommandHelp;
+				prompts: { invalidEmoji: string; };
+				returns: {};
+			};
+			profile: {
+				help: CommandHelp;
+				returns: {};
+			}
 			help: {
 				help: CommandHelp;
 				prompts: { invalidCommand: string; };
@@ -181,7 +268,7 @@ declare module '@amanda/lang' {
 		};
 
 		audio: {
-			musictoken: {
+			token: {
 				help: CommandHelp;
 				prompts: { dmFailed: string; none: string; };
 				returns: { dmSuccess: string; deleted: string; new: string; generated: string; };
@@ -193,18 +280,18 @@ declare module '@amanda/lang' {
 			};
 			music: {
 				help: CommandHelp;
-				prompts: { guildOnly: string; invalidSkips: string; invalidSkipsAmount: string; tooManySkips: string; invalidAction: string; nothingPlaying: string; voiceChannelRequired: string; voiceCantJoin:string; voiceCantSpeak: string; playableRequired: string; youtubeRequired: string; queueCannotDo: string; voiceChannelWaiting: string; songSelection: string; songSelectionCanceled: string; totalLength: string; queueFor: string; };
+				prompts: { guildOnly: string; invalidSkips: string; invalidSkipsAmount: string; tooManySkips: string; invalidAction: string; nothingPlaying: string; noResults: string; voiceChannelRequired: string; voiceCantJoin:string; voiceCantSpeak: string; playableRequired: string; youtubeRequired: string; queueCannotDo: string; voiceChannelWaiting: string; songSelection: string; songSelectionCanceled: string; totalLength: string; queueFor: string; };
 				returns: { queueClear: string; queueIn: string; };
 			};
 			playlist: {
 				help: CommandHelp;
-				prompts: { playFromStart: string; playFromLinked: string; playOnlyLinked: string; userLinked: string; query: string; selectionInfo: string; playlistNameRequired: string; directPlaylist: string; playlistNameLimit: string; playlistNotExist: string; databaseFixed: string; usePlaylistAdd: string; youtubeLinkInvalid: string; indexRequired: string; indexMoveRequired: string; playlistNotOwned: string; playlistDuplicateSong: string; indexesEqual: string; playlistEmpty: string; playlistImporting: string; playlistImportAllExisting: string; playlistImportingDatabase: string; playlistDeleteConfirm: string; };
-				returns: { playlistAdded: string; playlistRemoved: string; playlistCreated: string; playlistImportDone: string; playlistDeleted: string; playlistMoved: string; };
+				prompts: { playFromStart: string; playFromLinked: string; playOnlyLinked: string; userLinked: string; query: string; selectionInfo: string; playlistNameRequired: string; directPlaylist: string; playlistNameLimit: string; playlistNotExist: string; databaseFixed: string; usePlaylistAdd: string; youtubeLinkInvalid: string; indexRequired: string; indexMoveRequired: string; playlistNotOwned: string; playlistDuplicateSong: string; indexesEqual: string; playlistEmpty: string; playlistImporting: string; playlistImportAllExisting: string; playlistImportingDatabase: string; playlistDeleteConfirm: string; bulkListening: string; bulkDescription: string; outOfRange: string; };
+				returns: { playlistAdded: string; playlistRemoved: string; playlistCreated: string; playlistImportDone: string; playlistDeleted: string; playlistMoved: string; bulkDone: string; bulkMenuGone: string; };
 			},
 			debug: {
 				help: CommandHelp;
 				prompts: { guildOnly: string; invalidChannel: string; };
-				returns: { tip: string; tipValue: string; };
+				returns: { tip: string; tipValue: string; unnamedNode: string; queueUsing: string; infoFor: string; permissions: string; method: string; };
 			};
 		};
 
@@ -213,6 +300,11 @@ declare module '@amanda/lang' {
 				help: CommandHelp;
 				prompts: { cantModifyInDM: string; backgroundRecommended: string; invalidSyntaxScope: string; noSettings: string; manageServer: string; invalidSyntaxName: string; invalidSettingScope: string; currentValueServer: string; currentValueInherited: string; noBackground: string; donorRequired: string; invalidLink: string; invalidLangCode: string; invalidSyntaxBoolean: string; tooLong: string; };
 				returns: { updated: string; deleted: string; };
+			};
+			background: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
 			};
 		};
 	};

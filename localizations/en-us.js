@@ -81,6 +81,24 @@ module.exports = {
 				channel: "%mention1 has awarded %number amandollars to %mention2",
 				dm: `%mention has awarded you %number ${generic.emoji.discoin}`
 			}
+		},
+		forcestatusupdate: {
+			help: {
+				usage: "None",
+				description: "Forces the current shard to send statistic data to the database"
+			},
+			prompts: {},
+			returns: {}
+		},
+		restartnotify: {
+			help: {
+				usage: "None",
+				description: "Notifies you when Amanda is online again"
+			},
+			prompts: {},
+			returns: {
+				confirmation: "Alright. You'll be notified of the next time I restart"
+			}
 		}
 	},
 
@@ -241,6 +259,69 @@ module.exports = {
 				info: `%difficulty -- %number1 bombs, %number2 x %number3 board`,
 				error: "The minimum size is 4 and the max is 14. Bounds have been adjusted to normals",
 				rawTooLarge: "The raw content exceeded the 2000 character limit. Consider using a smaller board size"
+			}
+		},
+		cleverai: {
+			help: {
+				usage: "<a very witty question>",
+				description: "Ask me the answer to life's greatest questions."
+			},
+			prompts: {},
+			returns: {}
+		}
+	},
+
+	images: {
+		cat: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a cat"
+			},
+			prompts: {},
+			returns: {}
+		},
+		dog: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a dog"
+			},
+			prompts: {},
+			returns: {}
+		},
+		space: {
+			help: {
+				usage: "None",
+				description: "Sends an image of space"
+			},
+			prompts: {},
+			returns: {}
+		},
+		snek: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a snek"
+			},
+			prompts: {},
+			returns: {}
+		},
+		birb: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a birb"
+			},
+			prompts: {},
+			returns: {}
+		},
+		catgirl: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a neko girl"
+			},
+			prompts: {},
+			returns: {
+				offline: "Looks like the nekos.life API is currently offline."
+				+ "\nWe aren't able to fetch new pictures at the moment."
+				+ "\nHere's a sleepy catgirl while we wait for it to come back online."
 			}
 		}
 	},
@@ -480,6 +561,24 @@ module.exports = {
 	},
 
 	meta: {
+		statistics: {
+			help: {
+				usage: "[music|games]",
+				description: "Displays detailed statistics for nerds"
+			},
+			prompts: {},
+			returns: {}
+		},
+		ping: {
+			help: {
+				usage: "None",
+				description: "What do you think this does?"
+			},
+			prompts: {},
+			returns: {
+				footer: "W-Wait... It's called table tennis"
+			}
+		},
 		invite: {
 			help: {
 				usage: "None",
@@ -520,6 +619,65 @@ module.exports = {
 				+" and get a distinguishing donor badge on &profile."
 			}
 		},
+		commits: {
+			help: {
+				usage: "None",
+				description: "Gets the latest git commits to Amanda"
+			},
+			prompts: {},
+			returns: {}
+		},
+		privacy: {
+			help: {
+				usage: "None",
+				description: "Details Amanda's privacy statement"
+			},
+			prompts: {
+				dmSuccess: generic.dm.success
+			},
+			returns: {} // intentionally empty as Privacy policies might not translate properly and may have different implications
+		},
+		user: {
+			help: {
+				usage: "[user]",
+				description: "Provides information about a user"
+			},
+			prompts: {
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {}
+		},
+		avatar: {
+			help: {
+				usage: "[user]",
+				description: "Gets a user's avatar"
+			},
+			prompts: {
+				invalidUser: `%username, ${generic.command.input.invalid} user.`
+			},
+			returns: {}
+		},
+		wumbo: {
+			help: {
+				usage: "<emoji>",
+				description: "Makes an emoji bigger"
+			},
+			prompts: {
+				invalidEmoji: `%username, ${generic.command.input.invalid} emoji.`
+			},
+			returns: {}
+		},
+		profile: {
+			help: {
+				usage: "[user]",
+				description: "Gets profile information about a user"
+			},
+			prompts: {
+				invalidUser: `%username, ${generic.command.input.invalid} user.`,
+				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`
+			},
+			returns: {}
+		},
 		help: {
 			help: {
 				usage: "[Command|Category]",
@@ -538,7 +696,7 @@ module.exports = {
 	},
 
 	audio: {
-		musictoken: {
+		token: {
 			help: {
 				usage: "[new|delete]",
 				description: "Obtain a web dashboard login token"
@@ -580,6 +738,7 @@ module.exports = {
 				tooManySkips: "You cannot skip more songs than are in the queue!",
 				invalidAction: "%username, that's not a valid action. If you want to play something, try `&music play <song>`.\nCheck out `&help music` and `&help playlists` for more things you can do!",
 				nothingPlaying: "%username, nothing is currently playing.",
+				noResults: "No results.",
 				voiceChannelRequired: "%username, you need to join a voice channel to do that.",
 				voiceCantJoin: "%username, I don't have permission to join your voice channel.",
 				voiceCantSpeak: "%username, I don't have permission to speak in your voice channel.",
@@ -627,10 +786,16 @@ module.exports = {
 				playlistImportAllExisting: "%username, all videos in that playlist have already been imported.",
 				playlistImportingDatabase: "Importing playlist. This could take a moment...\n(Updating database)",
 				playlistDeleteConfirm: "This action will permanently delete the playlist `%playlist`. "
-				+"After deletion, you will not be able to play, display, or modify the playlist, and anyone will be able to create a new playlist with the same name."
-				+"\nYou will not be able to undo this action.\n\n"
-				+"<:bn_del:331164186790854656> - confirm deletion\n"
-				+"<:bn_ti:327986149203116032> - ignore"
+				+ "After deletion, you will not be able to play, display, or modify the playlist, and anyone will be able to create a new playlist with the same name."
+				+ "\nYou will not be able to undo this action.\n\n"
+				+ "<:bn_del:331164186790854656> - confirm deletion\n"
+				+ "<:bn_ti:327986149203116032> - ignore",
+				bulkListening: "Okay, I'm listening",
+				bulkDescription: "» Type anything to add it to the playlist."
+				+ `\n» Commands starting with \`%prefix\` will only run the command.`
+				+ "\n» Type `undo` to remove the last item in the playlist.\u2002🧹"
+				+ "\n» Type `stop` when you're done. You can keep adding things until you type `stop`.\u2002🛑",
+				outOfRange: "Out of range."
 			},
 			returns: {
 				playlistAdded: "%username, Added **%song** to playlist **%playlist**",
@@ -638,7 +803,9 @@ module.exports = {
 				playlistCreated: "%username, Created playlist **%playlist**",
 				playlistImportDone: "All done! Check out your playlist with **&music playlist %playlist**.",
 				playlistDeleted: "Playlist deleted.",
-				playlistMoved: "%username, Moved **%song** to position **%index**"
+				playlistMoved: "%username, Moved **%song** to position **%index**",
+				bulkDone: "All done! I won't add anything else to the playlist.",
+				bulkMenuGone: "(There used to be a menu here, but it's gone now.)"
 			}
 		},
 		debug: {
@@ -652,7 +819,12 @@ module.exports = {
 			},
 			returns: {
 				tip: "Tip:",
-				tipValue: "On top of Read Message and Add Reaction permissions, bots must also have Read Message History permissions to add reactions to messages"
+				tipValue: "On top of Read Message and Add Reaction permissions, bots must also have Read Message History permissions to add reactions to messages",
+				unnamedNode: "an unnamed node",
+				queueUsing: "However, the current queue is using %name",
+				infoFor: "Debugging info for %channel",
+				permissions: "Permissions:",
+				method: "Method:"
 			}
 		}
 	},
@@ -684,6 +856,14 @@ module.exports = {
 				updated: "Setting updated.",
 				deleted: "Setting deleted."
 			}
+		},
+		background: {
+			help: {
+				usage: "<url>",
+				description: "Set the background displayed on &profile"
+			},
+			prompts: {},
+			returns: {}
 		}
 	}
 };

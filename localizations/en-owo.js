@@ -61,6 +61,24 @@ module.exports = {
 				channel: "%mention1 has awarded %number amandollars towo %mention2",
 				dm: `%mention has awarded yowo %number ${genewic.emoji.discoin}`
 			}
+		},
+		forcestatusupdate: {
+			help: {
+				usage: "None",
+				description: "Forces the current shard to send statistic data to da database"
+			},
+			prompts: {},
+			returns: {}
+		},
+		restartnotify: {
+			help: {
+				usage: "None",
+				description: "Notifies you when Amanda is onwine again"
+			},
+			prompts: {},
+			returns: {
+				confirmation: "Awight. Yowou'll be notified of the next time I westart"
+			}
 		}
 	},
 
@@ -221,6 +239,69 @@ module.exports = {
 				info: `%difficulty -- %number1 boom booms, %number2 x %number3 bowoard`,
 				error: "da minimum size is 4 and da max is 14. Da bowoard has been adjusted (=゜ω゜)",
 				rawTooLarge: "Da raw content exceeded the 2000 character limit (◎_◎;) Pwease use a smaller bowoard size"
+			}
+		},
+		cleverai: {
+			help: {
+				usage: "<a very witty question>",
+				description: "Ask me the answer to life's greatest questions."
+			},
+			prompts: {},
+			returns: {}
+		}
+	},
+
+	images: {
+		cat: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a cat"
+			},
+			prompts: {},
+			returns: {}
+		},
+		dog: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a dog"
+			},
+			prompts: {},
+			returns: {}
+		},
+		space: {
+			help: {
+				usage: "None",
+				description: "Sends an image of space"
+			},
+			prompts: {},
+			returns: {}
+		},
+		snek: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a snek"
+			},
+			prompts: {},
+			returns: {}
+		},
+		birb: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a birb"
+			},
+			prompts: {},
+			returns: {}
+		},
+		catgirl: {
+			help: {
+				usage: "None",
+				description: "Sends an image of a neko girl"
+			},
+			prompts: {},
+			returns: {
+				offline: "Looks like the nekos.life API is currently offline."
+				+ "\nWe aren't able to fetch new pictures at the moment."
+				+ "\nHere's a sleepy catgirl while we wait for it to come back online."
 			}
 		}
 	},
@@ -460,6 +541,24 @@ module.exports = {
 	},
 
 	meta: {
+		statistics: {
+			help: {
+				usage: "[music|games]",
+				description: "Displays detailed statistics for nerds"
+			},
+			prompts: {},
+			returns: {}
+		},
+		ping: {
+			help: {
+				usage: "None",
+				description: "What do you think this does?"
+			},
+			prompts: {},
+			returns: {
+				footer: "W-Wait... It's called table tennis"
+			}
+		},
 		invite: {
 			help: {
 				usage: "None",
@@ -500,6 +599,65 @@ module.exports = {
 				+" and get a distingwishing donor badge on &profile."
 			}
 		},
+		commits: {
+			help: {
+				usage: "None",
+				description: "Gets the latest git commits to Amanda"
+			},
+			prompts: {},
+			returns: {}
+		},
+		privacy: {
+			help: {
+				usage: "None",
+				description: "Details Amanda's privacy statement"
+			},
+			prompts: {
+				dmSuccess: genewic.dm.success
+			},
+			returns: {} // intentionally empty as Privacy policies might not translate properly and may have different implications
+		},
+		user: {
+			help: {
+				usage: "[user]",
+				description: "Provides information about a user"
+			},
+			prompts: {
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {}
+		},
+		avatar: {
+			help: {
+				usage: "[user]",
+				description: "Gets a user's avatar"
+			},
+			prompts: {
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`
+			},
+			returns: {}
+		},
+		wumbo: {
+			help: {
+				usage: "<emoji>",
+				description: "Makes an emoji bigger"
+			},
+			prompts: {
+				invalidEmoji: `%username, ${genewic.command.input.invalid} emoji.`
+			},
+			returns: {}
+		},
+		profile: {
+			help: {
+				usage: "[user]",
+				description: "Gets profile information about a user"
+			},
+			prompts: {
+				invalidUser: `%username, ${genewic.command.input.invalid} user.`,
+				permissionDenied: `${genewic.command.permPre} attach files. ${genewic.command.permPost}`
+			},
+			returns: {}
+		},
 		help: {
 			help: {
 				usage: "[Command|Categowy]",
@@ -518,7 +676,7 @@ module.exports = {
 	},
 
 	audio: {
-		musictoken: {
+		token: {
 			help: {
 				usage: "[new|delete]",
 				description: "Obtain a web dashboawd wogin token"
@@ -560,6 +718,7 @@ module.exports = {
 				tooManySkips: "Yowo cannot skip mowe songs than are in the queue!",
 				invalidAction: "%username, that's not a vawid action. If yowo want to pway something, try `&music play <song>`.\nCheck out `&help music` and `&help playlists` for more things yowo can do!",
 				nothingPlaying: "%username, nothing is cuwwently pwaying.",
+				noResults: "No results.",
 				voiceChannelRequired: "%username, yoow need to join a voice channel to do that.",
 				voiceCantJoin: "%username, I don't have permission to join yowor voice channel.",
 				voiceCantSpeak: "%username, I don't have permission to speak in yowor voice channel.",
@@ -607,10 +766,16 @@ module.exports = {
 				playlistImportAllExisting: "%username, all videos in that pwaywist have already been imported.",
 				playlistImportingDatabase: "Importing pwaywist. This could take a moment...\n(Updating database)",
 				playlistDeleteConfirm: "This action will permanently dewete the pwaywist `%playlist`. "
-				+"After dewetion, yowo will not be able to pway, dispway, or modify the pwaywist, and anyone will be able to create a new pwaywist with the same name."
-				+"\nYowo will not be abwe to undo this action.\n\n"
-				+"<:bn_del:331164186790854656> - confirm dewetion\n"
-				+"<:bn_ti:327986149203116032> - ignore"
+				+ "After dewetion, yowo will not be able to pway, dispway, or modify the pwaywist, and anyone will be able to create a new pwaywist with the same name."
+				+ "\nYowo will not be abwe to undo this action.\n\n"
+				+ "<:bn_del:331164186790854656> - confirm dewetion\n"
+				+ "<:bn_ti:327986149203116032> - ignore",
+				bulkListening: "Okay, I'm listening",
+				bulkDescription: "» Type anything to add it to the playlist."
+				+ `\n» Commands starting with \`%prefix\` will only run the command.`
+				+ "\n» Type `undo` to remove the last item in the playlist.\u2002🧹"
+				+ "\n» Type `stop` when you're done. You can keep adding things until you type `stop`.\u2002🛑",
+				outOfRange: "Out of range."
 			},
 			returns: {
 				playlistAdded: "%username, Added **%song** to pwaywist **%playlist**",
@@ -618,7 +783,9 @@ module.exports = {
 				playlistCreated: "%username, Cweated pwaywist **%playlist**",
 				playlistImportDone: "All done! Check out yowor pwaywist with **&music playlist %playlist**.",
 				playlistDeleted: "Pwaywist deweted.",
-				playlistMoved: "%username, Moved **%song** to position **%index**"
+				playlistMoved: "%username, Moved **%song** to position **%index**",
+				bulkDone: "All done! I won't add anything else to the playlist.",
+				bulkMenuGone: "(There used to be a menu here, but it's gone now.)"
 			}
 		},
 		debug: {
@@ -632,7 +799,12 @@ module.exports = {
 			},
 			returns: {
 				tip: "Tip:",
-				tipValue: "On top of Wead Message and Add Weaction permissions, bots must also have Wead Message History permissions to add weactions to messages"
+				tipValue: "On top of Wead Message and Add Weaction permissions, bots must also have Wead Message History permissions to add weactions to messages",
+				unnamedNode: "an unnamed node",
+				queueUsing: "However, the current queue is using %name",
+				infoFor: "Debugging info for %channel",
+				permissions: "Permissions:",
+				method: "Method:"
 			}
 		}
 	},
@@ -664,6 +836,14 @@ module.exports = {
 				updated: "Setting updated.",
 				deleted: "Setting deleted."
 			}
+		},
+		background: {
+			help: {
+				usage: "<url>",
+				description: "Set the background displayed on &profile"
+			},
+			prompts: {},
+			returns: {}
 		}
 	}
 };
