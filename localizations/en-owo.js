@@ -670,7 +670,8 @@ module.exports = {
 				footer: "Type `&help [command]` to see more infowmation about a command",
 				mobile: "Cwick the weaction for a mobile-compwatible view",
 				main: "Type `&help [categowy]` to see all commands in that categowy."
-				+"\nType `&help [command]` to see more infowmation about a command."
+				+ "\nType `&help [command]` to see more infowmation about a command.",
+				info: "Type `&info` to see general information about Amanda.\nFor more, join our support server: %link"
 			}
 		}
 	},
