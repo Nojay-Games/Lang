@@ -1080,7 +1080,9 @@ declare module '@amanda/lang' {
 					 */
 					deleted: string;
 					/**
-					 * No Wildcards.
+					 * Wildcards:
+					 *
+					 * %website - string.
 					 */
 					new: string;
 					/**
