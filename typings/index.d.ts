@@ -1061,13 +1061,31 @@ declare module '@amanda/lang' {
 			token: {
 				help: CommandHelp;
 				prompts: {
+					/**
+					 * No Wildcards.
+					 */
 					dmFailed: string;
+					/**
+					 * No Wildcards.
+					 */
 					none: string;
 				};
 				returns: {
+					/**
+					 * No Wildcards.
+					 */
 					dmSuccess: string;
+					/**
+					 * No Wildcards.
+					 */
 					deleted: string;
+					/**
+					 * No Wildcards.
+					 */
 					new: string;
+					/**
+					 * No Wildcards.
+					 */
 					generated: string;
 				};
 			};
@@ -1075,91 +1093,370 @@ declare module '@amanda/lang' {
 				help: CommandHelp;
 				prompts: {};
 				returns: {
+					/**
+					 * No Wildcards.
+					 */
 					schedule: string;
+					/**
+					 * No Wildcards.
+					 */
 					footer: string;
 				};
 			};
 			music: {
 				help: CommandHelp;
 				prompts: {
+					/**
+					 * No Wildcards.
+					 */
 					guildOnly: string;
+					/**
+					 * No Wildcards.
+					 */
 					invalidSkips: string;
+					/**
+					 * No Wildcards.
+					 */
 					invalidSkipsAmount: string;
+					/**
+					 * No Wildcards.
+					 */
 					tooManySkips: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					invalidAction: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					nothingPlaying: string;
+					/**
+					 * No Wildcards.
+					 */
 					noResults: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					voiceChannelRequired: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					voiceCantJoin:string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					voiceCantSpeak: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					playableRequired: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					youtubeRequired: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %action - string.
+					 */
 					queueCannotDo: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					voiceChannelWaiting: string;
+					/**
+					 * No Wildcards.
+					 */
 					songSelection: string;
+					/**
+					 * No Wildcards.
+					 */
 					songSelectionCanceled: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - number.
+					 */
 					totalLength: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %server - string.
+					 */
 					queueFor: string;
 				};
 				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %number - number.
+					 */
 					queueClear: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %channel - string.
+					 */
 					queueIn: string;
 				};
 			};
 			playlist: {
 				help: CommandHelp;
 				prompts: {
+					/**
+					 * No Wildcards.
+					 */
 					playFromStart: string;
+					/**
+					 * No Wildcards.
+					 */
 					playFromLinked: string;
+					/**
+					 * No Wildcards.
+					 */
 					playOnlyLinked: string;
+					/**
+					 * No Wildcards.
+					 */
 					userLinked: string;
+					/**
+					 * No Wildcards.
+					 */
 					query: string;
+					/**
+					 * No Wildcards.
+					 */
 					selectionInfo: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					playlistNameRequired: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					directPlaylist: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					playlistNameLimit: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %playlist - string.
+					 */
 					playlistNotExist: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					databaseFixed: string;
+					/**
+					 * No Wildcards.
+					 */
 					usePlaylistAdd: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					youtubeLinkInvalid: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					indexRequired: string;
+					/**
+					 * No Wildcards.
+					 */
 					indexMoveRequired: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					playlistNotOwned: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					playlistDuplicateSong: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					indexesEqual: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %playlist - string.
+					 */
 					playlistEmpty: string;
+					/**
+					 * No Wildcards.
+					 */
 					playlistImporting: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
 					playlistImportAllExisting: string;
+					/**
+					 * No Wildcards.
+					 */
 					playlistImportingDatabase: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %playlist - string.
+					 */
 					playlistDeleteConfirm: string;
+					/**
+					 * No Wildcards.
+					 */
 					bulkListening: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %prefix - string.
+					 */
 					bulkDescription: string;
+					/**
+					 * No Wildcards.
+					 */
 					outOfRange: string;
 				};
 				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %song - string.
+					 *
+					 * %playlist - string.
+					 */
 					playlistAdded: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %song - string.
+					 *
+					 * %playlist - string.
+					 */
 					playlistRemoved: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %playlist - string.
+					 */
 					playlistCreated: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %playlist - string.
+					 */
 					playlistImportDone: string;
+					/**
+					 * No Wildcards.
+					 */
 					playlistDeleted: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %song - string.
+					 *
+					 * %index - number.
+					 */
 					playlistMoved: string;
+					/**
+					 * No Wildcards.
+					 */
 					bulkDone: string;
+					/**
+					 * No Wildcards.
+					 */
 					bulkMenuGone: string;
 				};
 			},
 			debug: {
 				help: CommandHelp;
 				prompts: {
+					/**
+					 * No Wildcards.
+					 */
 					guildOnly: string;
+					/**
+					 * No Wildcards.
+					 */
 					invalidChannel: string;
 				};
 				returns: {
+					/**
+					 * No Wildcards.
+					 */
 					tip: string;
+					/**
+					 * No Wildcards.
+					 */
 					tipValue: string;
+					/**
+					 * No Wildcards.
+					 */
 					unnamedNode: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %name - string.
+					 */
 					queueUsing: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %channel - string.
+					 */
 					infoFor: string;
+					/**
+					 * No Wildcards.
+					 */
 					permissions: string;
+					/**
+					 * No Wildcards.
+					 */
 					method: string;
 				};
 			};
@@ -1169,24 +1466,101 @@ declare module '@amanda/lang' {
 			settings: {
 				help: CommandHelp;
 				prompts: {
+					/**
+					 * No Wildcards.
+					 */
 					cantModifyInDM: string;
+					/**
+					 * No Wildcards.
+					 */
 					backgroundRecommended: string;
+					/**
+					 * No Wildcards.
+					 */
 					invalidSyntaxScope: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %scope - string.
+					 */
 					noSettings: string;
+					/**
+					 * No Wildcards.
+					 */
 					manageServer: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %usage - string.
+					 *
+					 * %settings - string.
+					 */
 					invalidSyntaxName: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %setting - string.
+					 *
+					 * %scope - string.
+					 */
 					invalidSettingScope: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %setting - string.
+					 *
+					 * %value - any.
+					 */
 					currentValueServer: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %setting - string.
+					 *
+					 * %value - any.
+					 */
 					currentValueInherited: string;
+					/**
+					 * No Wildcards.
+					 */
 					noBackground: string;
+					/**
+					 * No Wildcards.
+					 */
 					donorRequired: string;
+					/**
+					 * No Wildcards.
+					 */
 					invalidLink: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %codes - string.
+					 */
 					invalidLangCode: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %setting - string.
+					 *
+					 * %value - any.
+					 */
 					invalidSyntaxBoolean: string;
+					/**
+					 * No Wildcards.
+					 */
 					tooLong: string;
 				};
 				returns: {
+					/**
+					 * No Wildcards.
+					 */
 					updated: string;
+					/**
+					 * No Wildcards.
+					 */
 					deleted: string;
 				};
 			};
