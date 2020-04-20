@@ -637,6 +637,15 @@ module.exports = {
 			},
 			returns: {}
 		},
+		icon: {
+			help: {
+				usage: "None",
+				description: "Gets a server's icon"
+			},
+			prompts: {
+				guildOnly: `%username, ${genewic.command.guildOnly}`
+			}
+		},
 		wumbo: {
 			help: {
 				usage: "<emoji>",

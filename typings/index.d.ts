@@ -996,6 +996,17 @@ declare module '@amanda/lang' {
 				};
 				returns: {};
 			};
+			icon: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					guildOnly: string;
+				};
+			};
 			wumbo: {
 				help: CommandHelp;
 				prompts: {

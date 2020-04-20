@@ -690,6 +690,15 @@ module.exports = {
 			},
 			returns: {}
 		},
+		icon: {
+			help: {
+				usage: "None",
+				description: "Gets a server's icon"
+			},
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`
+			}
+		},
 		wumbo: {
 			help: {
 				usage: "<emoji>",
