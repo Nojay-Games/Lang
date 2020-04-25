@@ -309,6 +309,14 @@ declare module '@amanda/lang' {
 					 * %maxPages - number.
 					 */
 					pageLimit: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %current - number.
+					 *
+					 * %total - number.
+					 */
+					pageCurrent: string;
 				};
 				returns: {
 					/**
@@ -487,6 +495,38 @@ declare module '@amanda/lang' {
 					 * No Wildcards.
 					 */
 					permissionDenied: string;
+					/**
+					 * No Wildcards.
+					 */
+					provideAnswer: string;
+					/**
+					 * No Wildcards.
+					 */
+					reactionRound: string;
+					/**
+					 * No Wildcards.
+					 */
+					permissionRound: string;
+					/**
+					 * No Wildcards.
+					 */
+					winners: string;
+					/**
+					 * No Wildcards.
+					 */
+					noWinners: string;
+					/**
+					 * No Wildcards.
+					 */
+					nextRound: string;
+					/**
+					 * No Wildcards.
+					 */
+					categories: string;
+					/**
+					 * No Wildcards.
+					 */
+					dmError: string;
 				};
 				returns: {};
 			};
@@ -515,11 +555,6 @@ declare module '@amanda/lang' {
 					 */
 					rawTooLarge: string;
 				};
-			};
-			cleverai: {
-				help: CommandHelp;
-				prompts: {};
-				returns: {};
 			};
 		};
 
@@ -553,6 +588,10 @@ declare module '@amanda/lang' {
 				help: CommandHelp;
 				prompts: {};
 				returns: {
+					/**
+					 * No Wildcards.
+					 */
+					error: string;
 					/**
 					 * No Wildcards.
 					 */
@@ -641,7 +680,19 @@ declare module '@amanda/lang' {
 					/**
 					 * No Wildcards.
 					 */
+					waifu: string;
+					/**
+					 * No Wildcards.
+					 */
 					gifts: string;
+					/**
+					 * No Wildcards.
+					 */
+					nobody: string;
+					/**
+					 * No Wildcards.
+					 */
+					none: string;
 				};
 			};
 			waifuleaderboard: {
@@ -669,6 +720,16 @@ declare module '@amanda/lang' {
 					 * %lastPage - number.
 					 */
 					emptyPage: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %user1 - string.
+					 *
+					 * %user2 - string.
+					 *
+					 * %price - number.
+					 */
+					claimEntry: string;
 				};
 			};
 			claim: {
@@ -882,13 +943,103 @@ declare module '@amanda/lang' {
 		meta: {
 			statistics: {
 				help: CommandHelp;
-				prompts: {};
-				returns: {};
+				prompts: {
+					/**
+					 * No Wildcards.
+					 */
+					slow: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					songsToday: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					songsQueued: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					voiceConnections: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					usersListening: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					gamesToday: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					gamesInProgress: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					usersPlaying: string;
+					/**
+					 * No Wildcards.
+					 */
+					heartbeat: string;
+					/**
+					 * No Wildcards.
+					 */
+					latency: string;
+					/**
+					 * No Wildcards.
+					 */
+					uptime: string;
+					/**
+					 * No Wildcards.
+					 */
+					ramUsage: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					userCount: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					guildCount: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - string.
+					 */
+					channelCount: string;
+				};
 			};
 			ping: {
 				help: CommandHelp;
 				prompts: {};
 				returns: {
+					/**
+					 * No Wildcards.
+					 */
+					pong: string;
+					/**
+					 * No Wildcards.
+					 */
+					heartbeat: string;
 					/**
 					 * No Wildcards.
 					 */
@@ -1213,6 +1364,104 @@ declare module '@amanda/lang' {
 					 * %server - string.
 					 */
 					queueFor: string;
+					/**
+					 * No Wildcards.
+					 */
+					everyoneLeft: string;
+					/**
+					 * No Wildcards.
+					 */
+					songNotPlayingDiscord: string;
+					/**
+					 * No Wildcards.
+					 */
+					songErrorExclaimation: string;
+					/**
+					 * No Wildcards.
+					 */
+					songErrorNull: string;
+					/**
+					 * No Wildcards.
+					 */
+					songNotPlayable: string;
+					/**
+					 * No Wildcards.
+					 */
+					errorOccured: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %song - any.
+					 */
+					songErrorNotObject: "Song is not an object %song",
+					/**
+					 * No Wildcards.
+					 */
+					tooManyErrors: string;
+					/**
+					 * No Wildcards.
+					 */
+					errorsSuppressed: string;
+					/**
+					 * No Wildcards.
+					 */
+					autoRanOut: string;
+					/**
+					 * No Wildcards.
+					 */
+					queueAlreadyPaused: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %song - any.
+					 */
+					queueNowPlaying: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %time - number.
+					 */
+					noUsersLeft: string;
+					/**
+					 * No Wildcards.
+					 */
+					autoOn: string;
+					/**
+					 * No Wildcards.
+					 */
+					autoOff: string;
+					/**
+					 * No Wildcards.
+					 */
+					loopOn: string;
+					/**
+					 * No Wildcards.
+					 */
+					loopOff: string;
+					/**
+					 * No Wildcards.
+					 */
+					musicPlaying: string;
+					/**
+					 * No Wildcards.
+					 */
+					songRemoveRequired: string;
+					/**
+					 * No Wildcards.
+					 */
+					songRemove1: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number1 - number.
+					 *
+					 * %number2 - number.
+					 */
+					queueSongTotal: string;
+					/**
+					 * No Wildcards.
+					 */
+					numberNotInRelated: string;
 				};
 				returns: {
 					/**
@@ -1366,6 +1615,22 @@ declare module '@amanda/lang' {
 					 * No Wildcards.
 					 */
 					outOfRange: string;
+					/**
+					 * No Wildcards.
+					 */
+					playlistSection: string;
+					/**
+					 * No Wildcards.
+					 */
+					bulkMenuOpen: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %number - number.
+					 *
+					 * %total - number.
+					 */
+					playlistPages: string;
 				};
 				returns: {
 					/**
@@ -1634,5 +1899,5 @@ declare module '@amanda/lang' {
 			 */
 			action: string;
 		};
-	}
+	};
 }

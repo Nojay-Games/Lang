@@ -196,7 +196,8 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				pageLimit: "%username, you may only browse up to page %maxPages."
+				pageLimit: "%username, you may only browse up to page %maxPages.",
+				pageCurrent: "Page %current of %total"
 			},
 			returns: {
 				emptyPage: "There are only %lastPage pages to browse through."
@@ -264,7 +265,15 @@ module.exports = {
 				APIError: 'Er was een fout van de api',
 				parsingError:
 					'Er was een fout bij het parseren van de date geretourneerd door de api',
-				permissionDenied: `${generic.command.permPre} add reactions`
+				permissionDenied: `${generic.command.permPre} add reactions`,
+				provideAnswer: "To answer, type a letter in chat. You have 20 seconds.",
+				reactionRound: "Click the reaction for another round.",
+				permissionRound: "You can type \`&trivia\` or \`&t\` for another round.",
+				winners: "Winners",
+				noWinners: "No Winners",
+				nextRound: "Next Round",
+				categories: "Categories",
+				dmError: generic.dm.fail
 			},
 			returns: {}
 		},
@@ -282,14 +291,6 @@ module.exports = {
 				rawTooLarge:
 					'De rauwe inhoud heeft de 2000 tekenlimiet overschreden. Overweeg een kleinere bordgrootte te gebruiken'
 			}
-		},
-		cleverai: {
-			help: {
-				usage: "<a very witty question>",
-				description: "Ask me the answer to life's greatest questions."
-			},
-			prompts: {},
-			returns: {}
 		}
 	},
 
@@ -341,6 +342,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
+				error: "Uh oh.",
 				offline: "Looks like the nekos.life API is currently offline."
 				+ "\nWe aren't able to fetch new pictures at the moment."
 				+ "\nHere's a sleepy catgirl while we wait for it to come back online."
@@ -380,7 +382,10 @@ module.exports = {
 			returns: {
 				price: 'Prijs:',
 				claimedBy: 'Geclaimed Door:',
-				gifts: 'Cadeaus:'
+				waifu: "Waifu:",
+				gifts: 'Cadeaus:',
+				nobody: "(nobody)",
+				none: "(none)"
 			}
 		},
 		waifuleaderboard: {
@@ -393,7 +398,8 @@ module.exports = {
 				pageLimit: "%username, you may only browse up to page %maxPages."
 			},
 			returns: {
-				emptyPage: "There are only %lastPage pages to browse through."
+				emptyPage: "There are only %lastPage pages to browse through.",
+				claimEntry: `%user1 claimed %user2 for %price ${generic.emoji.discoin}`
 			}
 		},
 		claim: {
@@ -595,8 +601,25 @@ module.exports = {
 				usage: "[music|games]",
 				description: "Displays detailed statistics for nerds"
 			},
-			prompts: {},
-			returns: {}
+			prompts: {
+				slow: "Ugh. I hate it when I'm slow, too"
+			},
+			returns: {
+				songsToday: "**❯ Songs Played Today:**\n%number songs",
+				songsQueued: "**❯ Song Queued:**\n%number songs",
+				voiceConnections: "**❯ Voice Connections:\n%number connections",
+				usersListening: "**❯ Users Listening:**\n%number users",
+				gamesToday: "**❯ Games Played Today:**\n%number games",
+				gamesInProgress: "**❯ Games In Progress:**\n%number games",
+				usersPlaying: "**❯ Users Playing:**\n%number users",
+				heartbeat: "Heartbeat:",
+				latency: "Latency",
+				uptime: "Uptime",
+				ramUsage: "RAM Usage",
+				userCount: "**❯ User Count:**\n%number users",
+				guildCount: "**❯ Guild Count:**\n%number guilds",
+				channelCount: "**❯ Channel Count:**\n%number channels",
+			}
 		},
 		ping: {
 			help: {
@@ -605,6 +628,8 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
+				pong: "Pong!",
+				heartbeat: "❯ Heartbeat",
 				footer: "W-Wait... It's called table tennis"
 			}
 		},
@@ -616,6 +641,7 @@ module.exports = {
 			prompts: {},
 			returns: {
 				invited: 'Ik ben uitgenodigd?',
+				link: "Invite link: %link",
 				notice:
 					'Onthoud, je hebt **beheer server** toestemming nodig om bots toe te voegen aan een server.'
 			}
@@ -792,7 +818,36 @@ module.exports = {
 				songSelection: "Song selection",
 				songSelectionCanceled: "Song selection cancelled",
 				totalLength: "Total length: %number",
-				queueFor: "Queue for %server"
+				queueFor: "Queue for %server",
+				everyoneLeft: "Everyone left, so I have as well.",
+				songNotPlayingDiscord: "Hmm. Seems like the song isn't playing."
+				+ "\n\n**This is probably an issue with Discord.**"
+				+ "\nYou should try changing the server region."
+				+ "\n\nTo report a problem, join our server: https://discord.gg/YMkZDsK",
+				songErrorExclaimation: "`song.track` is ! placeholder. This is a bug.",
+				songErrorNull: "`song.track` is null or undefined. This is a bug.",
+				songNotPlayable: "We couldn't play that song",
+				errorOccured: "We ran into an error",
+				songErrorNotObject: "Song is not an object %song",
+				tooManyErrors: "Too many errors!",
+				errorsSuppressed: "Future errors from this queue will be silenced."
+				+ "\nIf any more songs fail, they will be skipped with no message."
+				+ "\nTo report a bug, join our server: https://discord.gg/YMkZDsK",
+				autoRanOut: "Auto mode is on, but we ran out of related songs and had to stop playback.",
+				queueAlreadyPaused: "Music is already paused. Use `&music resume` to resume.",
+				queueNowPlaying: "Now Playing: %song",
+				noUsersLeft: "No users left in my voice channel. I will stop playing in %time seconds if nobody rejoins.",
+				autoOn: "Auto mode is now turned on.",
+				autoOff: "Auto mode is now turned off.",
+				loopOn: "Loop mode is now turned on.",
+				loopOff: "Loop mode is now turned off.",
+				musicPlaying: "Music is playing. If you want to pause, use `&music pause`.",
+				songRemoveRequired: "You need to tell me which song to remove. `&music queue remove <number>`"
+				+ "\nTo clear the entire queue, use `&music queue clear` or `&music queue remove all`.",
+				songRemove1: "Item 1 is the currently playing song. Use `&music skip` to skip it, "
+				+ "or `&music queue remove 2` if you wanted to remove the song that's up next.",
+				queueSongTotal: "There are %number1 items in the queue. You can only remove items 2-%number2.",
+				numberNotInRelated: "The number you typed isn't an item in the related list. Try `&music related`."
 			},
 			returns: {
 				queueClear: "Cleared the queue, removing %number",
@@ -838,7 +893,10 @@ module.exports = {
 				+ `\n» Commands starting with \`%prefix\` will only run the command.`
 				+ "\n» Type `undo` to remove the last item in the playlist.\u2002🧹"
 				+ "\n» Type `stop` when you're done. You can keep adding things until you type `stop`.\u2002🛑",
-				outOfRange: "Out of range."
+				outOfRange: "Out of range.",
+				playlistSection: "Playlist section",
+				bulkMenuOpen: "You already have a menu open in here. Type `stop` to stop it.",
+				playlistPages: "Page %number of %total"
 			},
 			returns: {
 				playlistAdded: "%username, Added **%song** to playlist **%playlist**",
