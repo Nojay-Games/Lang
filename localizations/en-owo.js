@@ -851,6 +851,7 @@ module.exports = {
 				playlistCreated: "%username, Cweated pwaywist **%playlist**",
 				playlistImportDone: "All done! Check out yowor pwaywist with **&music playlist %playlist**.",
 				playlistDeleted: "Pwaywist deweted.",
+				playlistDeleteCancelled: "Playlist deletion cancelled",
 				playlistMoved: "%username, Moved **%song** to position **%index**",
 				bulkDone: "All done! I won't add anything else to the playlist.",
 				bulkMenuGone: "(There used to be a menu here, but it's gone now.)"

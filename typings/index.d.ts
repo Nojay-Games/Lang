@@ -1672,6 +1672,10 @@ declare module '@amanda/lang' {
 					 */
 					playlistDeleted: string;
 					/**
+					 * No Wildcards.
+					 */
+					playlistDeleteCancelled: string;
+					/**
 					 * Wildcards:
 					 *
 					 * %username - string.
