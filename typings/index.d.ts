@@ -1055,6 +1055,12 @@ declare module '@amanda/lang' {
 					 */
 					invited: string;
 					/**
+					 * Wildcards:
+					 *
+					 * %link - string.
+					 */
+					link: string;
+					/**
 					 * No Wildcards.
 					 */
 					notice: string;
@@ -1393,7 +1399,7 @@ declare module '@amanda/lang' {
 					 *
 					 * %song - any.
 					 */
-					songErrorNotObject: "Song is not an object %song",
+					songErrorNotObject: string;
 					/**
 					 * No Wildcards.
 					 */
