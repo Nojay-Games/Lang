@@ -375,7 +375,8 @@ module.exports = {
 			},
 			returns: {
 				emptyPage: "There are only %lastPage pages to browse through.",
-				claimEntry: `%user1 claimed %user2 for %price ${generic.emoji.discoin}`
+				claimEntry: `%user1 claimed %user2 for %price ${generic.emoji.discoin}`,
+				pageCurrent: "Page %current of %total"
 			}
 		},
 		claim: {
@@ -576,20 +577,20 @@ module.exports = {
 				slow: "Ugh. I hate it when I'm slow, too"
 			},
 			returns: {
-				songsToday: "**❯ Songs Played Today:**\n%number songs",
-				songsQueued: "**❯ Song Queued:**\n%number songs",
-				voiceConnections: "**❯ Voice Connections:\n%number connections",
-				usersListening: "**❯ Users Listening:**\n%number users",
-				gamesToday: "**❯ Games Played Today:**\n%number games",
-				gamesInProgress: "**❯ Games In Progress:**\n%number games",
+				songsToday: "**❯ Songs played today:**\n%number songs",
+				songsQueued: "**❯ Song queued:**\n%number songs",
+				voiceConnections: "**❯ Voice connections:**\n%number connections",
+				usersListening: "**❯ Users listening:**\n%number users",
+				gamesToday: "**❯ Games played today:**\n%number games",
+				gamesInProgress: "**❯ Games in progress:**\n%number games",
 				usersPlaying: "**❯ Users Playing:**\n%number users",
-				heartbeat: "Heartbeat:",
+				heartbeat: "Heartbeat",
 				latency: "Latency",
 				uptime: "Uptime",
-				ramUsage: "RAM Usage",
-				userCount: "**❯ User Count:**\n%number users",
-				guildCount: "**❯ Guild Count:**\n%number guilds",
-				channelCount: "**❯ Channel Count:**\n%number channels",
+				ramUsage: "RAM usage",
+				userCount: "**❯ User count:**\n%number",
+				guildCount: "**❯ Server count:**\n%number",
+				channelCount: "**❯ Channel count:**\n%number",
 			}
 		},
 		ping: {
@@ -601,6 +602,7 @@ module.exports = {
 			returns: {
 				pong: "Pong!",
 				heartbeat: "❯ Heartbeat",
+				latency: "❯ Latency",
 				footer: "W-Wait... It's called table tennis"
 			}
 		},

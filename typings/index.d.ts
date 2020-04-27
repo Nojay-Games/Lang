@@ -730,6 +730,14 @@ declare module '@amanda/lang' {
 					 * %price - number.
 					 */
 					claimEntry: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %current - number.
+					 *
+					 * %total - number.
+					 */
+					pageCurrent: string;
 				};
 			};
 			claim: {
@@ -1040,6 +1048,10 @@ declare module '@amanda/lang' {
 					 * No Wildcards.
 					 */
 					heartbeat: string;
+					/**
+					 * No Wildcards.
+					 */
+					latency: string;
 					/**
 					 * No Wildcards.
 					 */
