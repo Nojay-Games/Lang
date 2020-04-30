@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PapiOphidian/Amanda-Lang.git"
+    "url": "git+https://github.com/AmandaDiscord/Lang.git"
   },
   "author": "PapiOphidian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PapiOphidian/Amanda-Lang/issues"
+    "url": "https://github.com/AmandaDiscord/Lang/issues"
   },
-  "homepage": "https://github.com/PapiOphidian/Amanda-Lang#readme"
+  "homepage": "https://github.com/AmandaDiscord/Lang#readme"
 }

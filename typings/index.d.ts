@@ -1,19 +1,27 @@
 declare module '@amanda/lang' {
 
 	/**
-	 * English (US)
+	 * English (United States)
+	 *
+	 * Written by PapiOphidian.
 	 */
 	export const en_us: Lang;
 	/**
 	 * English (owo)
+	 *
+	 * Written by PapiOphidian.
 	 */
 	export const en_owo: Lang;
 	/**
 	 * Spanish
+	 *
+	 * Written by Jamie.
 	 */
 	export const es: Lang;
 	/**
 	 * Dutch
+	 *
+	 * Written by Nojay.
 	 */
 	export const nl: Lang;
 

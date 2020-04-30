@@ -36,8 +36,8 @@ const generic = {
 		}
 	},
 	image: {
-		dm: "Why would you want to %action someone in DMs?",
-		noUser: "You have to tell me who you wanna %action"
+		dm: "porque quieres darle %action a alguien en mensajes privados?",
+		noUser: "Tienes que decirme a quien quieres a %action"
 	},
 	emoji: {
 		discoin: "<a:Discoin:422523472128901140>"
@@ -84,20 +84,20 @@ module.exports = {
 		},
 		forcestatusupdate: {
 			help: {
-				usage: "None",
-				description: "Forces the current shard to send statistic data to the database"
+				usage: "Ninguno",
+				description: "Obliga al fragmento a enviar datos estadísticos a la base de datos"
 			},
 			prompts: {},
 			returns: {}
 		},
 		restartnotify: {
 			help: {
-				usage: "None",
-				description: "Notifies you when Amanda is online again"
+				usage: "Ninguno",
+				description: "Te notifica cuando Amanda regresa en linea"
 			},
 			prompts: {},
 			returns: {
-				confirmation: "Alright. You'll be notified of the next time I restart"
+				confirmation: "Ok. Te notificare la proxima vez que reinicio"
 			}
 		}
 	},
@@ -110,13 +110,13 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`,
+				permissionDenied: `${generic.command.permPre} adjuntar archivos. ${generic.command.permPost}`,
 				invalidBet: `%username, ${generic.command.input.invalid}`,
 				betSmall: `%username, nesesitar que apostar por lo menos 2 ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`
 			},
 			returns: {
-				lost: `Lo siento. You didn't get a match. Has perdido %number ${generic.emoji.discoin}`,
+				lost: `Lo siento. No salio ningun par. Has perdido %number ${generic.emoji.discoin}`,
 				triple: `Un triple. Ganaste %number ${generic.emoji.discoin}`,
 				heart1: `Un :heart: Ganaste %number ${generic.emoji.discoin}`,
 				heart2: `Wow! Doble :heart: Ganaste %number ${generic.emoji.discoin}`,
@@ -130,7 +130,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				flip: "You flipped %flip"
+				flip: "Volteaste %flip"
 			}
 		},
 		betflip: {
@@ -140,7 +140,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidBetandSide: "%username, nesesitas que apostar una cantidad de amandollars y elegir un lado para apostar.",
+				invalidBetandSide: "%username, nesesitas que apostar una cantidad de amandollars y elegir un lado de la moneda para apostar.",
 				invalidBet: `%username, ${generic.command.input.invalid}.`,
 				betSmall: `%username, nesesitas que apostar por lo menos 1 amandollar ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
@@ -163,7 +163,7 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
 			},
 			returns: {
-				coins: `amandollars para %display`
+				coins: `amandollars de %display`
 			}
 		},
 		daily: {
@@ -186,11 +186,11 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				pageLimit: "%username, you may only browse up to page %maxPages.",
-				pageCurrent: "Page %current of %total"
+				pageLimit: "%username, solo puedes navegar asta la pagina %maxPages.",
+				pageCurrent: "Pagina %current de %total"
 			},
 			returns: {
-				emptyPage: "There are only %lastPage pages to browse through."
+				emptyPage: "Solo hay %lastPage paginas para navegar."
 			}
 		},
 		give: {
@@ -202,32 +202,32 @@ module.exports = {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidAmountandUser: "%username, nesesitas que escribir una cantidad de amandollars y el nombre del usuario.",
 				invalidUser: `%username, ${generic.command.input.invalid}`,
-				cannotGiveSelf: "No puedes dar monedas a ti menso.",
+				cannotGiveSelf: "No puedes regalarte amandollars a ti mismo, menso.",
 				invalidGift: `%username, ${generic.command.input.invalid}`,
 				giftSmall: `%username, nesesitas que regalar por lo menos 1 amandollar ${generic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollar.`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				channel: "%mention1 regalo %number amandollar a %mention2",
+				channel: "%mention1 regalo %number amandollars a %mention2",
 				dm: `%mention te regalo %number ${generic.emoji.discoin}`
 			}
 		},
 		wheel: {
 			help: {
 				usage: "[cantidad: numero|all|half]",
-				description: "Gira una rueda para la oportunidad de ganar amandollar"
+				description: "Gira una rueda para la oportunidad de ganar amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`,
+				permissionDenied: `${generic.command.permPre} adjuntar archivos. ${generic.command.permPost}`,
 				invalidAmountWheel: "%username, nesesitas que escribir una cantidad para girar la rueda",
-				betSmall: `%username, nesesitas que apostar por lo menos 1 moneda ${generic.emoji.discoin}`,
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollar.`,
+				betSmall: `%username, nesesitas que apostar por lo menos 1 amandollar ${generic.emoji.discoin}`,
+				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidAmount: `%username, ${generic.command.input.invalid}`,
 			},
 			returns: {
-				winnings: `%tag aposto %number1 amandollar y recibio %number2 de regreso ${generic.emoji.discoin}`
+				winnings: `%tag aposto %number1 amandollars y recibio %number2 de regreso ${generic.emoji.discoin}`
 			}
 		}
 	},
@@ -236,7 +236,7 @@ module.exports = {
 		trivia: {
 			help: {
 				usage: "[categoria]",
-				description: "Juega un juego de trivia con otros usuarios para ganar amandollar"
+				description: "Juega un juego de trivia con otros usuarios para ganar amandollars"
 			},
 			prompts: {
 				categorySelect: "para seleccionar una categoria usa `&trivia <nombre de la categoria>`.",
@@ -247,13 +247,13 @@ module.exports = {
 				APIError: "Ha ocurrido un error en el api",
 				parsingError: "Ha ocurrido un error analizando los datos regresado por el api",
 				permissionDenied: `${generic.command.permPre} añadir reacciones`,
-				provideAnswer: "To answer, type a letter in chat. You have 20 seconds.",
-				reactionRound: "Click the reaction for another round.",
-				permissionRound: "You can type \`&trivia\` or \`&t\` for another round.",
-				winners: "Winners",
-				noWinners: "No Winners",
-				nextRound: "Next Round",
-				categories: "Categories",
+				provideAnswer: "Para responder, escribe una letra en el chat. Tienes 20 segundos.",
+				reactionRound: "Haga clic en la reaccion para otra ronda..",
+				permissionRound: "Puedes escribir \`&trivia\` o \`&t\` para otra ronda.",
+				winners: "Ganadores",
+				noWinners: "No hay ganadores",
+				nextRound: "Siguiente ronda",
+				categories: "Categorias",
 				dmError: generic.dm.fail
 			},
 			returns: {}
@@ -275,55 +275,55 @@ module.exports = {
 	images: {
 		cat: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a cat"
+				usage: "Ninguno",
+				description: "Envia un imagen de un gato"
 			},
 			prompts: {},
 			returns: {}
 		},
 		dog: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a dog"
+				usage: "Ninguno",
+				description: "Envia un imagen de un perro"
 			},
 			prompts: {},
 			returns: {}
 		},
 		space: {
 			help: {
-				usage: "None",
-				description: "Sends an image of space"
+				usage: "Ninguno",
+				description: "Envia un imagen del espacio"
 			},
 			prompts: {},
 			returns: {}
 		},
 		snek: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a snek"
+				usage: "Ninguno",
+				description: "Envia un imagen de una serpiente"
 			},
 			prompts: {},
 			returns: {}
 		},
 		birb: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a birb"
+				usage: "Ninguna",
+				description: "Envia un imagen de un pajaro"
 			},
 			prompts: {},
 			returns: {}
 		},
 		catgirl: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a neko girl"
+				usage: "Ninguna",
+				description: "Envia un imagen de un catgirl"
 			},
 			prompts: {},
 			returns: {
 				error: "Uh oh.",
-				offline: "Looks like the nekos.life API is currently offline."
-				+ "\nWe aren't able to fetch new pictures at the moment."
-				+ "\nHere's a sleepy catgirl while we wait for it to come back online."
+				offline: "Parece que el API de nekos.life no esta en linea."
+				+ "\nNo pude obtener nuevas imagenes por el momento."
+				+ "\nAqui hay una catgirl dormida mientras esperamos que vuelva a estar en linea."
 			}
 		}
 	},
@@ -336,10 +336,10 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`,
+				permissionDenied: `${generic.command.permPre} adjuntar archivos. ${generic.command.permPost}`,
 				invalidUsers: `%username, nesesitas que escribir los usuarios`,
 				invalidUser1: `%username:el primer miembro no es valido`,
-				invalidUser2: `%username, the segundo miembro no es valido`,
+				invalidUser2: `%username, el segundo miembro no es valido`,
 				selfShip: "%username, no puedes hacer el ship a ti solo menso :v",
 			},
 			returns: {
@@ -360,23 +360,23 @@ module.exports = {
 				claimedBy: "Reclamado por:",
 				waifu: "Waifu:",
 				gifts: "Regalos:",
-				nobody: "(nobody)",
-				none: "(none)"
+				nobody: "(nadie)",
+				none: "(ninguno)"
 			}
 		},
 		waifuleaderboard: {
 			help: {
 				usage: "[local] [pagina: numero]",
-				description: "Displays the leaderboard of the top waifus"
+				description: "Enseña la tabla de posiciones de los top waifus"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				pageLimit: "%username, you may only browse up to page %maxPages."
+				pageLimit: "%username, solo puedes navegar asta la pagina %maxPages."
 			},
 			returns: {
-				emptyPage: "There are only %lastPage pages to browse through.",
-				claimEntry: `%user1 claimed %user2 for %price ${generic.emoji.discoin}`,
-				pageCurrent: "Page %current of %total"
+				emptyPage: "Solo hay %lastPage paginas para navegar.",
+				claimEntry: `%user1 reclamo a %user2 por %price ${generic.emoji.discoin}`,
+				pageCurrent: "Pagina %current de %total"
 			}
 		},
 		claim: {
@@ -386,9 +386,9 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				badFormat: "%username, se escribe `&claim <cantidad> <usuario>`. Amount comes first, usuario comes last.",
+				badFormat: "%username, se escribe `&claim <cantidad> <usuario>`. Cantidad viene primero, luego el usuario.",
 				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
-				selfClaim: "%username, no puedes reclamar a ti mismo menso :v",
+				selfClaim: "%username, no puedes reclamar a ti mismo, menso :v",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				claimSmall: `%username, nesesitas que reclamar a aguien por lo menos 1 ${generic.emoji.discoin}`,
 				claimedByOther: `%username, este usuario ya fue reclamado por alguien mas, y por un precio mas alto. nesesitas que gastar mas de %number amandollars para reclamar a este usuario.`,
@@ -406,7 +406,7 @@ module.exports = {
 				description: "Divorcia a tu waifu"
 			},
 			prompts: {
-				noWaifu: "%username, no tienes waifu menso :v",
+				noWaifu: "%username, no tienes waifu, menso :v",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
@@ -448,121 +448,121 @@ module.exports = {
 		hug: {
 			help: {
 				usage: "<user>",
-				description: "Hugs someone"
+				description: "Abraza a alguien"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
-				amanda: "**Hugs %username back** :heart:",
-				action: "%username hugged %mention"
+				amanda: "**Abraza a %username de regreso** :heart:",
+				action: "%username abrazo a %mention"
 			}
 		},
 		nom: {
 			help: {
-				usage: "<user>",
-				description: "Noms someone"
+				usage: "<usuario>",
+				description: "Muerde a alguien"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
 				amanda: "owie",
-				action: "%username nommed %mention"
+				action: "%username mordio a %mention"
 			}
 		},
 		kiss: {
 			help: {
-				usage: "<user>",
-				description: "Kisses someone"
+				usage: "<usuario>",
+				description: "Besa a alguien"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
-				amanda: "**Kisses %username back** :heart:",
-				action: "%username kissed %mention"
+				amanda: "**Besa a %username de regreso** :heart:",
+				action: "%username beso a %mention"
 			}
 		},
 		cuddle: {
 			help: {
-				usage: "<user>",
-				description: "Cuddles someone"
+				usage: "<usuario>",
+				description: "Abraza a alguien"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
-				amanda: "**Cuddles %username back** :heart:",
-				action: "%username cuddled %mention"
+				amanda: "**Abraza a %username de regreso** :heart:",
+				action: "%username abrazo a %mention"
 			}
 		},
 		poke: {
 			help: {
-				usage: "<user>",
-				description: "Pokes someone"
+				usage: "<usuario>",
+				description: "Toqua a alguien"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
-				amanda: "Dun poke me ; ^ ;",
-				action: "%username poked %mention"
+				amanda: "No me toques ; ^ ;",
+				action: "%username le dio toque a %mention"
 			}
 		},
 		slap: {
 			help: {
-				usage: "<user>",
-				description: "Slaps someone"
+				usage: "<usuario>",
+				description: "Abofetea a alguien"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
-				amanda: "**Slaps %username back** That hurt me ; ^ ;",
-				action: "%username slapped %mention"
+				amanda: "**Abofetea a %username de regreso** Eso me dolio ; ^ ;",
+				action: "%username abofeteo a %mention"
 			}
 		},
 		boop: {
 			help: {
-				usage: "<user>",
-				description: "Boops someone"
+				usage: "<usuario>",
+				description: "Toqua a alguien"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
-				amanda: "Dun boop me ; ^ ;",
-				action: "%username booped %mention"
+				amanda: "No me toques ; ^ ;",
+				action: "%username le dio toque a %mention"
 			}
 		},
 		pat: {
 			help: {
-				usage: "<user>",
-				description: "Pats someone"
+				usage: "<usuario>",
+				description: "Dale palmaditas a alguien en la cabeza"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {
 				amanda: "≥ w ≤",
-				action: "%username patted %mention"
+				action: "%username le dio palmaditas en la cabeza a %mention"
 			}
 		}
 	},
@@ -571,39 +571,39 @@ module.exports = {
 		statistics: {
 			help: {
 				usage: "[music|games]",
-				description: "Displays detailed statistics for nerds"
+				description: "Enseña estadisticas para nerds"
 			},
 			prompts: {
-				slow: "Ugh. I hate it when I'm slow, too"
+				slow: "Uff. Odio cuando soy muy lenta"
 			},
 			returns: {
-				songsToday: "**❯ Songs played today:**\n%number",
-				songsQueued: "**❯ Song queued:**\n%number",
-				voiceConnections: "**❯ Voice connections:**\n%number",
-				usersListening: "**❯ Users listening:**\n%number",
-				gamesToday: "**❯ Games played today:**\n%number",
-				gamesInProgress: "**❯ Games in progress:**\n%number",
-				usersPlaying: "**❯ Users Playing:**\n%number",
-				heartbeat: "Heartbeat",
-				latency: "Latency",
-				uptime: "Uptime",
-				ramUsage: "RAM usage",
-				userCount: "**❯ User count:**\n%number",
-				guildCount: "**❯ Server count:**\n%number",
-				channelCount: "**❯ Channel count:**\n%number",
+				songsToday: "**❯ Numero de canciones tocadas hoy:**\n%number",
+				songsQueued: "**❯ Numero de canciones en cola:**\n%number",
+				voiceConnections: "**❯ Numero de conexiones de voz:**\n%number",
+				usersListening: "**❯ Numero de usuarios escuchando:**\n%number",
+				gamesToday: "**❯ Numero de juegos jugados hoy:**\n%number",
+				gamesInProgress: "**❯ Numero de juegos en proceso:**\n%number",
+				usersPlaying: "**❯ Numero de usuarios jugando:**\n%number",
+				heartbeat: "Latido de corazon",
+				latency: "Latencia",
+				uptime: "Tiempo de actividad",
+				ramUsage: "Uso de RAM",
+				userCount: "**❯ Cantidad de usuarios:**\n%number",
+				guildCount: "**❯ Cantidad de servidores:**\n%number",
+				channelCount: "**❯ Cantidad de canales:**\n%number",
 			}
 		},
 		ping: {
 			help: {
-				usage: "None",
-				description: "What do you think this does?"
+				usage: "Ninguno",
+				description: "Pos que crees que hace?"
 			},
 			prompts: {},
 			returns: {
 				pong: "Pong!",
-				heartbeat: "❯ Heartbeat",
-				latency: "❯ Latency",
-				footer: "W-Wait... It's called table tennis"
+				heartbeat: "❯ Latido de corazon",
+				latency: "❯ Latencia",
+				footer: "E-Espera... Se llama tenis de mesa"
 			}
 		},
 		invite: {
@@ -614,7 +614,7 @@ module.exports = {
 			prompts: {},
 			returns: {
 				invited: "Fui invitada?",
-				link: "Invite link: %link",
+				link: "Enlance de invitacion: %link",
 				notice: "Recuerda, nesesitas permisos de **Gestionar servidor** para añadir bots a tu servidor ."
 			}
 		},
@@ -649,16 +649,16 @@ module.exports = {
 		},
 		commits: {
 			help: {
-				usage: "None",
-				description: "Gets the latest git commits to Amanda"
+				usage: "Ninguno",
+				description: "Obtenga las git commits recientes para Amanda"
 			},
 			prompts: {},
 			returns: {}
 		},
 		privacy: {
 			help: {
-				usage: "None",
-				description: "Details Amanda's privacy statement"
+				usage: "Ninguno",
+				description: "Detalles de la declaracion de privacidad de Amanda"
 			},
 			prompts: {
 				dmSuccess: generic.dm.success
@@ -667,28 +667,28 @@ module.exports = {
 		},
 		user: {
 			help: {
-				usage: "[user]",
-				description: "Provides information about a user"
+				usage: "[usuario]",
+				description: "Proporciona informacion sobre un usuario."
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {}
 		},
 		avatar: {
 			help: {
-				usage: "[user]",
-				description: "Gets a user's avatar"
+				usage: "[usuario]",
+				description: "Obtenga el perfil de un usuario"
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
 			},
 			returns: {}
 		},
 		icon: {
 			help: {
-				usage: "None",
-				description: "Gets a server's icon"
+				usage: "Ninguno",
+				description: "Obten el icono de un servidor"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`
@@ -697,7 +697,7 @@ module.exports = {
 		wumbo: {
 			help: {
 				usage: "<emoji>",
-				description: "Makes an emoji bigger"
+				description: "Hace un emoji mas grande"
 			},
 			prompts: {
 				invalidEmoji: `%username, ${generic.command.input.invalid} emoji.`
@@ -706,29 +706,29 @@ module.exports = {
 		},
 		profile: {
 			help: {
-				usage: "[user]",
-				description: "Gets profile information about a user"
+				usage: "[usuario]",
+				description: "Obter informacion de un usuario"
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} user.`,
-				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`
+				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
+				permissionDenied: `${generic.command.permPre} adjuntar archivos. ${generic.command.permPost}`
 			},
 			returns: {}
 		},
 		help: {
 			help: {
 				usage: "[Command|Category]",
-				description: "Your average help command"
+				description: "Su comando de ayuda ordinario"
 			},
 			prompts: {
-				invalidCommand: "**%tag**, I couldn't find the help panel for that command"
+				invalidCommand: "**%tag**, No pude encontrar informacion de ayuda para ese comando"
 			},
 			returns: {
-				footer: "Type `&help [command]` to see more information about a command",
-				mobile: "Click the reaction for a mobile-compatible view",
-				main: "Type `&help [category]` to see all commands in that category."
-				+ "\nType `&help [command]` to see more information about a command.",
-				info: "Type `&info` to see general information about Amanda.\nFor more, join our support server: %link"
+				footer: "Escribe `&help [command]` para ver mas informacion sobre ese comando",
+				mobile: "Haga clic en la reaccion para obtener una vista compatible para dispositivos moviles",
+				main: "Escribe `&help [category]` para ver todos los comandos en esa categoria."
+				+ "\nEscribe `&help [command]` para ver mas informacion sobre ese comando.",
+				info: "Escribe `&info` Informacion general de Amanda.\nPara mas, unete a nuestro servidor de soporte: %link"
 			}
 		}
 	},
@@ -737,165 +737,165 @@ module.exports = {
 		token: {
 			help: {
 				usage: "[new|delete]",
-				description: "Obtain a web dashboard login token"
+				description: "Obtenga un token de inicio de sesion de panel web"
 			},
 			prompts: {
 				dmFailed: generic.dm.fail,
-				none: "You do not currently have any tokens. Use `&musictoken new` to generate a new one."
+				none: " no tienes ningun token actualmente. Usa `&musictoken new` para generar uno."
 			},
 			returns: {
 				dmSuccess: generic.dm.success,
-				deleted: "Deleted all your tokens. Use `&musictoken new` to generate a new one.",
-				new: "Your existing tokens were deleted, and a new one was created."
-				+"\nDo not share this token with anyone. If you do accidentally share it, you can use `&musictoken delete` to delete it and keep you safe."
-				+"\nYou can now log in! %website",
-				generated: "Here is the token you generated previously:"
-				+"\nYou can use `&musictoken delete` to delete it, and `&musictoken new` to regenerate it."
+				deleted: "Borre todos tus tokens. Usa `&musictoken new` para generar uno nuevo.",
+				new: "Tus tokens existentes fuero borrados y uno nuevo fue creado."
+				+"\nNo compartes este token a nadie. Si lo compartiste por error, puedes usar `&musictoken delete` para borrarlo y te mantenga a salvo."
+				+"\nAhora puedes ingresar! %website",
+				generated: "Aqui esta tu token que fue generado previamente:"
+				+"\nPuedes usar `&musictoken delete` para borrarlo, y `&musictoken new` para regenerarlo."
 			}
 		},
 		frisky: {
 			help: {
 				usage: "[original|deep|chill|classics]",
-				description: "Play Frisky Radio: https://friskyradio.com"
+				description: "Toca Frisky Radio: https://friskyradio.com"
 			},
 			prompts: {},
 			returns: {
 				schedule: "Frisky Radio ­— Schedule",
-				footer: "Use &frisky [station] to play a station"
+				footer: "Usa &frisky [station] para tocar una estacion"
 			}
 		},
 		music: {
 			help: {
-				usage: "None. You're not supposed to see this.",
-				description: "None. You're not supposed to see this."
+				usage: "Ninguno. No debes de usar esto.",
+				description: "Ninguno. No debes de ver esto."
 			},
 			prompts: {
 				guildOnly: generic.command.guildOnly,
-				invalidSkips: "That is not a valid amount of songs to skip",
-				invalidSkipsAmount: "You have to skip 1 or more songs",
-				tooManySkips: "You cannot skip more songs than are in the queue!",
-				invalidAction: "%username, that's not a valid action. If you want to play something, try `&music play <song>`.\nCheck out `&help music` and `&help playlists` for more things you can do!",
-				nothingPlaying: "%username, nothing is currently playing.",
-				noResults: "No results.",
-				voiceChannelRequired: "%username, you need to join a voice channel to do that.",
-				voiceCantJoin: "%username, I don't have permission to join your voice channel.",
-				voiceCantSpeak: "%username, I don't have permission to speak in your voice channel.",
-				playableRequired: "%username, please provide either a YouTube video link or some words for me to search for.",
-				youtubeRequired: "%username, please provide a YouTube link or video ID.",
-				queueCannotDo: "The current queue cannot be %action at this time.",
-				voiceChannelWaiting: "%username, you need to join a voice channel to do that. Waiting for you to connect...",
-				songSelection: "Song selection",
-				songSelectionCanceled: "Song selection cancelled",
-				totalLength: "Total length: %number",
-				queueFor: "Queue for %server",
-				everyoneLeft: "Everyone left, so I have as well.",
-				songNotPlayingDiscord: "Hmm. Seems like the song isn't playing."
-				+ "\n\n**This is probably an issue with Discord.**"
-				+ "\nYou should try changing the server region."
-				+ "\n\nTo report a problem, join our server: https://discord.gg/YMkZDsK",
-				songErrorExclaimation: "`song.track` is ! placeholder. This is a bug.",
-				songErrorNull: "`song.track` is null or undefined. This is a bug.",
-				songNotPlayable: "We couldn't play that song",
-				errorOccured: "We ran into an error",
-				songErrorNotObject: "Song is not an object %song",
-				tooManyErrors: "Too many errors!",
-				errorsSuppressed: "Future errors from this queue will be silenced."
-				+ "\nIf any more songs fail, they will be skipped with no message."
-				+ "\nTo report a bug, join our server: https://discord.gg/YMkZDsK",
-				autoRanOut: "Auto mode is on, but we ran out of related songs and had to stop playback.",
-				queueAlreadyPaused: "Music is already paused. Use `&music resume` to resume.",
-				queueNowPlaying: "Now Playing: %song",
-				noUsersLeft: "No users left in my voice channel. I will stop playing in %time seconds if nobody rejoins.",
-				autoOn: "Auto mode is now turned on.",
-				autoOff: "Auto mode is now turned off.",
-				loopOn: "Loop mode is now turned on.",
-				loopOff: "Loop mode is now turned off.",
-				musicPlaying: "Music is playing. If you want to pause, use `&music pause`.",
-				songRemoveRequired: "You need to tell me which song to remove. `&music queue remove <number>`"
-				+ "\nTo clear the entire queue, use `&music queue clear` or `&music queue remove all`.",
-				songRemove1: "Item 1 is the currently playing song. Use `&music skip` to skip it, "
-				+ "or `&music queue remove 2` if you wanted to remove the song that's up next.",
-				queueSongTotal: "There are %number1 items in the queue. You can only remove items 2-%number2.",
-				numberNotInRelated: "The number you typed isn't an item in the related list. Try `&music related`."
+				invalidSkips: "Esto no es una cantidad valida para omitir canciones",
+				invalidSkipsAmount: "Nesesitas que omitr 1 o mas canciones",
+				tooManySkips: "No puedes omitir mas canciones que estan en la cola!",
+				invalidAction: "%username, esa accion valida. Si quieres tocar una cancion, usa `&music play <song>`.\nUsa `&help music` y `&help playlists` para ver mas cosas que puedes hacer!",
+				nothingPlaying: "%username, nada esta tocando actualmente.",
+				noResults: "No hay resultados.",
+				voiceChannelRequired: "%username, nesesitas que unirte a un canal de voz para hacer eso.",
+				voiceCantJoin: "%username, No tengo permiso para unirme en tu canal de voz.",
+				voiceCantSpeak: "%username, No tengo permiso para hablar en to canal de voz.",
+				playableRequired: "%username, por favor proporcione un enlance de Youtube o escribe unas palabras para que yo busque.",
+				youtubeRequired: "%username, pro favor proporcione un enlance de Youtube o ID de video.",
+				queueCannotDo: "La cola actualmente no puede %action en este momento.",
+				voiceChannelWaiting: "%username, nesesitas que unirte a un canal de voz para hacer eso. Esperando que te conectas...",
+				songSelection: "Seleccion de canciones",
+				songSelectionCanceled: "Seleccion de canciones cancelada",
+				totalLength: "Duracion: %number",
+				queueFor: "Cola de musica para %server",
+				everyoneLeft: "Todos se fueron, y yo tambien.",
+				songNotPlayingDiscord: "Hmm. Parece que esta cancion no esta tocando."
+				+ "\n\n**Esto probablemente es un problema con Discord.**"
+				+ "\nTrata de cambiar la region del servidor."
+				+ "\n\nPara reportar un problema, unete a nuestro servidor de soporte: https://discord.gg/YMkZDsK",
+				songErrorExclaimation: "`song.track` es ! marcador de posicion. Esto es un error.",
+				songErrorNull: "`song.track` Es nula o indefinida. Esto es un error.",
+				songNotPlayable: "No pude tocar esa cancion",
+				errorOccured: "Corri con un error",
+				songErrorNotObject: "Cancion no es un objectivo %song",
+				tooManyErrors: "Demasiados errores!",
+				errorsSuppressed: "Los errores futuros de esta cola se silenciaran."
+				+ "\nSi fallan mas canciones, se omitiran sin mensaje de error."
+				+ "\nPara reportar un error, unete a nuestro servidor de soporte: https://discord.gg/YMkZDsK",
+				autoRanOut: "Modo auto esta activado, pero ya se me agoto la lista de canciones relacionadas y nesesitaba que parar.",
+				queueAlreadyPaused: "Musica ya esta en pausa. Usa `&music resume` para resumir.",
+				queueNowPlaying: "Tocando: %song",
+				noUsersLeft: "No hay usuarios en el canal de voz. Dejare de jugar en %time segundos si nadie se une.",
+				autoOn: "El modo auto ahora esta activado.",
+				autoOff: "El modo auto ahora fue desactivado.",
+				loopOn: "El modo de bucle ahora esta activado.",
+				loopOff: "El modo de bucle ahora esta desactivado.",
+				musicPlaying: "La musica ya esta tocando. Si quieres pausar, usa `&music pause`.",
+				songRemoveRequired: "Nesesitas que decirme cual cancion quieres que elimine. `&music queue remove <number>`"
+				+ "\nPara borrar toda la cola, usa `&music queue clear` o `&music queue remove all`.",
+				songRemove1: "El elemento 1 es la cancion que esta tocando actualmente. Usa `&music skip` para omitirlo, "
+				+ "o `&music queue remove 2` si quisieras eliminar la cancion que sigue.",
+				queueSongTotal: "Hay %number1 canciones en la cola. Solo puedes eliminar canciones 2-%number2.",
+				numberNotInRelated: "El numero que escribio no es un elemento en la lista relacionada. Usa `&music related`."
 			},
 			returns: {
-				queueClear: "Cleared the queue, removing %number",
-				queueIn: "The current music session is over in %channel. Go there to see what's playing!"
+				queueClear: "Limpiando la cola, quitando %number",
+				queueIn: "La sesion de musica actual esta tocando en %channel. Ve alli para ver que esta jugando!"
 			}
 		},
 		playlist: {
 			help: {
-				usage: "None. You're not supposed to see this.",
-				description: "None. You're not supposed to see this."
+				usage: "Ninguno. No debes de ver esto.",
+				description: "Ninguno. No debes de ver esto."
 			},
 			prompts: {
-				playFromStart: "Play the entire playlist from the start",
-				playFromLinked: "Play the playlist, starting at the linked song",
-				playOnlyLinked: "Only play the linked song",
-				userLinked: "You linked to this song in the playlist: %title",
-				query: "What would you like to do?",
-				selectionInfo: "To play a more specific range from the playlist, use `&music play <link> <start> <end>`. See `&help playlist` for more information.",
-				playlistNameRequired: "%username, you must name a playlist. Use `&music playlists show` to show all playlists.",
-				directPlaylist: "%username, you can play a playlist directly! Just pass it to \`&music play\` like so:"
-				+"%info\n\n\n\nIf you still want to import a playlist into Amanda, you must give it a friendly name first, like `bobs_songs`.",
-				playlistNameLimit: "%username, the playlist name must be 24 characters or less.",
-				playlistNotExist: "%username, That playlist does not exist. Use \`&music playlist %playlist create\` to create it.",
-				databaseFixed: "%username, The database entries for that playlist are inconsistent. The inconsistencies have been resolved by resetting the order of the songs in that playlist. Apart from the song order, no data was lost. Other playlists were not affected.",
-				usePlaylistAdd: "Do not use playlist importing with `playlist add`. Use `playlist import` instead",
-				youtubeLinkInvalid: "%username, That is not a valid YouTube link",
-				indexRequired: "%username, Please provide the index of the item to remove",
-				indexMoveRequired: "Please provide an index to move from and an index to move to.",
-				playlistNotOwned: "%username, you do not own that playlist and so cannot modify it.",
-				playlistDuplicateSong: "%username, that song is already in the playlist.",
-				indexesEqual: "%username, Those two indexes are equal.",
-				playlistEmpty: "That playlist is empty. Add some songs with `&music playlist %playlist add <song>`!",
-				playlistImporting: "Importing playlist. This could take a moment...\n(Fetching song info)",
-				playlistImportAllExisting: "%username, all videos in that playlist have already been imported.",
-				playlistImportingDatabase: "Importing playlist. This could take a moment...\n(Updating database)",
-				playlistDeleteConfirm: "This action will permanently delete the playlist `%playlist`. "
-				+ "After deletion, you will not be able to play, display, or modify the playlist, and anyone will be able to create a new playlist with the same name."
-				+ "\nYou will not be able to undo this action.\n\n"
-				+ "<:bn_del:331164186790854656> - confirm deletion\n"
-				+ "<:bn_ti:327986149203116032> - ignore",
-				bulkListening: "Okay, I'm listening",
-				bulkDescription: "» Type anything to add it to the playlist."
-				+ `\n» Commands starting with \`%prefix\` will only run the command.`
-				+ "\n» Type `undo` to remove the last item in the playlist.\u2002🧹"
-				+ "\n» Type `stop` when you're done. You can keep adding things until you type `stop`.\u2002🛑",
-				outOfRange: "Out of range.",
-				playlistSection: "Playlist section",
-				bulkMenuOpen: "You already have a menu open in here. Type `stop` to stop it.",
-				playlistPages: "Page %number of %total"
+				playFromStart: "Reproduce toda la lista de reproduccion desde el principio",
+				playFromLinked: "Reproduzca la lista de reproduccion, comenzando en la cancion vinculada.",
+				playOnlyLinked: "Solo reproduce la cancion vinculada",
+				userLinked: "Has vinculado a esta cancion en la lista de reproduccion: %title",
+				query: "Que deseas hacer?",
+				selectionInfo: "Para reproducir un rango mas especifico de la lista de reproduccion, usa `&music play <link> <start> <end>`. Escribe `&help playlist` para mas informacion.",
+				playlistNameRequired: "%username, debes nombrar una lista de reproduccion. Usa `&music playlists show` para mostrar todas las listas de reproduccion.",
+				directPlaylist: "%username, puedes reproducir una lista de reproduccion directamente! Solo pasalo a \`&music play\`"
+				+"%info\n\n\n\nSi aun deseas importar una lista de reproduccion a Amanda, primero debe darle un nombre descriptivo, como `bobs_songs`.",
+				playlistNameLimit: "%username, el nombre de la lista de reproduccion debe tener 24 caracteres o menos.",
+				playlistNotExist: "%username, Esa lista de reproduccion no existe. Usa \`&music playlist %playlist create\` para crearlo.",
+				databaseFixed: "%username, Las entradas del base de datos para esa lista de reproducción son inconsistentes. Las inconsistencias se han resuelto restableciendo el orden de las canciones en esa lista de reproduccion. Aparte del orden de las canciones, no se perdieron datos. Las otras listas de reproduccion no fueron afectadas.",
+				usePlaylistAdd: "No uses la lista de reproduccion importando con `playlist add`. En vez usa `playlist import`",
+				youtubeLinkInvalid: "%username, Ese no es un enlace valido de YouTube",
+				indexRequired: "%username, Proporcione el indice del articulo para eliminar",
+				indexMoveRequired: "Proporcione un indice para moverse y un indice para moverlo alli.",
+				playlistNotOwned: "%username, usted no es el dueñ@ de esa lista de reproduccion y, por lo tanto, no puedes modificarla.",
+				playlistDuplicateSong: "%username, esa canción ya está en tu lista de reproduccion.",
+				indexesEqual: "%username, Esos dos indices son iguales.",
+				playlistEmpty: "Esa lista de reproduccion esta vacia. Agrega algunas canciones con `&music playlist %playlist add <song>`!",
+				playlistImporting: "Importando lista de reproduccion. Esto podra tomar un tiempo...\n(Obteniendo informacion de la cancion)",
+				playlistImportAllExisting: "%username, todos los videos en esa lista de reproduccion ya se han importado.",
+				playlistImportingDatabase: "Importando lista de reproduccion. Esto podra tomar un tiempo...\n(Actualizando la base de datos)",
+				playlistDeleteConfirm: "Esta accion eliminara permanentemente la lista de reproduccion. `%playlist`. "
+				+ "Despues de la eliminacion, no podra reproducir, mostrar o modificar la lista de reproduccion, y cualquiera podra crear una nueva lista de reproduccion con el mismo nombre."
+				+ "\nNo podras deshacer esta accion.\n\n"
+				+ "<:bn_del:331164186790854656> - confirmar la eliminacion\n"
+				+ "<:bn_ti:327986149203116032> - ignorar",
+				bulkListening: "Ok, estoy escuchando",
+				bulkDescription: "» Escribe cualquier cosa para agregarla a la lista de reproduccion."
+				+ `\n» comandos empezando con \`%prefix\` solo ejecutara el comando.`
+				+ "\n» Escribe `undo` para eliminar el ultimo elemento de la lista de reproduccion.\u2002🧹"
+				+ "\n» Escribe `stop` cuando tu terminas. Puedes seguir agregando cosas hasta que escribas `stop`.\u2002🛑",
+				outOfRange: "Fuera de rango.",
+				playlistSection: "Seccion de la lista de reproduccion",
+				bulkMenuOpen: "Ya tienes un menu abierto en este canal. escribe `stop` para detenerlo.",
+				playlistPages: "Pagina %number de %total"
 			},
 			returns: {
-				playlistAdded: "%username, Added **%song** to playlist **%playlist**",
-				playlistRemoved: "%username, Removed **%song** from playlist **%playlist**",
-				playlistCreated: "%username, Created playlist **%playlist**",
-				playlistImportDone: "All done! Check out your playlist with **&music playlist %playlist**.",
-				playlistDeleted: "Playlist deleted.",
-				playlistDeleteCancelled: "Playlist deletion cancelled",
-				playlistMoved: "%username, Moved **%song** to position **%index**",
-				bulkDone: "All done! I won't add anything else to the playlist.",
-				bulkMenuGone: "(There used to be a menu here, but it's gone now.)"
+				playlistAdded: "%username, **%song** fue añadido a tu lista de reproduccion **%playlist**",
+				playlistRemoved: "%username, **%song** fue eliminado de tu lista de reproduccion **%playlist**",
+				playlistCreated: "%username, Lista de reproduccion creada **%playlist**",
+				playlistImportDone: "Todo Listo! Mira tu lista de reproduccion con **&music playlist %playlist**.",
+				playlistDeleted: "Lista de reproduccion eliminada.",
+				playlistDeleteCancelled: "Eliminacion de lista de reproducción cancelada",
+				playlistMoved: "%username, **%song** fue movido a la posicion numero **%index**",
+				bulkDone: "Todo Listo! Ya no voy a añadir nada mas a esa lista de reproduccion.",
+				bulkMenuGone: "(​​habia un menú aquí, pero ya no está.)"
 			}
 		},
 		debug: {
 			help: {
-				usage: "[Channel]",
-				description: "Provides debugging information for if audio commands are not working as intended"
+				usage: "[Canal]",
+				description: "Proporciona información de depuracion por si los comandos de audio no funcionan segun lo previsto"
 			},
 			prompts: {
-				guildOnly: "You cannot debug music in a DM channel",
-				invalidChannel: "Channel not found"
+				guildOnly: "No puedes depurar musica en un canal de mensajes directos",
+				invalidChannel: "Canal no encontrado"
 			},
 			returns: {
-				tip: "Tip:",
-				tipValue: "On top of Read Message and Add Reaction permissions, bots must also have Read Message History permissions to add reactions to messages",
-				unnamedNode: "an unnamed node",
-				queueUsing: "However, the current queue is using %name",
-				infoFor: "Debugging info for %channel",
-				permissions: "Permissions:",
-				method: "Method:"
+				tip: "Propina:",
+				tipValue: "Ademas de los permisos leer mensajes y agregar reacciones, los bots tambien deben tener permisos para leer historial de mensajes para agregar reacciones a los mensajes",
+				unnamedNode: "un nodo sin nombre",
+				queueUsing: "Sin embargo, la cola actual esta usando %name",
+				infoFor: "Informacion de depuracion para %channel",
+				permissions: "Permisos:",
+				method: "Metodo:"
 			}
 		}
 	},
@@ -904,34 +904,34 @@ module.exports = {
 		settings: {
 			help: {
 				usage: "<self|server> <view|setting name> [value]",
-				description: "Modify settings Amanda will use for yourself or server wide"
+				description: "Modifique la configuracion que Amanda usara para usted o para todo el servidor"
 			},
 			prompts: {
-				cantModifyInDM: "You cannot modify a server's settings if you don't use the command in a server",
+				cantModifyInDM: "No puede modificar la configuración de un servidor si no utilizas el comando en el servidor",
 				backgroundRecommended: "Recommended to be a 800x500px png/jpeg",
 				invalidSyntaxScope: "Command syntax is `&settings <scope> <name> <value>`. Your value for `scope` was incorrect, it must be either `self` or `server`.",
-				noSettings: "There are no settings set for scope %scope",
-				manageServer: "You must have either the Manage Server or Administrator permission to modify Amanda's settings on this server.",
+				noSettings: "No hay configuraciones establecidas para el alcance %scope",
+				manageServer: "Debes tener el permiso Administrar servidor o Administrador para modificar la configuracion de Amanda en este servidor.",
 				invalidSyntaxName: "Command syntax is `&settings %usage`. Your value for `name` was incorrect, it must be one of: %settings",
-				invalidSettingScope: "The setting `%setting` is not valid for the scope `%scope`.",
-				currentValueServer: "Current value of `%setting` is `%value`. This value was set for the server.",
-				currentValueInherited: "Current value of `%setting` is not set in this server, so it inherits the default value, which is `%value`.",
-				noBackground: "You didn't have a profile background image. No action was taken.",
-				donorRequired: "You must be a donor to modify this setting.",
-				invalidLink: "There was an error trying to fetch the data from the link provided. Please make sure the link is valid.",
-				invalidLangCode: "%username, that is not a valid or supported language code. Supported language codes are %codes",
-				invalidSyntaxBoolean: "Command syntax is `&settings <scope> <name> <value>`. The setting `%setting` is a boolean, and so your `%value` must be either `true` or `false`.",
-				tooLong: "That setting value is too long. It must not be more than 50 characters."
+				invalidSettingScope: "La configuracion `%setting` no es valida para el alcance `%scope`.",
+				currentValueServer: "Valor actual de `%setting` es `%value`. Este valor se establecio para el servidor.",
+				currentValueInherited: "Valor actual de `%setting` no esta configurado en este servidor, por lo que hereda el valor predeterminado que es `%value`.",
+				noBackground: "No tienes ningun imagen de fondo de perfil. No se tomo ninguna medida..",
+				donorRequired: "Debes de ser un donante para modificar esta configuracion.",
+				invalidLink: "Se produjo un error al intentar obtener los datos del enlace que proporcionaste. Asegurate de que el enlace sea valido.",
+				invalidLangCode: "%username, ese no es un codigo de idioma valido o compatible. Los codigos de idioma admitidos son %codes",
+				invalidSyntaxBoolean: "La sintaxis del comando es `&settings <scope> <name> <value>`. El ajuste `%setting` es un booleano, y entonces tu `%value` nesesita que ser `true` o `false`.",
+				tooLong: "Ese valor de configuracion es demasiado grande. No debe de ser mas de 50 caracteres."
 			},
 			returns: {
-				updated: "Setting updated.",
-				deleted: "Setting deleted."
+				updated: "Configuracion actualizada.",
+				deleted: "Configuracion eliminada."
 			}
 		},
 		background: {
 			help: {
 				usage: "<url>",
-				description: "Set the background displayed on &profile"
+				description: "Establece el fondo que se muestra en &profile"
 			},
 			prompts: {},
 			returns: {}
