@@ -725,7 +725,8 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`
-			}
+			},
+			returns: {}
 		},
 		wumbo: {
 			help: {

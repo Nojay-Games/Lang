@@ -672,7 +672,8 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${genewic.command.guildOnly}`
-			}
+			},
+			returns: {}
 		},
 		wumbo: {
 			help: {

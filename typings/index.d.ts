@@ -24,6 +24,12 @@ declare module '@amanda/lang' {
 	 * Written by Nojay.
 	 */
 	export const nl: Lang;
+	/**
+	 * Polish
+	 *
+	 * Written by The Blue Fox
+	 */
+	export const pl: Lang;
 
 	export type Lang = {
 		admin: {
@@ -1183,6 +1189,7 @@ declare module '@amanda/lang' {
 					 */
 					guildOnly: string;
 				};
+				returns: {};
 			};
 			wumbo: {
 				help: CommandHelp;
