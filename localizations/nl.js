@@ -774,11 +774,11 @@ module.exports = {
 				description: "Obtain a web dashboard login token"
 			},
 			prompts: {
-				dmSuccess: generic.dm.success,
 				dmFailed: generic.dm.fail,
 				none: "You do not currently have any tokens. Use `&musictoken new` to generate a new one."
 			},
 			returns: {
+				dmSuccess: generic.dm.success,
 				deleted: "Deleted all your tokens. Use `&musictoken new` to generate a new one.",
 				new: "Your existing tokens were deleted, and a new one was created."
 				+"\nDo not share this token with anyone. If you do accidentally share it, you can use `&musictoken delete` to delete it and keep you safe."

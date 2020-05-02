@@ -4,6 +4,7 @@ const es = require("./localizations/es");
 const nl = require("./localizations/nl");
 const pl = require("./localizations/pl");
 
+// @ts-ignore
 const langCodeMap = new Map([
 	["nl", nl],
 	["en_us", en_us],
@@ -12,39 +13,7 @@ const langCodeMap = new Map([
 	["pl", pl]
 ]);
 
-const langCodeCache = new Map();
-
-const exporting = {};
-Object.defineProperties(exporting, {
-	"en_us": {
-		value: en_us
-	},
-	"en_owo": {
-		get() {
-			return fill("en_owo")
-		}
-	},
-	"es": {
-		get() {
-			return fill("es")
-		}
-	},
-	"nl": {
-		get() {
-			return fill("nl")
-		}
-	},
-	"pl": {
-		get() {
-			return fill("pl")
-		}
-	}
-})
-
-module.exports = exporting;
-
 function fill(code) {
-	if (langCodeCache.get(code)) return langCodeCache.get(code);
 	const commandsRawENNF = Object.values(en_us);
 	const commandsRawEN = Object.assign({}, ...commandsRawENNF);
 	const categories = Object.keys(en_us);
@@ -64,10 +33,10 @@ function fill(code) {
 
 			const promptsEn = commandEN.prompts;
 			const promptsTarget = commandTarget.prompts;
-	
+
 			const returnsEn = commandEN.returns;
 			const returnsTarget = commandTarget.returns;
-	
+
 			// Check for if the prompts are the same.
 			// Add prompts which do not exist on target.
 			for (const prompt of Object.keys(promptsEn)) {
@@ -77,7 +46,7 @@ function fill(code) {
 			for (const prompt of Object.keys(promptsTarget)) {
 				if (!promptsEn[prompt]) delete promptsTarget[prompt];
 			}
-	
+
 			// Check for if the returns are the same.
 			// Add returns which do not exist on target.
 			for (const rt of Object.keys(returnsEn)) {
@@ -103,6 +72,13 @@ function fill(code) {
 		}
 	});
 
-	langCodeCache.set(code, newTarget);
 	return newTarget;
+}
+
+for (const code of langCodeMap.keys()) {
+	if (code === "en_us") {
+		module.exports.en_us = en_us;
+	} else {
+		module.exports[code] = fill(code);
+	}
 }

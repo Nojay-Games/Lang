@@ -1879,6 +1879,16 @@ declare module '@amanda/lang' {
 					deleted: string;
 				};
 			};
+			language: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
+			serverlanguage: {
+				help: CommandHelp;
+				prompts: {};
+				returns: {};
+			};
 			background: {
 				help: CommandHelp;
 				prompts: {};
