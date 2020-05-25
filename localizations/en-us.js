@@ -783,6 +783,7 @@ module.exports = {
 				voiceCantSpeak: "%username, I don't have permission to speak in your voice channel.",
 				playableRequired: "%username, please provide either a YouTube video link or some words for me to search for.",
 				youtubeRequired: "%username, please provide a YouTube link or video ID.",
+				invalidLink: "%username, that is not a valid link.",
 				queueCannotDo: "The current queue cannot be %action at this time.",
 				voiceChannelWaiting: "%username, you need to join a voice channel to do that. Waiting for you to connect...",
 				songSelection: "Song selection",

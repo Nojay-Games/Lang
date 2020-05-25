@@ -1368,6 +1368,12 @@ declare module '@amanda/lang' {
 					/**
 					 * Wildcards:
 					 *
+					 * %username - string.
+					 */
+					invalidLink: string;
+					/**
+					 * Wildcards:
+					 *
 					 * %action - string.
 					 */
 					queueCannotDo: string;
