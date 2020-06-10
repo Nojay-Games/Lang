@@ -833,11 +833,9 @@ module.exports = {
 				playlistImporting: "Importing pwaywist. This could take a moment...\n(Fetching song info)",
 				playlistImportAllExisting: "%username, all videos in that pwaywist have already been imported.",
 				playlistImportingDatabase: "Importing pwaywist. This could take a moment...\n(Updating database)",
-				playlistDeleteConfirm: "This action will permanently dewete the pwaywist `%playlist`. "
-				+ "After dewetion, yowo will not be able to pway, dispway, or modify the pwaywist, and anyone will be able to create a new pwaywist with the same name."
-				+ "\nYowo will not be abwe to undo this action.\n\n"
-				+ "<:bn_del:331164186790854656> - confirm dewetion\n"
-				+ "<:bn_ti:327986149203116032> - ignore",
+				playlistDeleteConfirm: "This action will permawentwy dewete the pwaywist `%playlist`."
+				+ "\nYou cannot undo this action, and anywone will be abwe to cweate a new pwaywist with the same name."
+				+ "\nPress <:bn_del:331164186790854656> to dewete `%playlist` fowewer (◔◡◔✿)",
 				bulkListening: "Okay, I'm listening",
 				bulkDescription: "» Type anything to add it to the playlist."
 				+ `\n» Commands starting with \`%prefix\` will only run the command.`

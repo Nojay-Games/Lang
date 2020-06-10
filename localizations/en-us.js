@@ -854,11 +854,9 @@ module.exports = {
 				playlistImporting: "Importing playlist. This could take a moment...\n(Fetching song info)",
 				playlistImportAllExisting: "%username, all videos in that playlist have already been imported.",
 				playlistImportingDatabase: "Importing playlist. This could take a moment...\n(Updating database)",
-				playlistDeleteConfirm: "This action will permanently delete the playlist `%playlist`. "
-				+ "After deletion, you will not be able to play, display, or modify the playlist, and anyone will be able to create a new playlist with the same name."
-				+ "\nYou will not be able to undo this action.\n\n"
-				+ "<:bn_del:331164186790854656> - confirm deletion\n"
-				+ "<:bn_ti:327986149203116032> - ignore",
+				playlistDeleteConfirm: "This action will permanently delete the playlist `%playlist`."
+				+ "\nYou cannot undo this action, and anyone will be able to create a new playlist with the same name."
+				+ "\nPress <:bn_del:331164186790854656> to delete `%playlist` forever.",
 				bulkListening: "Okay, I'm listening",
 				bulkDescription: "» Type anything to add it to the playlist."
 				+ `\n» Commands starting with \`%prefix\` will only run the command.`
