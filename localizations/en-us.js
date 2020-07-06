@@ -818,7 +818,13 @@ module.exports = {
 				songRemove1: "Item 1 is the currently playing song. Use `&music skip` to skip it, "
 				+ "or `&music queue remove 2` if you wanted to remove the song that's up next.",
 				queueSongTotal: "There are %number1 items in the queue. You can only remove items 2-%number2.",
-				numberNotInRelated: "The number you typed isn't an item in the related list. Try `&music related`."
+				numberNotInRelated: "The number you typed isn't an item in the related list. Try `&music related`.",
+				playNoArguments:
+					"You need to tell me what you want to play. Try one of these things:"
+					+ "\n- Search terms, like `despacito`"
+					+ "\n- A YouTube link, like `https://youtu.be/kJQP7kiw5Fk`"
+					+ "\n- A SoundCloud link, like `https://soundcloud.com/luisfonsiofficial/despacito`"
+					+ "\nUse `&help music` for more ideas."
 			},
 			returns: {
 				queueClear: "Cleared the queue, removing %number",
