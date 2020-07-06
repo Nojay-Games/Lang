@@ -1501,6 +1501,10 @@ declare module '@amanda/lang' {
 					 * No Wildcards.
 					 */
 					numberNotInRelated: string;
+					/**
+					 * No wildcards.
+					 */
+					playNoArguments: string;
 				};
 				returns: {
 					/**
