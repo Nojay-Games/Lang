@@ -149,7 +149,7 @@ module.exports = {
 			returns: {
 				autoChoose: "Nie podałeś/aś strony, więc wybiorę ją za Ciebie",
 				guess: "Wybrałeś/aś %string1 Ja wyrzuciłam %string2",
-				win: `Zgadłeś! Otrzymujesz %number ${generic.emoji.discoin}`,
+				win: `Zgadłeś! Otrzymujesz %number ${generic.emoji.discoin} %explanation`,
 				lost: `Wybacz, ale nie zgadłeś/aś poprawnie. Powodzenia następnym razem.`
 			}
 		},

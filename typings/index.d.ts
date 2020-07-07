@@ -244,6 +244,8 @@ declare module '@amanda/lang' {
 					 * Wildcards:
 					 *
 					 * %number - number.
+					 *
+					 * %explanation - string.
 					 */
 					win: string;
 					/**
