@@ -130,7 +130,7 @@ module.exports = {
 				autoChoose: "Yowo didn't choose a side (>.<), so I picked one for yowo:",
 				guess: "Yowo guessed %string1 I fwipped %string2",
 				win: `Yowo guessed it! You got %number ${genewic.emoji.discoin} %explanation (\´･ω･\`)`,
-				lost: `Sowwy but yowo didn't guess cowwectly. Better wuck next time. (*\´д\｀*)`
+				lost: `Sowwy, yowo didn't gess cowwectly. Yowo wost %number ${genewic.emoji.discoin} (*\´д\｀*)`
 			}
 		},
 		coins: {

@@ -157,7 +157,7 @@ module.exports = {
 					'Je hebt geen kant gekozen, dus ik heb er een voor je gekozen:',
 				guess: 'Je hebt %string1 geraden, Ik heb %string2 gegooid',
 				win: `Je hebt het geraden! Je hebt %number ${generic.emoji.discoin} gekregen %explanation`,
-				lost: `Sorry, maar je hebt niet correct geraden. Meer geluk volgende keer.`
+				lost: `Sorry, maar je hebt niet correct geraden. Je bent %number ${generic.emoji.discoin} verloren`
 			}
 		},
 		coins: {

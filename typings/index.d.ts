@@ -249,7 +249,9 @@ declare module '@amanda/lang' {
 					 */
 					win: string;
 					/**
-					 * No Wildcards.
+					 * Wilcards:
+					 *
+					 * %number - number.
 					 */
 					lost: string;
 				};

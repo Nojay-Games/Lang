@@ -150,7 +150,7 @@ module.exports = {
 				autoChoose: "No eligiste ningun lado, elegi uno para ti:",
 				guess: "Tu elegiste %string1 Voltie %string2",
 				win: `Bien hecho! Ganaste %number ${generic.emoji.discoin} %explanation`,
-				lost: `Lo siento pero no elegiste correctamente. Para la proxima.`
+				lost: `Lo siento pero no elegiste correctamente. Has perdido %number ${generic.emoji.discoin}`
 			}
 		},
 		coins: {
