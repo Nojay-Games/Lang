@@ -19,31 +19,28 @@
 undefined;
 
 const generic = {
-	error: 'API heeft geen data geretourneerd',
+	error: "De API heeft geen gegevens teruggestuurd.",
 	dm: {
-		success: 'Ik heb je een privébericht gestuurd.',
-		fail:
-			'je moet me toestaan je een privébericht te sturen voor dat commando om te werken. Je hebt me of geblokkeerd, of je moet privéberichten aanzetten in deze server. (server instellingen → privacy → sta directe berichten toe).',
-		blocked:
-			'Ik kon die persoon geen privébericht sturen. Misschien heeft diegene mij geblokkeerd, of diegene moet misschien privéberichten aanzetten in een gedeelde server.'
+		success: "Ik heb je een privÃ©bericht gestuurd.",
+		fail: "je moet me toestaan om je een privÃ©bericht te sturen om dat commando te laten werken. Of je hebt me geblokkeerd, of je moet privÃ©berichten van serverleden toestaan in deze server. (serverinstellingen â†’ privacy-instellingen â†’ directe berichten van serverleden toestaan).",
+		blocked: "Ik kon die persoon geen privÃ©bericht sturen. Misschien hebben ze me geblokkeerd, of misschien moeten ze privÃ©berichten in een gemeenschappelijke server aanzetten."
 	},
 	command: {
-		dmOnly: 'dit commando kan alleen in een privébericht gebruikt worden',
-		guildOnly: 'dit commando werkt niet in een privébericht',
-		permPre: 'Ik heb geen toestemming om',
-		permPost:
-			'Ik werk het best wanneer ik alle toestemmingen heb waar ik voor gevraagd heb wanneer je me uitnodigt. Verander alstublieft mijn toestemmingen.',
+		dmOnly: "dit commando kan alleen worden gebruikt in een privÃ©bericht.",
+		guildOnly: "dit commando werkt niet in een privÃ©bericht.",
+		permPre: "Ik heb geen toestemming om",
+		permPost: "Ik werk het beste als ik alle rechten heb waar ik om gevraagd had toen je me uitnodigde. Pas alstublieft mijn rechten aan.",
 		input: {
-			invalid: 'dat is geen geldig',
-			insufficient: 'je hebt niet zo veel'
+			invalid: "dat is geen geldige",
+			insufficient: "je hebt niet zoveel"
 		}
 	},
 	image: {
-		dm: "Why would you want to %action someone in DMs?",
-		noUser: "You have to tell me who you wanna %action"
+		dm: "Waarom zou je iemand in een privÃ©bericht willen %action",
+		noUser: "Je moet me vertellen wie je wilt %action"
 	},
 	emoji: {
-		discoin: '<a:Discoin:422523472128901140>'
+		discoin: "<a:Discoin:422523472128901140>"
 	}
 }
 
@@ -51,56 +48,56 @@ module.exports = {
 	admin: {
 		evaluate: {
 			help: {
-				usage: '<code>',
-				description: 'Voert willekeurig JavaScript uit tijdens het proces'
+				usage: "<code>",
+				description: "Voert een willekeurig stuk JavaScript uit in het proces"
 			},
 			prompts: {
-				noInput: 'Je hebt geen input gegeven om te evalueren, onnozele.'
+				noInput: "Je hebt geen input gegeven om te evalueren, stommerd."
 			},
 			returns: {}
 		},
 		execute: {
 			help: {
-				usage: '<code>',
-				description: 'Voert een shell operatie uit'
+				usage: "<code>",
+				description: "Voert een shell-operatie uit"
 			},
 			prompts: {
-				noInput: 'Je hebt niets gegeven om uit te voeren, onnozele.'
+				noInput: "Je hebt niets voorzien om uit te voeren, stommerd."
 			},
 			returns: {}
 		},
 		award: {
 			help: {
-				usage: '<hoeveelheid> <gebruiker>',
-				description: 'Kent een specifieke gebruiker toe'
+				usage: "<hoeveelheid> <gebruiker>",
+				description: "Kent een specifieke gebruiker toe"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidAmount: `%username, ${generic.command.input.invalid} hoevelheid om toe te kennen.`,
+				invalidAmount: `%username, ${generic.command.input.invalid} hoeveelheid om toe te kennen.`,
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				channel: '%mention1 heeft %number amandollars gegeven aan %mention2',
-				dm: `%mention heeft je %number ${generic.emoji.discoin} gegeven`
+				channel: "%mention1 heeft %number amandollars toegekend aan %mention2",
+				dm: `%mention heeft je %number ${generic.emoji.discoin} toegekend`
 			}
 		},
 		forcestatusupdate: {
 			help: {
-				usage: "None",
-				description: "Forces the current shard to send statistic data to the database"
+				usage: "Geen",
+				description: "Forceert de huidige shard om statistische gegevens naar de database te sturen"
 			},
 			prompts: {},
 			returns: {}
 		},
 		restartnotify: {
 			help: {
-				usage: "None",
-				description: "Notifies you when Amanda is online again"
+				usage: "Geen",
+				description: "Brengt je op de hoogte wanneer Amanda weer online is"
 			},
 			prompts: {},
 			returns: {
-				confirmation: "Alright. You'll be notified of the next time I restart"
+				confirmation: "OkÃ©. Je wordt op de hoogte gebracht van de volgende keer dat ik herstart"
 			}
 		}
 	},
@@ -108,139 +105,129 @@ module.exports = {
 	gambling: {
 		slot: {
 			help: {
-				usage: '[hoeveelheid: nummer|all|half]',
-				description:
-					'Runt een willekeurige gokautomaat en maakt kans op amandollars'
+				usage: "[hoeveelheid: aantal|all|half]",
+				description: "Draait een gokautomaat voor een kans op amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				permissionDenied: `${generic.command.permPre} voeg bestanden toe. ${generic.command.permPost}`,
-				invalidBet: `%username, ${generic.command.input.invalid} heeft gegokt.`,
-				betSmall: `%username, je moet tenminste 2 ${generic.emoji.discoin} gokken`,
+				permissionDenied: `${generic.command.permPre} bestanden bij te voegen. ${generic.command.permPost}`,
+				invalidBet: `%username, ${generic.command.input.invalid} weddenschap.`,
+				betSmall: `%username, je moet minstens 2 ${generic.emoji.discoin} inzetten`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`
 			},
 			returns: {
-				lost: `Sorry. Je hebt geen match gekregen. Je bent %number ${generic.emoji.discoin} verloren`,
-				triple: `Een driedubbele. Je hebt %number ${generic.emoji.discoin} gewonnen`,
-				heart1: `Een single :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`,
-				heart2: `Wow! Een dubbel :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`,
+				lost: `Sorry. Je hebt geen match gekregen. Je bent %number ${generic.emoji.discoin} kwijt`,
+				triple: `Een triple. Je hebt %number ${generic.emoji.discoin} gewonnen`,
+				heart1: `EÃ©n :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`,
+				heart2: `Wauw! Een dubbel :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`,
 				heart3: `WOAH! Een driedubbel :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`
 			}
 		},
 		flip: {
 			help: {
-				usage: 'Geen',
-				description: 'Gooit een munt'
+				usage: "Geen",
+				description: "Gooit een munt op"
 			},
 			prompts: {},
 			returns: {
-				flip: "You flipped %flip"
+				flip: "Je gooide %flip"
 			}
 		},
 		betflip: {
 			help: {
-				usage: '<hoeveelheid: nummer|all|half> [h|t]',
-				description:
-					'Plaats een gok op een willekeurige gooi voor een kans op amandollars'
+				usage: "<hoeveelheid: aantal|all|half> [h|t]",
+				description: "Plaats een weddenschap op een willekeurige flip voor een kans op amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidBetandSide:
-					'%username, je moet een gok geven en een kant om op te gokken.',
-				invalidBet: `%username, ${generic.command.input.invalid} heeft gegokt.`,
-				betSmall: `%username, je moet tenminste 1 ${generic.emoji.discoin} gokken`,
+				invalidBetandSide: "%username, je moet een weddenschap aangaan en een kant om op in te zetten.",
+				invalidBet: `%username, ${generic.command.input.invalid} weddenschap.`,
+				betSmall: `%username, je moet minstens 1 ${generic.emoji.discoin} inzetten`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
-				invalidSide: '%username, dat is geen geldige kant om op te gokken.'
+				invalidSide: "%username, dat is geen geldige kant om op te wedden."
 			},
 			returns: {
-				autoChoose:
-					'Je hebt geen kant gekozen, dus ik heb er een voor je gekozen:',
-				guess: 'Je hebt %string1 geraden, Ik heb %string2 gegooid',
+				autoChoose: "Je hebt geen kant gekozen, dus heb ik er een voor je uitgekozen:",
+				guess: "Je raadde %string1, ik flipte %string2",
 				win: `Je hebt het geraden! Je hebt %number ${generic.emoji.discoin} gekregen %explanation`,
-				lost: `Sorry, maar je hebt niet correct geraden. Je bent %number ${generic.emoji.discoin} verloren`
+				lost: `Sorry, je hebt het niet goed geraden. Je hebt %number ${generic.emoji.discoin} verloren`
 			}
 		},
 		coins: {
 			help: {
-				usage: '[gebruiker]',
-				description:
-					'Retourneerd de hoeveelheid amandollars die jij of een andere gebruiker heeft'
+				usage: "[gebruiker]",
+				description: "Geeft de hoeveelheid amandollars die jij of een andere gebruiker heeft"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
-				coins: `Munten voor %display`
+				coins: `amandollars voor %display`
 			}
 		},
 		daily: {
 			help: {
-				usage: 'Geen',
-				description:
-					'Een dagelijks commando dat een willekeurige hoeveelheid amandollars geeft'
+				usage: "Geen",
+				description: "Een dagelijks commando dat een willekeurig aantal amandollars geeft"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				cooldown:
-					'%username, je dagelijkse munten zullen een nieuwe voorraad innemen in %number.'
+				cooldown: "%username, je dagelijkse amandollars zullen verfrissen in %number."
 			},
 			returns: {
-				claimed: `%username heeft zijn dagelijkse geclaimed en heeft %number ${generic.emoji.discoin} gekregen`
+				claimed: `%username claimde zijn dagelijkse amandollars en kreeg %number ${generic.emoji.discoin}`
 			}
 		},
 		leaderboard: {
 			help: {
-				usage: '[local] [pagina: nummer]',
-				description: 'Krijgt het scorebord voor mensen met de meeste munten'
+				usage: "[local] [pagina: nummer]",
+				description: "Krijgt het scorebord voor mensen met de meeste amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				pageLimit: "%username, you may only browse up to page %maxPages.",
-				pageCurrent: "Page %current of %total"
+				pageLimit: "%username, je kan slechts tot en met pagina %maxPages bladeren.",
+				pageCurrent: "Pagina %current van %total"
 			},
 			returns: {
-				emptyPage: "There are only %lastPage pages to browse through."
+				emptyPage: "Er zijn slechts %lastPage pagina's om door te bladeren."
 			}
 		},
 		give: {
 			help: {
-				usage: '<hoeveelheid: nummer|all|half> <gebruiker>',
-				description: 'Geeft amandollars aan een gebruiker vanaf jouw account'
+				usage: "<hoeveelheid: aantal|all|half> <gebruiker>",
+				description: "Geeft amandollars aan een gebruiker vanaf jouw account"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidAmountandUser:
-					'%username, je moet een hoeveelheid geven en dan een gebruiker.',
+				invalidAmountandUser: "%username, je moet een hoeveelheid geven en dan een gebruiker.",
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
-				cannotGiveSelf: 'Je kan jezelf geen amandollars geven, onnozele.',
+				cannotGiveSelf: "Je kunt geen amandollars aan jezelf geven, stommerd.",
 				invalidGift: `%username, ${generic.command.input.invalid} cadeau.`,
-				giftSmall: `%username, je moet tenminste 1 ${generic.emoji.discoin} geven`,
+				giftSmall: `%username, je moet minstens 1 ${generic.emoji.discoin} geven`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				channel: '%mention1 heeft %number amandollars gegeven aan %mention2',
+				channel: "%mention1 heeft %number amandollars aan %mention2 gegeven",
 				dm: `%mention heeft je %number ${generic.emoji.discoin} gegeven`
 			}
 		},
 		wheel: {
 			help: {
-				usage: '[hoeveelheid: nummer|all|half]',
-				description:
-					'Een Rad van Fortuin voor een kans om meer amandollars te krijgen'
+				usage: "[hoeveelheid: aantal|all|half]",
+				description: "Een Rad van Fortuin voor een kans op het maken van meer amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				permissionDenied: `${generic.command.permPre} voeg bestanden toe. ${generic.command.permPost}`,
-				invalidAmountWheel:
-					'%username, je moet een hoeveelheid geven om het rad mee te draaien',
-				betSmall: `%username, je moet tenminste 1 ${generic.emoji.discoin} gokken`,
+				permissionDenied: `${generic.command.permPre} bestanden bij te voegen. ${generic.command.permPost}`,
+				invalidAmountWheel: "%username, je moet een bedrag geven om het rad mee te draaien",
+				betSmall: `%username, je moet minstens 1 ${generic.emoji.discoin} inzetten`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidAmount: `%username, ${generic.command.input.invalid} hoeveelheid.`
 			},
 			returns: {
-				winnings: `%tag heeft %number1 amandollars gegokt en heeft %number2 ${generic.emoji.discoin} teruggekregen`
+				winnings: `%tag zette %number1 amandollars in en kreeg er %number2 terug ${generic.emoji.discoin}`
 			}
 		}
 	},
@@ -248,48 +235,39 @@ module.exports = {
 	games: {
 		trivia: {
 			help: {
-				usage: '[categorie]',
-				description:
-					'Speelt een spel van trivia met andere leden en win amandollars'
+				usage: "[categorie]",
+				description: "Speel een spelletje trivia met andere leden en win amandollars"
 			},
 			prompts: {
-				categorySelect:
-					'Om een categorie te selecteren, gebruik `&trivia <categorie naam>`.',
-				dm:
-					'%username, Ik heb je een privébericht gestuurd met een lijst van categorieën.',
-				noCategory:
-					'%username, Ik heb geen categorieën gevonden met die naam. gebruik `&trivia categories` voor een complete lijst van categorieën.',
-				multipleCategories:
-					'%username, er zijn meerdere categorieën met die naam: %string',
-				gameInProgress: '%username, er is al een spel bezig voor dit kanaal.',
-				APIError: 'Er was een fout van de api',
-				parsingError:
-					'Er was een fout bij het parseren van de date geretourneerd door de api',
-				permissionDenied: `${generic.command.permPre} add reactions`,
-				provideAnswer: "To answer, type a letter in chat. You have 20 seconds.",
-				reactionRound: "Click the reaction for another round.",
-				permissionRound: "You can type \`&trivia\` or \`&t\` for another round.",
-				winners: "Winners",
-				noWinners: "No Winners",
-				nextRound: "Next Round",
-				categories: "Categories",
+				categorySelect: "Om een categorie te selecteren, gebruik je `&trivia <naam categorie>`.",
+				dm: "%username, ik heb je een privÃ©bericht gestuurd met de lijst van categorieÃ«n.",
+				noCategory: "%username, ik vond geen categorieÃ«n met die naam. Gebruik `&trivia categories` voor de volledige lijst van categorieÃ«n.",
+				multipleCategories: "%username, er zijn meerdere categorieÃ«n met die naam: %string",
+				gameInProgress: "%username, er is al een spel aan de gang voor dit kanaal.",
+				APIError: "Er was een fout van de api",
+				parsingError: "Er was een fout bij het parseren van de gegevens die de api terugstuurde",
+				permissionDenied: `${generic.command.permPre} reacties toe te voegen`,
+				provideAnswer: "Om te antwoorden, typ een letter in de chat. Je hebt 20 seconden.",
+				reactionRound: "Klik op de reactie voor een andere ronde.",
+				permissionRound: "Je kan \`&trivia\` of \`&t\` typen voor een andere ronde.",
+				winners: "Winnaars",
+				noWinners: "Geen Winnaars",
+				nextRound: "Volgende Ronde",
+				categories: "CategorieÃ«n",
 				dmError: generic.dm.fail
 			},
 			returns: {}
 		},
 		minesweeper: {
 			help: {
-				usage: '[easy|medium|hard] [--rauw] [--grootte:nummer]',
-				description:
-					'Begint een spel minesweeper met het Discord spoiler systeem'
+				usage: "[easy|medium|hard] [--raw] [--size:nummer]",
+				description: "Start een spel minesweeper met behulp van het Discord spoiler systeem"
 			},
 			prompts: {},
 			returns: {
 				info: `%difficulty -- %number1 bommen, %number2 x %number3 bord`,
-				error:
-					'De minimale grootte is 4 en de maximale grootte is 14. De grenzen zijn aangepast aan het normale',
-				rawTooLarge:
-					'De rauwe inhoud heeft de 2000 tekenlimiet overschreden. Overweeg een kleinere bordgrootte te gebruiken'
+				error: "De minimale grootte is 4 en de maximale grootte is 14. De grenzen zijn aangepast aan de normalen",
+				rawTooLarge: "De ruwe inhoud overschreed de 2000 karakterlimiet. Overweeg het gebruik van een kleinere bordgrootte"
 			}
 		}
 	},
@@ -297,55 +275,55 @@ module.exports = {
 	images: {
 		cat: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a cat"
+				usage: "Geen",
+				description: "Stuurt een afbeelding van een kat"
 			},
 			prompts: {},
 			returns: {}
 		},
 		dog: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a dog"
+				usage: "Geen",
+				description: "Stuurt een afbeelding van een hond"
 			},
 			prompts: {},
 			returns: {}
 		},
 		space: {
 			help: {
-				usage: "None",
-				description: "Sends an image of space"
+				usage: "Geen",
+				description: "Stuurt een afbeelding van de ruimte"
 			},
 			prompts: {},
 			returns: {}
 		},
 		snek: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a snek"
+				usage: "Geen",
+				description: "Stuurt een afbeelding van een slang"
 			},
 			prompts: {},
 			returns: {}
 		},
 		birb: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a birb"
+				usage: "Geen",
+				description: "Stuurt een afbeelding van een vogel"
 			},
 			prompts: {},
 			returns: {}
 		},
 		catgirl: {
 			help: {
-				usage: "None",
-				description: "Sends an image of a neko girl"
+				usage: "Geen",
+				description: "Stuurt een afbeelding van een kattenmeisje"
 			},
 			prompts: {},
 			returns: {
-				error: "Uh oh.",
-				offline: "Looks like the nekos.life API is currently offline."
-				+ "\nWe aren't able to fetch new pictures at the moment."
-				+ "\nHere's a sleepy catgirl while we wait for it to come back online."
+				error: "Oh oh.",
+				offline: "Het lijkt erop dat de nekos.life API momenteel offline is."
+				+ "\nWe zijn niet in staat om nieuwe foto's te halen op dit moment."
+				+ "\nHier is een slaperig kattenmeisje terwijl we wachten tot het weer online komt."
 			}
 		}
 	},
@@ -353,72 +331,68 @@ module.exports = {
 	interaction: {
 		ship: {
 			help: {
-				usage: '<gebruiker 1> <gebruiker 2>',
-				description: 'Krijgt twee mensen in een relatie'
+				usage: "<gebruiker 1> <gebruiker 2>",
+				description: "Probeert twee mensen te laten daten"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				permissionDenied: `${generic.command.permPre} voeg bestanden toe. ${generic.command.permPost}`,
-				invalidUsers: `%username, je moet twee gebruikers geven als argumenten`,
-				invalidUser1: `%username: het eerste gegeven lid was niet gevonden`,
-				invalidUser2: `%username, het tweede gegeven lid was niet gevonden`,
-				selfShip:
-					'%username, je kan niet iemand met zichzelf in een relatie krijgen, onnozele'
+				permissionDenied: `${generic.command.permPre} bestanden bij te voegen. ${generic.command.permPost}`,
+				invalidUsers: `%username, je moet twee gebruikers als argument aanvoeren`,
+				invalidUser1: `%username: het eerste gegeven lid is niet gevonden`,
+				invalidUser2: `%username, het tweede gegeven lid is niet gevonden`,
+				selfShip: "%username, je kunt iemand niet met zichzelf laten daten, stommerd"
 			},
 			returns: {
-				rating:
-					'Aww. Ik zou de kans dat %display1 en %display2 bij elkaar komen een %percentage% geven'
+				rating: "Aww. Ik zou %display1 en %display2 samen een score van %percentage% geven"
 			}
 		},
 		waifu: {
 			help: {
-				usage: '[gebruiker]',
-				description: 'Krijgt de waifu-informatie over jezelf of een gebruiker'
+				usage: "[gebruiker]",
+				description: "Krijgt de waifu-informatie over jezelf of een gebruiker"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
-				price: 'Prijs:',
-				claimedBy: 'Geclaimed Door:',
+				price: "Prijs:",
+				claimedBy: "Geclaimd Door:",
 				waifu: "Waifu:",
-				gifts: 'Cadeaus:',
-				nobody: "(nobody)",
-				none: "(none)"
+				gifts: "Cadeaus:",
+				nobody: "(niemand)",
+				none: "(geen)"
 			}
 		},
 		waifuleaderboard: {
 			help: {
 				usage: "[local] [pagina: nummer]",
-				description: "Displays the leaderboard of the top waifus"
+				description: "Toont het leaderboard van de topwaifus"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				pageLimit: "%username, you may only browse up to page %maxPages."
+				pageLimit: "%username, je kan slechts tot en met pagina %maxPages bladeren."
 			},
 			returns: {
-				emptyPage: "There are only %lastPage pages to browse through.",
-				claimEntry: `%user1 claimed %user2 for %price ${generic.emoji.discoin}`,
-				pageCurrent: "Page %current of %total"
+				emptyPage: "Er zijn slechts %lastPage pagina's om door te bladeren.",
+				claimEntry: `%user1 claimde %user2 voor %price ${generic.emoji.discoin}`,
+				pageCurrent: "Pagina %current van %total"
 			}
 		},
 		claim: {
 			help: {
-				usage: '<hoeveelheid: nummer|all|half> <gebruiker>',
-				description: 'Claimt iemand als een waifu. Vereist amandollars'
+				usage: "<hoeveelheid: aantal|all|half> <gebruiker>",
+				description: "Claimt iemand als een waifu. Vereist amandollars"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				badFormat:
-					'%username, de juiste indeling is `&claim <hoeveelheid> <gebruiker>`. Hoeveelheid komt eerst, gebruiker komt laatst.',
+				badFormat: "%username, het juiste formaat is `&claim <hoeveelheid> <gebruiker>`. Hoeveelheid komt eerst, gebruiker komt als laatste.",
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
-				selfClaim: '%username, je kan niet jezelf claimen, onnozele',
+				selfClaim: "%username, je kunt jezelf niet claimen, stommerd",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
-				claimSmall: `%username, je moet iemand claimen met tenminste 1 ${generic.emoji.discoin}`,
-				claimedByOther: `%username, dit persoon is al door iemand anders geclaimd, voor een hogere prijs. Je zou tenminste %number amandollars moeten spenderen om degene te stelen.`,
-				doubleClaim:
-					'%username, je hebt deze persoon al geclaimd als je waifu. Als je hun prijs wilt verhogen, gebruik `&gift <hoeveelheid>`',
+				claimSmall: `%username, je moet iemand claimen met minstens 1 ${generic.emoji.discoin}`,
+				claimedByOther: `%username, deze persoon is al door iemand anders geclaimd, voor een hogere prijs. Je moet minstens %number amandollars uitgeven om ze te stelen.`,
+				doubleClaim: "%username, je hebt die persoon al geclaimd als je waifu. Als je hun prijs wilt verhogen, gebruik dan `&gift <hoeveelheid>`",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
@@ -428,71 +402,68 @@ module.exports = {
 		},
 		divorce: {
 			help: {
-				usage: '[reden]',
-				description: 'Scheidt een gebruiker'
+				usage: "[reden]",
+				description: "Scheidt een gebruiker"
 			},
 			prompts: {
-				noWaifu: '%username, je hebt geen waifu om mee te scheiden, onnozele',
+				noWaifu: "%username, je hebt niet eens een waifu om te scheiden, stommerd",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				divorced: '%tag1 heeft een scheiding ingediend voor %tag2 met %reason',
-				dm: '%tag heeft een scheiding ingediend van jou met %reason'
+				divorced: "%tag1 heeft een scheiding van %tag2 aangevraagd met %reason",
+				dm: "%tag heeft een scheiding van je aangevraagd met %reason"
 			}
 		},
 		gift: {
 			help: {
-				usage: '<hoeveelheid: nummer|all|half>',
-				description:
-					"Schenkt een hoeveelheid van amandollars naar je waifu's prijs"
+				usage: "<hoeveelheid: aantal|all|half>",
+				description: "Schenkt een bedrag aan amandollars aan de prijs van je waifu"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				noWaifu:
-					'%username, je hebt geen waifu om amandollars te schenken, onnozele',
-				noGift: '%username, je hebt geen hoeveelheid voor een geschenk gegeven',
+				noWaifu: "%username, je hebt niet eens een waifu om amandollars aan te schenken, stommerd",
+				noGift: "%username, je hebt geen bedrag gegeven",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidGift: `%username, ${generic.command.input.invalid} cadeau.`,
-				giftSmall: `%username, je moet iemand tenminste 1 ${generic.emoji.discoin} schenken`
+				giftSmall: `%username, je moet iemand minstens 1 ${generic.emoji.discoin} schenken`
 			},
 			returns: {
-				gifted: "%tag1 heeft %number amandollars geschonken naar %tag2's prijs"
+				gifted: "%tag1 heeft %number amandollars aan %tag2's prijs geschonken"
 			}
 		},
 		bean: {
 			help: {
-				usage: '<gebruiker>',
-				description: 'Verboont een gebruiker'
+				usage: "<gebruiker>",
+				description: "Verboont een gebruiker"
 			},
 			prompts: {
-				guildOnly:
-					'%username, je kan niet iemand in een privébericht verbonen, onnozele',
+				guildOnly: "%username, je kan niet iemand in een privÃ©bericht verbonen, stommerd",
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
-				selfBean: '%username, je kan jezelf niet verbonen, onnozele'
+				selfBean: "%username, je kan jezelf niet verbonen, stommerd"
 			},
 			returns: {
-				beaned: '%tag is verbannen!'
+				beaned: "%tag is verbannen!"
 			}
 		},
 		hug: {
 			help: {
-				usage: "<user>",
-				description: "Hugs someone"
+				usage: "<gebruiker>",
+				description: "Knuffelt iemand"
 			},
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
-				amanda: "**Hugs %username back** :heart:",
-				action: "%username hugged %mention"
+				amanda: "**Knuffelt %username terug** :heart:",
+				action: "%username knuffelde %mention"
 			}
 		},
 		nom: {
 			help: {
-				usage: "<user>",
-				description: "Noms someone"
+				usage: "<gebruiker>",
+				description: "Neemt een hap van iemand"
 			},
 			prompts: {
 				dm: generic.image.dm,
@@ -500,14 +471,14 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
 			},
 			returns: {
-				amanda: "owie",
-				action: "%username nommed %mention"
+				amanda: "auw",
+				action: "%username nam een hap van %mention"
 			}
 		},
 		kiss: {
 			help: {
-				usage: "<user>",
-				description: "Kisses someone"
+				usage: "<gebruiker>",
+				description: "Kust iemand"
 			},
 			prompts: {
 				dm: generic.image.dm,
@@ -515,14 +486,14 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
 			},
 			returns: {
-				amanda: "**Kisses %username back** :heart:",
-				action: "%username kissed %mention"
+				amanda: "**Kust %username terug** :heart:",
+				action: "%username kuste %mention"
 			}
 		},
 		cuddle: {
 			help: {
-				usage: "<user>",
-				description: "Cuddles someone"
+				usage: "<gebruiker>",
+				description: "Omhelst iemand"
 			},
 			prompts: {
 				dm: generic.image.dm,
@@ -530,14 +501,14 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
 			},
 			returns: {
-				amanda: "**Cuddles %username back** :heart:",
-				action: "%username cuddled %mention"
+				amanda: "**Omhelst %username terug** :heart:",
+				action: "%username omhelsde %mention"
 			}
 		},
 		poke: {
 			help: {
-				usage: "<user>",
-				description: "Pokes someone"
+				usage: "<gebruiker>",
+				description: "Port iemand"
 			},
 			prompts: {
 				dm: generic.image.dm,
@@ -545,14 +516,14 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
 			},
 			returns: {
-				amanda: "Dun poke me ; ^ ;",
-				action: "%username poked %mention"
+				amanda: "Por me niet ; ^ ;",
+				action: "%username porde %mention"
 			}
 		},
 		slap: {
 			help: {
-				usage: "<user>",
-				description: "Slaps someone"
+				usage: "<gebruiker>",
+				description: "Slaat iemand"
 			},
 			prompts: {
 				dm: generic.image.dm,
@@ -560,14 +531,14 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
 			},
 			returns: {
-				amanda: "**Slaps %username back** That hurt me ; ^ ;",
-				action: "%username slapped %mention"
+				amanda: "**Slaat %username terug** Dat deed me pijn ; ^ ;",
+				action: "%username sloeg %mention"
 			}
 		},
 		boop: {
 			help: {
-				usage: "<user>",
-				description: "Boops someone"
+				usage: "<gebruiker>",
+				description: "Prikt iemands neus"
 			},
 			prompts: {
 				dm: generic.image.dm,
@@ -575,14 +546,14 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
 			},
 			returns: {
-				amanda: "Dun boop me ; ^ ;",
-				action: "%username booped %mention"
+				amanda: "Prik mijn neus niet ; ^ ;",
+				action: "%username prikte %mention's neus"
 			}
 		},
 		pat: {
 			help: {
-				usage: "<user>",
-				description: "Pats someone"
+				usage: "<gebruiker>",
+				description: "Geeft iemand een tikje"
 			},
 			prompts: {
 				dm: generic.image.dm,
@@ -590,8 +561,8 @@ module.exports = {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
 			},
 			returns: {
-				amanda: "≥ w ≤",
-				action: "%username patted %mention"
+				amanda: "â‰¥ w â‰¤",
+				action: "%username gaf %mention een tikje"
 			}
 		}
 	},
@@ -600,98 +571,94 @@ module.exports = {
 		statistics: {
 			help: {
 				usage: "[music|games]",
-				description: "Displays detailed statistics for nerds"
+				description: "Toont gedetailleerde statistieken voor nerds"
 			},
 			prompts: {
-				slow: "Ugh. I hate it when I'm slow, too"
+				slow: "Ugh. Ik haat het ook als ik traag ben"
 			},
 			returns: {
-				songsToday: "**❯ Songs played today:**\n%number",
-				songsQueued: "**❯ Song queued:**\n%number",
-				voiceConnections: "**❯ Voice connections:**\n%number",
-				usersListening: "**❯ Users listening:**\n%number",
-				gamesToday: "**❯ Games played today:**\n%number",
-				gamesInProgress: "**❯ Games in progress:**\n%number",
-				usersPlaying: "**❯ Users Playing:**\n%number",
-				heartbeat: "Heartbeat",
-				latency: "Latency",
+				songsToday: "**â¯ Nummers vandaag afgespeeld:**\n%number",
+				songsQueued: "**â¯ Nummers in de wachtrij:**\n%number",
+				voiceConnections: "**â¯ Spraakverbindingen:**\n%number",
+				usersListening: "**â¯ Gebruikers die luisteren:**\n%number",
+				gamesToday: "**â¯ Spelletjes gespeeld vandaag:**\n%number",
+				gamesInProgress: "**â¯ Spelletjes in uitvoering:**\n%number",
+				usersPlaying: "**â¯ Gebruikers die spelen:**\n%number",
+				heartbeat: "Hartslag",
+				latency: "Latentie",
 				uptime: "Uptime",
-				ramUsage: "RAM usage",
-				userCount: "**❯ User count:**\n%number",
-				guildCount: "**❯ Server count:**\n%number",
-				channelCount: "**❯ Channel count:**\n%number",
+				ramUsage: "RAM-gebruik",
+				userCount: "**â¯ Aantal gebruikers:**\n%number",
+				guildCount: "**â¯ Aantal servers:**\n%number",
+				channelCount: "**â¯ Aantal kanalen:**\n%number",
 			}
 		},
 		ping: {
 			help: {
-				usage: "None",
-				description: "What do you think this does?"
+				usage: "Geen",
+				description: "Wat denk je dat dit doet?"
 			},
 			prompts: {},
 			returns: {
 				pong: "Pong!",
-				heartbeat: "❯ Heartbeat",
-				latency: "❯ Latency",
-				footer: "W-Wait... It's called table tennis"
+				heartbeat: "â¯ Hartslag",
+				latency: "â¯ Latentie",
+				footer: "W-Wacht... het heet tafeltennis"
 			}
 		},
 		invite: {
 			help: {
-				usage: 'Geen',
-				description: 'Voeg Amanda toe tot een server'
+				usage: "Geen",
+				description: "Voeg Amanda toe aan een server"
 			},
 			prompts: {},
 			returns: {
-				invited: 'Ik ben uitgenodigd?',
-				link: "Invite link: %link",
-				notice:
-					'Onthoud, je hebt **beheer server** toestemming nodig om bots toe te voegen aan een server.'
+				invited: "Ik ben uitgenodigd?",
+				link: "Uitnodigingslink: %link",
+				notice: "Vergeet niet dat je **server beheren** rechten nodig hebt om bots toe te kunnen voegen aan een server."
 			}
 		},
 		info: {
 			help: {
-				usage: 'Geen',
-				description: 'Toont informatie over Amanda'
+				usage: "Geen",
+				description: "Toont informatie over Amanda"
 			},
 			prompts: {},
 			returns: {
-				thanks:
-					'Dank je voor het kiezen van mij als je metgezel! :heart:\nHier is een beetje informatie over mij a...',
-				creators: 'Makers',
-				links:
-					"Bezoek Amanda's [website](%website) of haar [ondersteuningsserver](%server)\nWil je doneren? Bekijk haar [Patreon](%patreon) of maak een eenmalige donatie door [PayPal](%paypal).\nWanna see Amanda's growth over time? You can [here](%stats)"
+				thanks: "Bedankt dat je mij als je metgezel hebt gekozen! :heart:\nHier is wat informatie over mij...",
+				creators: "Makers",
+				links: "Bezoek Amanda's [website](%website) of haar [ondersteuningsserver](%server)\nWil je doneren? Bekijk haar [Patreon](%patreon) of doe een eenmalige donatie via [PayPal](%paypal).\nWil je Amanda's groei in de loop van de tijd zien? Dat kan je [hier](%stats)"
 			}
 		},
 		donate: {
 			help: {
-				usage: 'Geen',
-				description: 'Krijg informatie over hoe je kan doneren'
+				usage: "Geen",
+				description: "Krijg informatie over hoe je kunt doneren"
 			},
 			prompts: {},
 			returns: {
-				intro: 'Aan het nadenken over doneren? ❤',
-				description:
-					'Ik ben opgewonden over dat je geïnteresseerd bent om mijn makers te ondersteunen!' +
-					'\n\nAls je bent geïnteresseerd in het maken van maandelijkse donaties, kan je dat doen op [Patreon](%patreon),' +
-					' of als je een eenmalige donatie wilt maken, kan je doneren door [PayPal](%paypal).' +
-					'\n\nAl het gedoneerde geld gaat terug naar de ontwikkeling.' +
-					"\nToegang tot Amanda's kenmerken zullen niet veranderen, wat je keuze ook is," +
-					' maar je zult wel een donor rol krijgen in onze [Ondersteuningsserver](%server)' +
-					' en een onderscheidende donor badge krijgen op &profile.'
+				intro: "Denk je eraan om te doneren? â¤",
+				description: "Ik ben opgewonden dat je geÃ¯nteresseerd bent in het ondersteunen van mijn makers!" +
+					"\n\nAls je geÃ¯nteresseerd bent in het doen van maandelijkse donaties, kan je dit doen op [Patreon](%patreon)," +
+					" of als je een eenmalige donatie wilt doen, kan je doneren via [PayPal](%paypal)." +
+					"\n\nAl het gedoneerde geld gaat terug in de ontwikkeling." +
+					"\nToegang tot Amanda's functies zal niet veranderen, ongeacht je keuze," +
+					" maar je krijgt wel een donorrol in onze [Ondersteuningsserver](%server)" +
+					" en een onderscheidende donorbadge op &profile."
 			}
 		},
 		commits: {
 			help: {
-				usage: "None",
-				description: "Gets the latest git commits to Amanda"
+				usage: "Geen",
+				description: "Krijgt de nieuwste git commits aan Amanda"
 			},
 			prompts: {},
 			returns: {}
 		},
 		privacy: {
 			help: {
-				usage: "None",
-				description: "Details Amanda's privacy statement"
+				usage: "Geen",
+				description: "Beschrijft Amanda's privacyverklaring"
 			},
 			prompts: {
 				dmSuccess: generic.dm.success
@@ -700,8 +667,8 @@ module.exports = {
 		},
 		user: {
 			help: {
-				usage: "[user]",
-				description: "Provides information about a user"
+				usage: "[gebruiker]",
+				description: "Geeft informatie over een gebruiker"
 			},
 			prompts: {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
@@ -710,8 +677,8 @@ module.exports = {
 		},
 		avatar: {
 			help: {
-				usage: "[user]",
-				description: "Gets a user's avatar"
+				usage: "[gebruiker]",
+				description: "Krijgt de avatar van een gebruiker"
 			},
 			prompts: {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`
@@ -720,8 +687,8 @@ module.exports = {
 		},
 		icon: {
 			help: {
-				usage: "None",
-				description: "Gets a server's icon"
+				usage: "Geen",
+				description: "Krijgt het pictogram van een server"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`
@@ -731,7 +698,7 @@ module.exports = {
 		wumbo: {
 			help: {
 				usage: "<emoji>",
-				description: "Makes an emoji bigger"
+				description: "Maakt een emoji groter"
 			},
 			prompts: {
 				invalidEmoji: `%username, ${generic.command.input.invalid} emoji.`
@@ -740,29 +707,29 @@ module.exports = {
 		},
 		profile: {
 			help: {
-				usage: "[user]",
-				description: "Gets profile information about a user"
+				usage: "[gebruiker]",
+				description: "Krijgt profielinformatie over een gebruiker"
 			},
 			prompts: {
 				invalidUser: `%username, ${generic.command.input.invalid} user.`,
-				permissionDenied: `${generic.command.permPre} attach files. ${generic.command.permPost}`
+				permissionDenied: `${generic.command.permPre} bestanden bij te voegen. ${generic.command.permPost}`
 			},
 			returns: {}
 		},
 		help: {
 			help: {
-				usage: "[Command|Category]",
-				description: "Your average help command"
+				usage: "[Commando|Categorie]",
+				description: "Je gemiddelde helpcommando"
 			},
 			prompts: {
-				invalidCommand: "**%tag**, I couldn't find the help panel for that command"
+				invalidCommand: "**%tag**, ik kon het hulp-paneel voor dat commando niet vinden"
 			},
 			returns: {
-				footer: "Type `&help [command]` to see more information about a command",
-				mobile: "Click the reaction for a mobile-compatible view",
-				main: "Type `&help [category]` to see all commands in that category."
-				+ "\nType `&help [command]` to see more information about a command.",
-				info: "Type `&info` to see general information about Amanda.\nFor more, join our support server: %link"
+				footer: "Typ `&help [commando]` om meer informatie over een commando te zien",
+				mobile: "Klik op de reactie voor een mobiel-compatibele weergave",
+				main: "Typ `&help [categorie]` om alle commando's in die categorie te zien."
+				+ "\nTyp `&help [commando]` om meer informatie over een commando te zien.",
+				info: "Typ `&info` om algemene informatie over Amanda te zien.\nVoor meer, word lid van onze ondersteuningsserver: %link"
 			}
 		}
 	},
@@ -771,165 +738,170 @@ module.exports = {
 		token: {
 			help: {
 				usage: "[new|delete]",
-				description: "Obtain a web dashboard login token"
+				description: "Verkrijg een webdashboard login token"
 			},
 			prompts: {
 				dmFailed: generic.dm.fail,
-				none: "You do not currently have any tokens. Use `&musictoken new` to generate a new one."
+				none: "Je hebt momenteel geen tokens. Gebruik `&musictoken new` om een nieuwe te genereren."
 			},
 			returns: {
 				dmSuccess: generic.dm.success,
-				deleted: "Deleted all your tokens. Use `&musictoken new` to generate a new one.",
-				new: "Your existing tokens were deleted, and a new one was created."
-				+"\nDo not share this token with anyone. If you do accidentally share it, you can use `&musictoken delete` to delete it and keep you safe."
-				+"\nYou can now log in! %website",
-				generated: "Here is the token you generated previously:"
-				+"\nYou can use `&musictoken delete` to delete it, and `&musictoken new` to regenerate it."
+				deleted: "Ik heb al je tokens verwijderd. Gebruik `&musictoken new` om een nieuwe te genereren.",
+				new: "Je bestaande tokens zijn verwijderd, en er is een nieuwe aangemaakt."
+				+"\nDeel dit token met niemand. Als je het per ongeluk toch deelt, kan je `&musictoken delete` gebruiken om het te verwijderen en jezelf veilig te houden."
+				+"\nJe kan nu inloggen! %website",
+				generated: "Hier is het token dat je eerder hebt gegenereerd:"
+				+"\nJe kan `&musictoken delete` gebruiken om het te verwijderen, en `&musictoken new` om het opnieuw te genereren."
 			}
 		},
 		frisky: {
 			help: {
 				usage: "[original|deep|chill|classics]",
-				description: "Play Frisky Radio: https://friskyradio.com"
+				description: "Speel Frisky Radio: https://friskyradio.com"
 			},
 			prompts: {},
 			returns: {
-				schedule: "Frisky Radio ­— Schedule",
-				footer: "Use &frisky [station] to play a station"
+				schedule: "Frisky Radio Â­â€” Schema",
+				footer: "Gebruik &frisky [zender] om een zender af te spelen"
 			}
 		},
 		music: {
 			help: {
-				usage: "None. You're not supposed to see this.",
-				description: "None. You're not supposed to see this."
+				usage: "Geen. Dit mag je niet zien.",
+				description: "Geen. Dit mag je niet zien."
 			},
 			prompts: {
 				guildOnly: generic.command.guildOnly,
-				invalidSkips: "That is not a valid amount of songs to skip",
-				invalidSkipsAmount: "You have to skip 1 or more songs",
-				tooManySkips: "You cannot skip more songs than are in the queue!",
-				invalidAction: "%username, that's not a valid action. If you want to play something, try `&music play <song>`.\nCheck out `&help music` and `&help playlists` for more things you can do!",
-				nothingPlaying: "%username, nothing is currently playing.",
-				noResults: "No results.",
-				voiceChannelRequired: "%username, you need to join a voice channel to do that.",
-				voiceCantJoin: "%username, I don't have permission to join your voice channel.",
-				voiceCantSpeak: "%username, I don't have permission to speak in your voice channel.",
-				playableRequired: "%username, please provide either a YouTube video link or some words for me to search for.",
-				youtubeRequired: "%username, please provide a YouTube link or video ID.",
-				queueCannotDo: "The current queue cannot be %action at this time.",
-				voiceChannelWaiting: "%username, you need to join a voice channel to do that. Waiting for you to connect...",
-				songSelection: "Song selection",
-				songSelectionCanceled: "Song selection cancelled",
-				totalLength: "Total length: %number",
-				queueFor: "Queue for %server",
-				everyoneLeft: "Everyone left, so I have as well.",
-				songNotPlayingDiscord: "Hmm. Seems like the song isn't playing."
-				+ "\n\n**This is probably an issue with Discord.**"
-				+ "\nYou should try changing the server region."
-				+ "\n\nTo report a problem, join our server: https://discord.gg/YMkZDsK",
-				songErrorExclaimation: "`song.track` is ! placeholder. This is a bug.",
-				songErrorNull: "`song.track` is null or undefined. This is a bug.",
-				songNotPlayable: "We couldn't play that song",
-				errorOccured: "We ran into an error",
-				songErrorNotObject: "Song is not an object %song",
-				tooManyErrors: "Too many errors!",
-				errorsSuppressed: "Future errors from this queue will be silenced."
-				+ "\nIf any more songs fail, they will be skipped with no message."
-				+ "\nTo report a bug, join our server: https://discord.gg/YMkZDsK",
-				autoRanOut: "Auto mode is on, but we ran out of related songs and had to stop playback.",
-				queueAlreadyPaused: "Music is already paused. Use `&music resume` to resume.",
-				queueNowPlaying: "Now Playing: %song",
-				noUsersLeft: "No users left in my voice channel. I will stop playing in %time seconds if nobody rejoins.",
-				autoOn: "Auto mode is now turned on.",
-				autoOff: "Auto mode is now turned off.",
-				loopOn: "Loop mode is now turned on.",
-				loopOff: "Loop mode is now turned off.",
-				musicPlaying: "Music is playing. If you want to pause, use `&music pause`.",
-				songRemoveRequired: "You need to tell me which song to remove. `&music queue remove <number>`"
-				+ "\nTo clear the entire queue, use `&music queue clear` or `&music queue remove all`.",
-				songRemove1: "Item 1 is the currently playing song. Use `&music skip` to skip it, "
-				+ "or `&music queue remove 2` if you wanted to remove the song that's up next.",
-				queueSongTotal: "There are %number1 items in the queue. You can only remove items 2-%number2.",
-				numberNotInRelated: "The number you typed isn't an item in the related list. Try `&music related`."
+				invalidSkips: "Dat is geen geldig aantal nummers om over te slaan",
+				invalidSkipsAmount: "Je moet 1 of meer nummers overslaan",
+				tooManySkips: "Je kunt niet meer nummers overslaan dan er in de wachtrij staan!",
+				invalidAction: "%username, dat is geen geldige actie. Als je iets wilt afspelen, probeer dan `&music play <nummer>`.\nBekijk `&help music` en `&help playlists` voor meer dingen die je kunt doen!",
+				nothingPlaying: "%username, er wordt momenteel niets afgespeeld.",
+				noResults: "Geen resultaten.",
+				voiceChannelRequired: "%username, je moet je aansluiten bij een spraakkanaal om dat te kunnen doen.",
+				voiceCantJoin: "%username, ik heb geen toestemming om me bij je spraakkanaal aan te sluiten.",
+				voiceCantSpeak: "%username, ik heb geen toestemming om te spreken in je spraakkanaal.",
+				playableRequired: "%username, geef alstublieft een YouTube-videolink of enkele woorden waarnaar ik kan zoeken.",
+				youtubeRequired: "%username, geef alstublieft een YouTube-link of een video-ID op.",
+				invalidLink: "%username, dat is geen geldige link.",
+				queueCannotDo: "De huidige wachtrij kan op dit moment niet worden %action.",
+				voiceChannelWaiting: "%username, je moet je aansluiten bij een spraakkanaal om dat te kunnen doen. Aan het wachten totdat je verbinding maakt...",
+				songSelection: "Songselectie",
+				songSelectionCanceled: "Songselectie geannuleerd",
+				totalLength: "Totale lengte: %number",
+				queueFor: "Wachtrij voor %server",
+				everyoneLeft: "Iedereen ging weg, dus ik ging ook.",
+				songNotPlayingDiscord: "Hmm. Het lijkt erop dat het liejde niet speelt."
+				+ "\n\n**Dit is waarschijnlijk een probleem met Discord.**"
+				+ "\nProbeer de serverregio te wijzigen."
+				+ "\n\nWord lid van onze server om een probleem te melden: https://discord.gg/YMkZDsK",
+				songErrorExclaimation: "`song.track` is ! tijdelijke aanduiding. Dit is een fout.",
+				songErrorNull: "`song.track` is null of undefined. Dit is een fout.",
+				songNotPlayable: "We konden dat nummer niet afspelen",
+				errorOccured: "We kwamen een fout tegen",
+				songErrorNotObject: "Liedje is geen object %song",
+				tooManyErrors: "Te veel fouten!",
+				errorsSuppressed: "Toekomstige fouten uit deze wachtrij worden onderdrukt."
+				+ "\nAls er nog meer nummers mislukken, worden ze zonder bericht overgeslagen."
+				+ "\nOm een bug te melden, kan je je aanmelden bij onze server: https://discord.gg/YMkZDsK",
+				autoRanOut: "Auto modus is ingeschakeld, maar we hadden geen gerelateerde nummers meer en moesten het afspelen stoppen.",
+				queueAlreadyPaused: "De muziek is al gepauzeerd. Gebruik `&music resume` om te hervatten.",
+				queueNowPlaying: "Nu aan het spelen: %song",
+				noUsersLeft: "Er zijn geen gebruikers meer in mijn spraakkanaal. Ik zal stoppen met afspelen over %time seconden als niemand weer aansluit.",
+				autoOn: "Auto modus is nu ingeschakeld.",
+				autoOff: "Auto modus is nu uitgeschakeld.",
+				loopOn: "Lus modus is nu ingeschakeld.",
+				loopOff: "Lus modus is nu uitgeschakeld.",
+				musicPlaying: "Er speelt muziek. Als je wilt pauzeren, gebruik dan `&music pause`.",
+				songRemoveRequired: "Je moet me vertellen welk nummer ik moet verwijderen. `&music queue remove <nummer>`"
+				+ "\nOm de hele wachtrij te wissen, gebruik je `&music queue clear` of `&music queue remove all`.",
+				songRemove1: "Item 1 is het nummer dat momenteel wordt afgespeeld. Gebruik `&music skip` om het over te slaan, "
+				+ "of `&music queue remove 2` als je het volgende nummer zou willen verwijderen.",
+				queueSongTotal: "Er staan %number1 items in de wachtrij. Je kunt alleen items 2-%number2 verwijderen.",
+				numberNotInRelated: "Het nummer dat je hebt getypt is geen item in de gerelateerde lijst. Probeer `&music related`.",
+				playNoArguments:
+					"Je moet me vertellen wat je wilt afspelen. Probeer een van deze dingen:"
+					+ "\n- Zoektermen, zoals `despacito`"
+					+ "\n- Een YouTube-link, zoals `https://youtu.be/kJQP7kiw5Fk`"
+					+ "\n- Een SoundCloud-link, zoals `https://soundcloud.com/luisfonsiofficial/despacito`"
+					+ "\nGebruik `&help music` voor meer ideeÃ«n."
 			},
 			returns: {
-				queueClear: "Cleared the queue, removing %number",
-				queueIn: "The current music session is over in %channel. Go there to see what's playing!"
+				queueClear: "De wachtrij is leeggehaald, %number verwijderd",
+				queueIn: "De huidige muzieksessie is in %channel. Ga daarheen om te zien wat er wordt afgespeeld!"
 			}
 		},
 		playlist: {
 			help: {
-				usage: "None. You're not supposed to see this.",
-				description: "None. You're not supposed to see this."
+				usage: "Geen. Dit mag je niet zien.",
+				description: "Geen. Dit mag je niet zien."
 			},
 			prompts: {
-				playFromStart: "Play the entire playlist from the start",
-				playFromLinked: "Play the playlist, starting at the linked song",
-				playOnlyLinked: "Only play the linked song",
-				userLinked: "You linked to this song in the playlist: %title",
-				query: "What would you like to do?",
-				selectionInfo: "To play a more specific range from the playlist, use `&music play <link> <start> <end>`. See `&help playlist` for more information.",
-				playlistNameRequired: "%username, you must name a playlist. Use `&music playlists show` to show all playlists.",
-				directPlaylist: "%username, you can play a playlist directly! Just pass it to \`&music play\` like so:"
-				+"%info\n\n\n\nIf you still want to import a playlist into Amanda, you must give it a friendly name first, like `bobs_songs`.",
-				playlistNameLimit: "%username, the playlist name must be 24 characters or less.",
-				playlistNotExist: "%username, That playlist does not exist. Use \`&music playlist %playlist create\` to create it.",
-				databaseFixed: "%username, The database entries for that playlist are inconsistent. The inconsistencies have been resolved by resetting the order of the songs in that playlist. Apart from the song order, no data was lost. Other playlists were not affected.",
-				usePlaylistAdd: "Do not use playlist importing with `playlist add`. Use `playlist import` instead",
-				youtubeLinkInvalid: "%username, That is not a valid YouTube link",
-				indexRequired: "%username, Please provide the index of the item to remove",
-				indexMoveRequired: "Please provide an index to move from and an index to move to.",
-				playlistNotOwned: "%username, you do not own that playlist and so cannot modify it.",
-				playlistDuplicateSong: "%username, that song is already in the playlist.",
-				indexesEqual: "%username, Those two indexes are equal.",
-				playlistEmpty: "That playlist is empty. Add some songs with `&music playlist %playlist add <song>`!",
-				playlistImporting: "Importing playlist. This could take a moment...\n(Fetching song info)",
-				playlistImportAllExisting: "%username, all videos in that playlist have already been imported.",
-				playlistImportingDatabase: "Importing playlist. This could take a moment...\n(Updating database)",
-				playlistDeleteConfirm: "This action will permanently delete the playlist `%playlist`. "
-				+ "After deletion, you will not be able to play, display, or modify the playlist, and anyone will be able to create a new playlist with the same name."
-				+ "\nYou will not be able to undo this action.\n\n"
-				+ "<:bn_del:331164186790854656> - confirm deletion\n"
-				+ "<:bn_ti:327986149203116032> - ignore",
-				bulkListening: "Okay, I'm listening",
-				bulkDescription: "» Type anything to add it to the playlist."
-				+ `\n» Commands starting with \`%prefix\` will only run the command.`
-				+ "\n» Type `undo` to remove the last item in the playlist.\u2002🧹"
-				+ "\n» Type `stop` when you're done. You can keep adding things until you type `stop`.\u2002🛑",
-				outOfRange: "Out of range.",
-				playlistSection: "Playlist section",
-				bulkMenuOpen: "You already have a menu open in here. Type `stop` to stop it.",
-				playlistPages: "Page %number of %total"
+				playFromStart: "Speel de hele afspeellijst af vanaf het begin",
+				playFromLinked: "Speel de afspeellijst af, beginnend bij het gelinkte nummer",
+				playOnlyLinked: "Speel alleen het gelinkte nummer af",
+				userLinked: "Je hebt naar dit nummer gelinkt in de afspeellijst: %title",
+				query: "Wat zou je willen doen?",
+				selectionInfo: "Om een meer specifiek bereik van de afspeellijst af te spelen, gebruik je `&music play <link> <begin> <einde>`. Zie `&help playlist` voor meer informatie.",
+				playlistNameRequired: "%username, je moet een afspeellijst een naam geven. Gebruik `&music playlists show` om alle afspeellijsten te tonen.",
+				directPlaylist: "%username, je kunt een afspeellijst direct afspelen! Geef het gewoon door aan \`&music play\` zoals dit:"
+				+"%info\n\n\n\nAls je nog steeds een afspeellijst wilt importeren in Amanda, moet je het eerst een vriendelijke naam geven, zoals `bobs_songs`.",
+				playlistNameLimit: "%username, de naam van de afspeellijst moet 24 tekens of minder zijn.",
+				playlistNotExist: "%username, die afspeellijst bestaat niet. Gebruik \`&music playlist %playlist create\` om het aan te maken.",
+				databaseFixed: "%username, de database-items voor die afspeellijst zijn inconsistent. De inconsistenties zijn opgelost door de volgorde van de nummers in die afspeellijst te resetten. Afgezien van de volgorde van de nummers zijn er geen gegevens verloren gegaan. Andere afspeellijsten werden niet beÃ¯nvloed.",
+				usePlaylistAdd: "Gebruik het importeren van afspeellijsten niet met `playlist add`. Gebruik in plaats daarvan `playlist import`",
+				youtubeLinkInvalid: "%username, dat is geen geldige YouTube-link",
+				indexRequired: "%username, geef alstublieft de index van het item dat je wilt verwijderen",
+				indexMoveRequired: "Geef alstublieft een index om van te verplaatsen en een index om naar te verplaatsen.",
+				playlistNotOwned: "%username, je bent niet de eigenaar van die afspeellijst en kan deze dus ook niet wijzigen.",
+				playlistDuplicateSong: "%username, dat nummer staat al in de afspeellijst.",
+				indexesEqual: "%username, die twee indexen zijn gelijk.",
+				playlistEmpty: "Die afspeellijst is leeg. Voeg enkele nummers toe met `&music playlist %playlist add <nummer>`!",
+				playlistImporting: "Afspeellijst aan het importeren. Dit kan even duren...\n(Nummerinformatie aan het ophalen)",
+				playlistImportAllExisting: "%username, alle video's in die afspeellijst zijn al geÃ¯mporteerd.",
+				playlistImportingDatabase: "Afspeellijst aan het importeren. Dit kan even duren...\n(Database aan het bijwerken)",
+				playlistDeleteConfirm: "Deze actie zal de playlist `%playlist` permanent verwijderen."
+				+ "\nJe kunt deze actie niet ongedaan maken, en iedereen zal in staat zijn om een nieuwe afspeellijst met dezelfde aan te maken."
+				+ "\nDruk op <:bn_del:331164186790854656> om `%playlist` voor altijd te verwijderen.",
+				bulkListening: "OkÃ©, ik luister",
+				bulkDescription: "Â» Typ iets om het toe te voegen aan de afspeellijst."
+				+ `\nÂ» Commando's die beginnen met \`%prefix\` zullen alleen het commando uitvoeren.`
+				+ "\nÂ» Typ `undo` om het laatste item in de afspeellijst te verwijderen.\u2002ðŸ§¹"
+				+ "\nÂ» Typ `stop` als je klaar bent. Je kunt dingen blijven toevoegen totdat je `stop` typt.\u2002ðŸ›‘",
+				outOfRange: "Buiten bereik.",
+				playlistSection: "Afspeellijst sectie",
+				bulkMenuOpen: "Je hebt hier al een menu openstaan. Typ `stop` om het te stoppen.",
+				playlistPages: "Pagina %number van %total"
 			},
 			returns: {
-				playlistAdded: "%username, Added **%song** to playlist **%playlist**",
-				playlistRemoved: "%username, Removed **%song** from playlist **%playlist**",
-				playlistCreated: "%username, Created playlist **%playlist**",
-				playlistImportDone: "All done! Check out your playlist with **&music playlist %playlist**.",
-				playlistDeleted: "Playlist deleted.",
-				playlistDeleteCancelled: "Playlist deletion cancelled",
-				playlistMoved: "%username, Moved **%song** to position **%index**",
-				bulkDone: "All done! I won't add anything else to the playlist.",
-				bulkMenuGone: "(There used to be a menu here, but it's gone now.)"
+				playlistAdded: "%username, ik heb **%song** toegevoegd aan afspeellijst **%playlist**",
+				playlistRemoved: "%username, ik heb **%song** verwijderd uit afspeellijst **%playlist**",
+				playlistCreated: "%username, ik heb afspeellijst **%playlist** aangemaakt",
+				playlistImportDone: "Alles klaar! Bekijk je afspeellijst met **&music playlist %playlist**.",
+				playlistDeleted: "Afspeellijst verwijderd.",
+				playlistDeleteCancelled: "Verwijderen van afspeellijst geannuleerd",
+				playlistMoved: "%username, ik heb **%song** verplaatst naar positie **%index**",
+				bulkDone: "Alles klaar! Ik zal niets anders aan de afspeellijst toevoegen.",
+				bulkMenuGone: "(Vroeger was er hier een menu, maar dat is nu weg.)"
 			}
 		},
 		debug: {
 			help: {
-				usage: "[Channel]",
-				description: "Provides debugging information for if audio commands are not working as intended"
+				usage: "[Kanaal]",
+				description: "Biedt foutopsporingsinformatie voor als audio-commando's niet werken zoals bedoeld"
 			},
 			prompts: {
-				guildOnly: "You cannot debug music in a DM channel",
-				invalidChannel: "Channel not found"
+				guildOnly: "Je kunt geen muziek debuggen in een privÃ©bericht",
+				invalidChannel: "Kanaal niet gevonden"
 			},
 			returns: {
 				tip: "Tip:",
-				tipValue: "On top of Read Message and Add Reaction permissions, bots must also have Read Message History permissions to add reactions to messages",
-				unnamedNode: "an unnamed node",
-				queueUsing: "However, the current queue is using %name",
-				infoFor: "Debugging info for %channel",
-				permissions: "Permissions:",
-				method: "Method:"
+				tipValue: "Naast de rechten Tekstkanalen lezen en Reacties toevoegen, moeten bots ook het recht Berichtgeschiedenis lezen hebben om reacties op berichten toe te voegen",
+				unnamedNode: "een naamloos knooppunt",
+				queueUsing: "De huidige wachtrij gebruikt echter %name",
+				infoFor: "Foutopsporingsinformatie voor %channel",
+				permissions: "Rechten:",
+				method: "Methode:"
 			}
 		}
 	},
@@ -938,34 +910,50 @@ module.exports = {
 		settings: {
 			help: {
 				usage: "<self|server> <view|setting name> [value]",
-				description: "Modify settings Amanda will use for yourself or server wide"
+				description: "Wijzig instellingen die Amanda voor jezelf of voor de hele server zal gebruiken"
 			},
 			prompts: {
-				cantModifyInDM: "You cannot modify a server's settings if you don't use the command in a server",
-				backgroundRecommended: "Recommended to be a 800x500px png/jpeg",
-				invalidSyntaxScope: "Command syntax is `&settings <scope> <name> <value>`. Your value for `scope` was incorrect, it must be either `self` or `server`.",
-				noSettings: "There are no settings set for scope %scope",
-				manageServer: "You must have either the Manage Server or Administrator permission to modify Amanda's settings on this server.",
-				invalidSyntaxName: "Command syntax is `&settings %usage`. Your value for `name` was incorrect, it must be one of: %settings",
-				invalidSettingScope: "The setting `%setting` is not valid for the scope `%scope`.",
-				currentValueServer: "Current value of `%setting` is `%value`. This value was set for the server.",
-				currentValueInherited: "Current value of `%setting` is not set in this server, so it inherits the default value, which is `%value`.",
-				noBackground: "You didn't have a profile background image. No action was taken.",
-				donorRequired: "You must be a donor to modify this setting.",
-				invalidLink: "There was an error trying to fetch the data from the link provided. Please make sure the link is valid.",
-				invalidLangCode: "%username, that is not a valid or supported language code. Supported language codes are %codes",
-				invalidSyntaxBoolean: "Command syntax is `&settings <scope> <name> <value>`. The setting `%setting` is a boolean, and so your `%value` must be either `true` or `false`.",
-				tooLong: "That setting value is too long. It must not be more than 50 characters."
+				cantModifyInDM: "Je kunt de instellingen van een server niet wijzigen als je het commando niet in een server gebruikt",
+				backgroundRecommended: "Aanbevolen als een png/jpeg-bestand van 800x500px",
+				invalidSyntaxScope: "De commando-syntaxis is `&settings <scope> <naam> <waarde>`. Je waarde voor `scope` was onjuist, het moet `self` of `server` zijn.",
+				noSettings: "Er zijn geen instellingen ingesteld voor scope %scope",
+				manageServer: "Je moet de rechten Server beheren of Beheerder hebben om de instellingen van Amanda op deze server te wijzigen.",
+				invalidSyntaxName: "De commando-syntaxis is `&settings %usage`. Je waarde voor `naam` was onjuist, het moet een van deze zijn: %settings",
+				invalidSettingScope: "De instelling `%setting` geldt niet voor de scope `%scope`.",
+				currentValueServer: "De huidige waarde van `%setting` is `%value`. Deze waarde is ingesteld voor de server.",
+				currentValueInherited: "De huidige waarde van `%setting` is niet ingesteld op deze server, dus het neemt de standaardwaarde over, namelijk `%value`.",
+				noBackground: "Je had geen profielachtergrondafbeelding. Er is geen actie ondernomen.",
+				donorRequired: "Je moet een donor zijn om deze instelling aan te passen.",
+				invalidLink: "Er is een fout opgetreden bij het ophalen van de gegevens uit de verstrekte link. Zorg ervoor dat de link geldig is.",
+				invalidLangCode: "%username, dat is geen geldige of ondersteunde taalcode. Ondersteunde taalcodes zijn %codes",
+				invalidSyntaxBoolean: "De commando-syntaxis is `&settings <scope> <naam> <waarde>`. De instelling `%setting` is een boolean waarde, en dus moet je `%value` `true` of `false` zijn.",
+				tooLong: "Die instelwaarde is te lang. Het mag niet meer dan 50 karakters zijn."
 			},
 			returns: {
-				updated: "Setting updated.",
-				deleted: "Setting deleted."
+				updated: "Instelling bijgewerkt.",
+				deleted: "Instelling verwijderd."
 			}
+		},
+		language: {
+			help: {
+				usage: "<code>",
+				description: "Stel de taal in die Amanda zal gebruiken om met je te praten"
+			},
+			prompts: {},
+			returns: {}
+		},
+		serverlanguage: {
+			help: {
+				usage: "<code>",
+				description: "Stel de taal in die Amanda zal gebruiken in je server"
+			},
+			prompts: {},
+			returns: {}
 		},
 		background: {
 			help: {
 				usage: "<url>",
-				description: "Set the background displayed on &profile"
+				description: "Stel de achtergrond in die wordt weergegeven op &profile"
 			},
 			prompts: {},
 			returns: {}

@@ -22,7 +22,7 @@ const generic = {
 	error: "API no regreso ningun dato.",
 	dm: {
 		success: "Te mande un mensaje privado.",
-		fail: "nesesitas que darme permiso para mandarte un mensaje privado. A lo mejor me bloqueaste o nesesitas que activar mensajes directos a miembros del servidor. (ajustes de servidor → privacidad → permitir mensajes directos).",
+		fail: "necesitas que darme permiso para mandarte un mensaje privado. A lo mejor me bloqueaste o necesitas que activar mensajes directos a miembros del servidor. (ajustes de servidor → privacidad → permitir mensajes directos).",
 		blocked: "No pude mandar un mensaje a este usuario. A lo mejor me bloquearon o nesesita que activar mensajes directos a miembros del servidor."
 	},
 	command: {
@@ -74,7 +74,7 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				invalidAmount: `%username, ${generic.command.input.invalid} cantidad para premiar.`,
-				invalidUser: `%username, ${generic.command.input.invalid}`,
+				invalidUser: "%username, eso no es usario valido",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
@@ -140,9 +140,9 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidBetandSide: "%username, nesesitas que apostar una cantidad de amandollars y elegir un lado de la moneda para apostar.",
+				invalidBetandSide: "%username, necesitas que apostar una cantidad de amandollars y elegir un lado de la moneda para apostar.",
 				invalidBet: `%username, ${generic.command.input.invalid}.`,
-				betSmall: `%username, nesesitas que apostar por lo menos 1 amandollar ${generic.emoji.discoin}`,
+				betSmall: `%username, necesitas que apostar por lo menos 1 amandollar ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidSide: "%username, ese no es un lado disponible para apostar."
 			},
@@ -160,7 +160,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
+				invalidUser: "%username, eso no es usario valido",
 			},
 			returns: {
 				coins: `amandollars de %display`
@@ -200,11 +200,11 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidAmountandUser: "%username, nesesitas que escribir una cantidad de amandollars y el nombre del usuario.",
-				invalidUser: `%username, ${generic.command.input.invalid}`,
+				invalidAmountandUser: "%username, necesitas que escribir una cantidad de amandollars y el nombre del usuario.",
+				invalidUser: "%username, eso no es usario valido",
 				cannotGiveSelf: "No puedes regalarte amandollars a ti mismo, menso.",
 				invalidGift: `%username, ${generic.command.input.invalid}`,
-				giftSmall: `%username, nesesitas que regalar por lo menos 1 amandollar ${generic.emoji.discoin}`,
+				giftSmall: `%username, necesitas que regalar por lo menos 1 amandollar ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				dmFailed: generic.dm.blocked
 			},
@@ -221,8 +221,8 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				permissionDenied: `${generic.command.permPre} adjuntar archivos. ${generic.command.permPost}`,
-				invalidAmountWheel: "%username, nesesitas que escribir una cantidad para girar la rueda",
-				betSmall: `%username, nesesitas que apostar por lo menos 1 amandollar ${generic.emoji.discoin}`,
+				invalidAmountWheel: "%username, necesitas que escribir una cantidad para girar la rueda",
+				betSmall: `%username, necesitas que apostar por lo menos 1 amandollar ${generic.emoji.discoin}`,
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidAmount: `%username, ${generic.command.input.invalid}`,
 			},
@@ -337,7 +337,7 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				permissionDenied: `${generic.command.permPre} adjuntar archivos. ${generic.command.permPost}`,
-				invalidUsers: `%username, nesesitas que escribir los usuarios`,
+				invalidUsers: `%username, necesitas que escribir los usuarios`,
 				invalidUser1: `%username:el primer miembro no es valido`,
 				invalidUser2: `%username, el segundo miembro no es valido`,
 				selfShip: "%username, no puedes hacer el ship a ti solo menso :v",
@@ -353,7 +353,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidUser: `%username, ${generic.command.input.invalid}`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				price: "Precio:",
@@ -387,11 +387,11 @@ module.exports = {
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
 				badFormat: "%username, se escribe `&claim <cantidad> <usuario>`. Cantidad viene primero, luego el usuario.",
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
+				invalidUser: "%username, eso no es usario valido",
 				selfClaim: "%username, no puedes reclamar a ti mismo, menso :v",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
-				claimSmall: `%username, nesesitas que reclamar a aguien por lo menos 1 ${generic.emoji.discoin}`,
-				claimedByOther: `%username, este usuario ya fue reclamado por alguien mas, y por un precio mas alto. nesesitas que gastar mas de %number amandollars para reclamar a este usuario.`,
+				claimSmall: `%username, necesitas que reclamar a aguien por lo menos 1 ${generic.emoji.discoin}`,
+				claimedByOther: `%username, este usuario ya fue reclamado por alguien mas, y por un precio mas alto. necesitas que gastar mas de %number amandollars para reclamar a este usuario.`,
 				doubleClaim: "%username, ya reclamaste a ese usuario como tu waifu. Si quieres subir su precio, usa `&gift <cantidad>`",
 				dmFailed: generic.dm.blocked
 			},
@@ -425,7 +425,7 @@ module.exports = {
 				noGift: "%username, no escribiste una cantidad para regalar",
 				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollars.`,
 				invalidGift: `%username, ${generic.command.input.invalid}`,
-				giftSmall: `%username, nesesitas que regalar por lo menos 1 ${generic.emoji.discoin}`
+				giftSmall: `%username, necesitas que regalar por lo menos 1 ${generic.emoji.discoin}`
 			},
 			returns: {
 				gifted: "%tag1 regalo %number amandollars para el precio de %tag2"
@@ -438,7 +438,7 @@ module.exports = {
 			},
 			prompts: {
 				guildOnly: "%username, no puedes darle ban a alguien en mensajes privados menso",
-				invalidUser: `%username, ${generic.command.input.invalid}`,
+				invalidUser: "%username, eso no es usario valido",
 				selfBean: "%username, no puedes darle ban a ti mismo menso"
 			},
 			returns: {
@@ -453,7 +453,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "**Abraza a %username de regreso** :heart:",
@@ -468,7 +468,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "owie",
@@ -483,7 +483,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "**Besa a %username de regreso** :heart:",
@@ -498,7 +498,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "**Abraza a %username de regreso** :heart:",
@@ -513,7 +513,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "No me toques ; ^ ;",
@@ -528,7 +528,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "**Abofetea a %username de regreso** Eso me dolio ; ^ ;",
@@ -543,7 +543,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "No me toques ; ^ ;",
@@ -558,7 +558,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {
 				amanda: "≥ w ≤",
@@ -615,7 +615,7 @@ module.exports = {
 			returns: {
 				invited: "Fui invitada?",
 				link: "Enlance de invitacion: %link",
-				notice: "Recuerda, nesesitas permisos de **Gestionar servidor** para añadir bots a tu servidor ."
+				notice: "Recuerda, necesitas permisos de **Gestionar servidor** para añadir bots a tu servidor ."
 			}
 		},
 		info: {
@@ -671,7 +671,7 @@ module.exports = {
 				description: "Proporciona informacion sobre un usuario."
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {}
 		},
@@ -681,7 +681,7 @@ module.exports = {
 				description: "Obtenga el perfil de un usuario"
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`
+				invalidUser: "%username, eso no es usario valido"
 			},
 			returns: {}
 		},
@@ -711,7 +711,7 @@ module.exports = {
 				description: "Obter informacion de un usuario"
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} usuario.`,
+				invalidUser: "%username, eso no es usario valido",
 				permissionDenied: `${generic.command.permPre} adjuntar archivos. ${generic.command.permPost}`
 			},
 			returns: {}
@@ -773,18 +773,18 @@ module.exports = {
 			prompts: {
 				guildOnly: generic.command.guildOnly,
 				invalidSkips: "Esto no es una cantidad valida para omitir canciones",
-				invalidSkipsAmount: "Nesesitas que omitr 1 o mas canciones",
+				invalidSkipsAmount: "Necesitas que omitr 1 o mas canciones",
 				tooManySkips: "No puedes omitir mas canciones que estan en la cola!",
 				invalidAction: "%username, esa accion valida. Si quieres tocar una cancion, usa `&music play <song>`.\nUsa `&help music` y `&help playlists` para ver mas cosas que puedes hacer!",
 				nothingPlaying: "%username, nada esta tocando actualmente.",
 				noResults: "No hay resultados.",
-				voiceChannelRequired: "%username, nesesitas que unirte a un canal de voz para hacer eso.",
+				voiceChannelRequired: "%username, necesitas que unirte a un canal de voz para hacer eso.",
 				voiceCantJoin: "%username, No tengo permiso para unirme en tu canal de voz.",
 				voiceCantSpeak: "%username, No tengo permiso para hablar en to canal de voz.",
 				playableRequired: "%username, por favor proporcione un enlance de Youtube o escribe unas palabras para que yo busque.",
 				youtubeRequired: "%username, pro favor proporcione un enlance de Youtube o ID de video.",
 				queueCannotDo: "La cola actualmente no puede %action en este momento.",
-				voiceChannelWaiting: "%username, nesesitas que unirte a un canal de voz para hacer eso. Esperando que te conectas...",
+				voiceChannelWaiting: "%username, necesitas que unirte a un canal de voz para hacer eso. Esperando que te conectas...",
 				songSelection: "Seleccion de canciones",
 				songSelectionCanceled: "Seleccion de canciones cancelada",
 				totalLength: "Duracion: %number",
@@ -812,7 +812,7 @@ module.exports = {
 				loopOn: "El modo de bucle ahora esta activado.",
 				loopOff: "El modo de bucle ahora esta desactivado.",
 				musicPlaying: "La musica ya esta tocando. Si quieres pausar, usa `&music pause`.",
-				songRemoveRequired: "Nesesitas que decirme cual cancion quieres que elimine. `&music queue remove <number>`"
+				songRemoveRequired: "Necesitas que decirme cual cancion quieres que elimine. `&music queue remove <number>`"
 				+ "\nPara borrar toda la cola, usa `&music queue clear` o `&music queue remove all`.",
 				songRemove1: "El elemento 1 es la cancion que esta tocando actualmente. Usa `&music skip` para omitirlo, "
 				+ "o `&music queue remove 2` si quisieras eliminar la cancion que sigue.",
