@@ -7,7 +7,7 @@ undefined;
 const fs = require("fs");
 const path = require("path");
 
-const English = require("./localizations/en-us");
+const English = require("../localizations/en-us");
 
 /** @type {Array<[string, import("@amanda/lang").Lang]>} */
 const languages = fs.readdirSync(path.join(__dirname, "./localizations"))
@@ -65,19 +65,4 @@ for (const [langcode, lang] of languages) {
 	}
 
 	console.log(`Stat for ${langcode}\n\n\nMissing Categories:\n${missingCategories.length > 0 ? missingCategories.join(", ") : "None"}\n\nMissing Commands:\n${missingCommands.length > 0 ? missingCommands.join(", ") : "None"}\n\nMissing Command Prompts:\n${missingCommandPrompts.length > 0 ? missingCommandPrompts.map(i => `${i[1]} in ${i[0]}`).join(", ") : "None"}\n\nMissing Command Returns:\n${missingCommandReturns.length > 0 ? missingCommandReturns.map(i => `${i[1]} in ${i[0]}`).join(", ") : "None"}\n\n\n`);
-}
-
-function flat(data) {
-	return data.reduce(function iter(r, a) {
-		if (a === null) {
-			return r;
-		}
-		if (Array.isArray(a)) {
-			return a.reduce(iter, r);
-		}
-		if (typeof a === 'object') {
-			return Object.keys(a).map(k => a[k]).reduce(iter, r);
-		}
-		return r.concat(a);
-	}, []);
 }
