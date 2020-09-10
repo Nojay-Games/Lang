@@ -929,6 +929,22 @@ module.exports = {
 				deleted: "Configuracion eliminada."
 			}
 		},
+		language: {
+			help: {
+				usage: "<code>",
+				description: "Sets the language that Amanda will use to talk to you"
+			},
+			prompts: {},
+			returns: {}
+		},
+		serverlanguage: {
+			help: {
+				usage: "<code>",
+				description: "Sets the language that Amanda will use in your server"
+			},
+			prompts: {},
+			returns: {}
+		},
 		background: {
 			help: {
 				usage: "<url>",

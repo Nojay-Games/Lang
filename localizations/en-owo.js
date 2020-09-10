@@ -907,10 +907,26 @@ module.exports = {
 				deleted: "Setting deleted."
 			}
 		},
+		language: {
+			help: {
+				usage: "<cowode>",
+				description: "Sets da language dat Amanda will use to talk to chu owo"
+			},
+			prompts: {},
+			returns: {}
+		},
+		serverlanguage: {
+			help: {
+				usage: "<cowode>",
+				description: "Sets da language dat Amanda will use in chur server uwu"
+			},
+			prompts: {},
+			returns: {}
+		},
 		background: {
 			help: {
 				usage: "<url>",
-				description: "Set the background displayed on &profile"
+				description: "Sets da backgwound dispwayed on &profile"
 			},
 			prompts: {},
 			returns: {}
