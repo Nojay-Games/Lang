@@ -618,6 +618,407 @@ declare module '@amanda/lang' {
 			};
 		};
 
+		couples: {
+			couple: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					invalidUser: string;
+					/**
+					 * No Wildcards.
+					 */
+					noInfo: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %tag1 - string.
+					 *
+					 * %tag2 - string
+					 */
+					infoFor: string;
+					/**
+					 * No Wildcards.
+					 */
+					users: string;
+					/**
+					 * No Wildcards.
+					 */
+					balance: string;
+				};
+			};
+			marry: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					noUser: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					invalidUser: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					selfMarried: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %user - string.
+					 */
+					userMarried: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %tag - string.
+					 */
+					selfProposed: string;
+					/**
+					 * No Wildcards.
+					 */
+					dmFailed: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %tag - string.
+					 *
+					 * %accept - string.
+					 *
+					 * %decline - string.
+					 */
+					proposed: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %tag - string.
+					 *
+					 * %accept - string.
+					 *
+					 * %decline - string.
+					 */
+					dmProposed: string;
+				};
+			};
+			accept: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					noUser: string;
+					invalidUser: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %tag - string.
+					 */
+					noProposal: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					selfProposed: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					selfMarried: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %user - string.
+					 */
+					userMarried: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %tag1 - string.
+					 *
+					 * %tag2 - string.
+					 */
+					married: string;
+				};
+			};
+			decline: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					noUser: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					invalidUser: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %tag - stirng.
+					 */
+					noProposal: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					selfProposed: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					selfMarried: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %user - string.
+					 */
+					userMarried: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %tag1 - string.
+					 *
+					 * %tag2 - string.
+					 */
+					declines: string;
+				};
+			};
+			divorce: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					notMarried: string;
+					/**
+					 * No Wildcards.
+					 */
+					dmFailed: string;
+				},
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %tag1 - string.
+					 *
+					 * %tag2 - string.
+					 *
+					 * %reason - string.
+					 */
+					divorced: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %tag - string.
+					 *
+					 * %reason - string.
+					 */
+					dm: string;
+				};
+			};
+			bank: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					selfNotMarried: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %tag - string.
+					 */
+					userNotMarried: string;
+					/**
+					 * No Wildcards.
+					 */
+					dmFailed: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %tag1 - string.
+					 *
+					 * %tag2 - string.
+					 */
+					balance: string;
+				};
+			};
+			withdraw: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					notMarried: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					noMoney: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					invalidAmount: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					amountSmall: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					amountLarge: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %amount - string.
+					 */
+					success: string;
+				};
+			};
+			deposit: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					notMarried: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					noMoney: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					invalidAmount: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					amountSmall: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					amountLarge: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %amount - string.
+					 */
+					success: string;
+				};
+			};
+			coupleleaderboard: {
+				help: CommandHelp;
+				prompts: {
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 */
+					guildOnly: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %username - string.
+					 *
+					 * %maxPages - number.
+					 */
+					pageLimit: string;
+				};
+				returns: {
+					/**
+					 * Wildcards:
+					 *
+					 * %lastPage - number.
+					 */
+					emptyPage: string;
+					/**
+					 * Wildcards:
+					 *
+					 * %current - number.
+					 *
+					 * %total - number.
+					 */
+					pageCurrent: string;
+				};
+			};
+		};
+
 		interaction: {
 			ship: {
 				help: CommandHelp;
@@ -668,261 +1069,6 @@ declare module '@amanda/lang' {
 					 * %percentage - number.
 					 */
 					rating: string;
-				};
-			};
-			waifu: {
-				help: CommandHelp;
-				prompts: {
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					guildOnly: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					invalidUser: string;
-				};
-				returns: {
-					/**
-					 * No Wildcards.
-					 */
-					price: string;
-					/**
-					 * No Wildcards.
-					 */
-					claimedBy: string;
-					/**
-					 * No Wildcards.
-					 */
-					waifu: string;
-					/**
-					 * No Wildcards.
-					 */
-					gifts: string;
-					/**
-					 * No Wildcards.
-					 */
-					nobody: string;
-					/**
-					 * No Wildcards.
-					 */
-					none: string;
-				};
-			};
-			waifuleaderboard: {
-				help: CommandHelp;
-				prompts: {
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					guildOnly: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 *
-					 * %maxPages - number.
-					 */
-					pageLimit: string;
-				};
-				returns: {
-					/**
-					 * Wildcards:
-					 *
-					 * %lastPage - number.
-					 */
-					emptyPage: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %user1 - string.
-					 *
-					 * %user2 - string.
-					 *
-					 * %price - number.
-					 */
-					claimEntry: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %current - number.
-					 *
-					 * %total - number.
-					 */
-					pageCurrent: string;
-				};
-			};
-			claim: {
-				help: CommandHelp;
-				prompts: {
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					guildOnly: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					badFormat: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					invalidUser: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					selfClaim: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					moneyInsufficient: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					claimSmall: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 *
-					 * %number - number.
-					 */
-					claimedByOther: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					doubleClaim: string;
-					/**
-					 * No Wildcards.
-					 */
-					dmFailed: string;
-				};
-				returns: {
-					/**
-					 * Wildcards:
-					 *
-					 * %mention1 - string.
-					 *
-					 * %mention2 - string.
-					 *
-					 * %number - number.
-					 */
-					claimed: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %mention - string.
-					 *
-					 * %number - number.
-					 */
-					dm: string;
-				};
-			};
-			divorce: {
-				help: CommandHelp;
-				prompts: {
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					noWaifu: string;
-					/**
-					 * No Wildcards.
-					 */
-					dmFailed: string;
-				};
-				returns: {
-					/**
-					 * Wildcards:
-					 *
-					 * %tag1 - string.
-					 *
-					 * %tag2 - string.
-					 *
-					 * %reason - string.
-					 */
-					divorced: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %tag - string.
-					 *
-					 * %reason - string.
-					 */
-					dm: string;
-				};
-			};
-			gift: {
-				help: CommandHelp;
-				prompts: {
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					guildOnly: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					noWaifu: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					noGift: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					moneyInsufficient: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					invalidGift: string;
-					/**
-					 * Wildcards:
-					 *
-					 * %username - string.
-					 */
-					giftSmall: string;
-				};
-				returns: {
-					/**
-					 * Wildcards:
-					 *
-					 * %tag1 - string.
-					 *
-					 * %number - number.
-					 *
-					 * %tag2 - string.
-					 */
-					gifted: string;
 				};
 			};
 			bean: {
