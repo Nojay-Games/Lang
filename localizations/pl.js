@@ -328,6 +328,150 @@ module.exports = {
 		}
 	},
 
+	couples: {
+		couple: {
+			help: {
+				usage: "[User]",
+				description: "Get couple information about a user"
+			},
+			prompts: {
+				invalidUser: "%username, that is not a valid user.",
+				noInfo: "No couple info."
+			},
+			returns: {
+				infoFor: "Couple info for %tag1 and %tag2",
+				users: "Users",
+				balance: "Balance"
+			}
+		},
+		marry: {
+			help: {
+				usage: "<User>",
+				description: "Propose to a user"
+			},
+			prompts: {
+				noUser: "%username, you need to provide someone to propose to.",
+				invalidUser: "%username, that is not a valid user.",
+				selfMarried: "%username, you are already married.",
+				userMarried: "%username, %user is already married.",
+				selfProposed: "%username, you are already proposed to %tag",
+				dmFailed: generic.dm.blocked
+			},
+			returns: {
+				proposed: "%username has successfully proposed to %tag. They can use %accept or %decline to marry or decline.",
+				dmProposed: "%tag has proposed to you. You can use %accept or %decline to marry or decline."
+			}
+		},
+		accept: {
+			help: {
+				usage: "<User>",
+				description: "Accepts a proposal from a user."
+			},
+			prompts: {
+				noUser: "%username, you need to provide someone to accept their proposal.",
+				invalidUser: "%username, that is not a valid user.",
+				noProposal: "%username, %tag has not proposed to you yet.",
+				selfProposed: "%username, you cannot accept your own proposal.",
+				selfMarried: "%username, you are already married.",
+				userMarried: "%username, %user is already married.",
+			},
+			returns: {
+				married: "%tag1 is now married to %tag2"
+			}
+		},
+		decline: {
+			help: {
+				usage: "<User>",
+				description: "Declines a proposal from a user."
+			},
+			prompts: {
+				noUser: "%username, you need to provide someone to accept their proposal.",
+				invalidUser: "%username, that is not a valid user.",
+				noProposal: "%username, %tag has not proposed to you yet.",
+				selfProposed: "%username, you cannot decline your own proposal.",
+				selfMarried: "%username, you are already married.",
+				userMarried: "%username, %user is already married.",
+			},
+			returns: {
+				declines: "%tag1 has declined %tag2's marriage proposal."
+			}
+		},
+		divorce: {
+			help: {
+				usage: "[reason]",
+				description: "Divorces a user"
+			},
+			prompts: {
+				notMarried: "%username, you are not married to anyone.",
+				dmFailed: generic.dm.blocked
+			},
+			returns: {
+				divorced: "%tag1 has filed for a divorce from %tag2: %reason",
+				dm: "%tag has filed for a divorce from you: %reason"
+			}
+		},
+		bank: {
+			help: {
+				usage: "[User]",
+				description: "View the balance of a couple"
+			},
+			prompts: {
+				selfNotMarried: "%username, you are not married to anyone.",
+				userNotMarried: "%username, %tag is not married to anyone.",
+				dmFailed: generic.dm.blocked
+			},
+			returns: {
+				balance: "Couple balance for %tag1 and %tag2"
+			}
+		},
+		withdraw: {
+			help: {
+				usage: "[amount: number|all|half]",
+				description: "Withdraw money from your couple balance"
+			},
+			prompts: {
+				notMarried: "%username, you are not married to anyone.",
+				noMoney: "%username, there is no amandollars to withdraw.",
+				invalidAmount: "%username, that is not a valid amount.",
+				amountSmall: "%username, you must provide a number greater than 0.",
+				amountLarge: "%username, you cannot withdraw more than what is in the couple balance."
+			},
+			returns: {
+				success: "%username, successfully transacted %amount to your balance"
+			}
+		},
+		deposit: {
+			help: {
+				usage: "[amount: number|all|half]",
+				description: "Deposit money to your couple balance"
+			},
+			prompts: {
+				notMarried: "%username, you are not married to anyone.",
+				noMoney: "%username, you do not have any amandollars to deposit.",
+				invalidAmount: "%username, that is not a valid amount.",
+				amountSmall: "%username, you must provide a number greater than 0.",
+				amountLarge: "%username, you do not have that many amandollars."
+			},
+			returns: {
+				success: "%username, successfully transacted %amount from your balance"
+			}
+		},
+		coupleleaderboard: {
+			help: {
+				usage: "[local] [page: number]",
+				description: "Displays the leaderboard of the richest couples"
+			},
+			prompts: {
+				guildOnly: `%username, ${generic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "There are only %lastPage pages to browse through.",
+				pageCurrent: "Page %current of %total"
+			}
+		}
+	},
+
 	interaction: {
 		ship: {
 			help: {
@@ -344,91 +488,6 @@ module.exports = {
 			},
 			returns: {
 				rating: "Aww. Oceniam związek między %display1 i &display2 na %percentage%"
-			}
-		},
-		waifu: {
-			help: {
-				usage: "[użytkownik]",
-				description: "Otrzymujesz info na temat waifu Twojego, lub innego użytkownika"
-			},
-			prompts: {
-				guildOnly: `%username, ${generic.command.guildOnly}`,
-				invalidUser: `%username, ${generic.command.input.invalid} użytkownik.`
-			},
-			returns: {
-				price: "Cena:",
-				claimedBy: "Zajęty/ta przez:",
-				waifu: "Waifu:",
-				gifts: "Prezenty:",
-				nobody: "(nikt)",
-				none: "(brak)"
-			}
-		},
-		waifuleaderboard: {
-			help: {
-				usage: "[local] [page: numer]",
-				description: "Wyświetla tabelę top waifu"
-			},
-			prompts: {
-				guildOnly: `%username, ${generic.command.guildOnly}`,
-				pageLimit: "%username, możesz przeglądać tylko do strony %maxPages."
-			},
-			returns: {
-				emptyPage: "Są tylko %lastPage strony do przeglądania.",
-				claimEntry: `%user1 zajął %user2 za %price ${generic.emoji.discoin}`,
-				pageCurrent: "Strona %current z %total"
-			}
-		},
-		claim: {
-			help: {
-				usage: "<ilość: numer|all(wszystko)|half(pół)> <użytkownik>",
-				description: "Zajmuje kogoś jako waifu. Wymaga amandollarów"
-			},
-			prompts: {
-				guildOnly: `%username, ${generic.command.guildOnly}`,
-				badFormat: "%username, właściwy format to `&claim <ilość> <użytkownik>`. Najpierw ilość, a potem użytkownik.",
-				invalidUser: `%username, ${generic.command.input.invalid} użytkownik.`,
-				selfClaim: "%username, nie możesz zająć siebie, głupiutki/a",
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollarów.`,
-				claimSmall: `%username, musisz zająć kogoś używająć minimum 1 ${generic.emoji.discoin}`,
-				claimedByOther: `%username, ta osoba jest już zajęta przez kogoś innego, za wyższą cenę. Musisz wydać co najmniej %number amandollarów by ich ukraść`,
-				doubleClaim: "%username, ta osoba jest już zajęta jako waifu przez Ciebie. Jeśli chcesz zwiększyć ich wartość, użyj `&gift <ilość>`",
-				dmFailed: generic.dm.blocked
-			},
-			returns: {
-				claimed: `%mention1 zajmuje %mention2 za %number ${generic.emoji.discoin}`,
-				dm: `%mention zajmuje Ciebie za %number ${generic.emoji.discoin}`
-			}
-		},
-		divorce: {
-			help: {
-				usage: "[powód]",
-				description: "Rozwód z użytkownikiem"
-			},
-			prompts: {
-				noWaifu: "%username, nie masz nawet waifu by wziąć rozwód, głupiutki/a",
-				dmFailed: generic.dm.blocked
-			},
-			returns: {
-				divorced: "%tag1 wnosi pozew o rozwód od %tag2 za %reason",
-				dm: "%tag wnosi pozew o rozwód z Tobą za %reason"
-			}
-		},
-		gift: {
-			help: {
-				usage: "<ilość: numer|all(wszystko)|half(pół)>",
-				description: "Przekazuje sumę amandollarów by podnieść wartość Twojego waifu"
-			},
-			prompts: {
-				guildOnly: `%username, ${generic.command.guildOnly}`,
-				noWaifu: "%username, nie masz nawet waifu by przekazać amandollary, głupiutki/a",
-				noGift: "%username, nie podałeś/aś ilości",
-				moneyInsufficient: `%username, ${generic.command.input.insufficient} amandollarów.`,
-				invalidGift: `%username, ${generic.command.input.invalid} prezent.`,
-				giftSmall: `%username, musisz przekazać co najmniej 1 ${generic.emoji.discoin}`
-			},
-			returns: {
-				gifted: "%tag1 dodał/a %number amandollarów do wartości %tag2"
 			}
 		},
 		bean: {

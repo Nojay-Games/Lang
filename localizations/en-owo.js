@@ -308,6 +308,150 @@ module.exports = {
 		}
 	},
 
+	couples: {
+		couple: {
+			help: {
+				usage: "[User]",
+				description: "Get couple information about a user"
+			},
+			prompts: {
+				invalidUser: "%username, that is not a valid user.",
+				noInfo: "No couple info."
+			},
+			returns: {
+				infoFor: "Couple info for %tag1 and %tag2",
+				users: "Users",
+				balance: "Balance"
+			}
+		},
+		marry: {
+			help: {
+				usage: "<User>",
+				description: "Propose to a user"
+			},
+			prompts: {
+				noUser: "%username, you need to provide someone to propose to.",
+				invalidUser: "%username, that is not a valid user.",
+				selfMarried: "%username, you are already married.",
+				userMarried: "%username, %user is already married.",
+				selfProposed: "%username, you are already proposed to %tag",
+				dmFailed: genewic.dm.blocked
+			},
+			returns: {
+				proposed: "%username has successfully proposed to %tag. They can use %accept or %decline to marry or decline.",
+				dmProposed: "%tag has proposed to you. You can use %accept or %decline to marry or decline."
+			}
+		},
+		accept: {
+			help: {
+				usage: "<User>",
+				description: "Accepts a proposal from a user."
+			},
+			prompts: {
+				noUser: "%username, you need to provide someone to accept their proposal.",
+				invalidUser: "%username, that is not a valid user.",
+				noProposal: "%username, %tag has not proposed to you yet.",
+				selfProposed: "%username, you cannot accept your own proposal.",
+				selfMarried: "%username, you are already married.",
+				userMarried: "%username, %user is already married.",
+			},
+			returns: {
+				married: "%tag1 is now married to %tag2"
+			}
+		},
+		decline: {
+			help: {
+				usage: "<User>",
+				description: "Declines a proposal from a user."
+			},
+			prompts: {
+				noUser: "%username, you need to provide someone to accept their proposal.",
+				invalidUser: "%username, that is not a valid user.",
+				noProposal: "%username, %tag has not proposed to you yet.",
+				selfProposed: "%username, you cannot decline your own proposal.",
+				selfMarried: "%username, you are already married.",
+				userMarried: "%username, %user is already married.",
+			},
+			returns: {
+				declines: "%tag1 has declined %tag2's marriage proposal."
+			}
+		},
+		divorce: {
+			help: {
+				usage: "[reason]",
+				description: "Divorces a user"
+			},
+			prompts: {
+				notMarried: "%username, you are not married to anyone.",
+				dmFailed: genewic.dm.blocked
+			},
+			returns: {
+				divorced: "%tag1 has filed for a divorce from %tag2: %reason",
+				dm: "%tag has filed for a divorce from you: %reason"
+			}
+		},
+		bank: {
+			help: {
+				usage: "[User]",
+				description: "View the balance of a couple"
+			},
+			prompts: {
+				selfNotMarried: "%username, you are not married to anyone.",
+				userNotMarried: "%username, %tag is not married to anyone.",
+				dmFailed: genewic.dm.blocked
+			},
+			returns: {
+				balance: "Couple balance for %tag1 and %tag2"
+			}
+		},
+		withdraw: {
+			help: {
+				usage: "[amount: number|all|half]",
+				description: "Withdraw money from your couple balance"
+			},
+			prompts: {
+				notMarried: "%username, you are not married to anyone.",
+				noMoney: "%username, there is no amandollars to withdraw.",
+				invalidAmount: "%username, that is not a valid amount.",
+				amountSmall: "%username, you must provide a number greater than 0.",
+				amountLarge: "%username, you cannot withdraw more than what is in the couple balance."
+			},
+			returns: {
+				success: "%username, successfully transacted %amount to your balance"
+			}
+		},
+		deposit: {
+			help: {
+				usage: "[amount: number|all|half]",
+				description: "Deposit money to your couple balance"
+			},
+			prompts: {
+				notMarried: "%username, you are not married to anyone.",
+				noMoney: "%username, you do not have any amandollars to deposit.",
+				invalidAmount: "%username, that is not a valid amount.",
+				amountSmall: "%username, you must provide a number greater than 0.",
+				amountLarge: "%username, you do not have that many amandollars."
+			},
+			returns: {
+				success: "%username, successfully transacted %amount from your balance"
+			}
+		},
+		coupleleaderboard: {
+			help: {
+				usage: "[local] [page: number]",
+				description: "Displays the leaderboard of the richest couples"
+			},
+			prompts: {
+				guildOnly: `%username, ${genewic.command.guildOnly}`,
+				pageLimit: "%username, you may only browse up to page %maxPages."
+			},
+			returns: {
+				emptyPage: "There are only %lastPage pages to browse through.",
+				pageCurrent: "Page %current of %total"
+			}
+		}
+	},
+
 	interaction: {
 		ship: {
 			help: {
@@ -324,91 +468,6 @@ module.exports = {
 			},
 			returns: {
 				rating: "OWO. I'd rate %display1 and %display2 being together a %percentage%"
-			}
-		},
-		waifu: {
-			help: {
-				usage: "[user]",
-				description: "Gets da waifu information about churself or a user"
-			},
-			prompts: {
-				guildOnly: `%username, ${genewic.command.guildOnly}`,
-				invalidUser: `%username, ${genewic.command.input.invalid} user ヾ(ﾟдﾟ)ﾉ`
-			},
-			returns: {
-				price: "Price:",
-				claimedBy: "Claimed By:",
-				waifu: "Waifu:",
-				gifts: "Gifts:",
-				nobody: "(nobody)",
-				none: "(none)"
-			}
-		},
-		waifuleaderboard: {
-			help: {
-				usage: "[local] [page: number]",
-				description: "Dispways the weaderboawd of the top waifus~"
-			},
-			prompts: {
-				guildOnly: `%username, ${genewic.command.guildOnly}`,
-				pageLimit: "%username, chu may owonly browose up to page %maxPages."
-			},
-			returns: {
-				emptyPage: "There are onwy %lastPage pages to browose thwoogh.",
-				claimEntry: `%user1 claimed %user2 for %price ${genewic.emoji.discoin}`,
-				pageCurrent: "Page %current of %total"
-			}
-		},
-		claim: {
-			help: {
-				usage: "<amowount: numbwer|all|half> <user>",
-				description: "Claims someone as a waifu uwu. Requires amandollars"
-			},
-			prompts: {
-				guildOnly: `%username, ${genewic.command.guildOnly}`,
-				badFormat: "%username, da cowwect format is `&claim <amount> <user>`. Amount comes first, user comes last.",
-				invalidUser: `%username, ${genewic.command.input.invalid} user ( ﾟдﾟ)`,
-				selfClaim: "%username, chu can't cwaim churself, siwwy biwwy >.<",
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
-				claimSmall: `%username, chu must cwaim someone with at least 1 ${genewic.emoji.discoin}`,
-				claimedByOther: `%username, dis person has already been claimed by somebody else, for a higher price (╯°□°）╯︵ ┻━┻ Chu'll need to spend at weast %number amandollars to steal them.`,
-				doubleClaim: "%username, chu've already cwaimed dat person as chur waifu. If chu'd wike to increase deir pwice, use `&gift <amount>`",
-				dmFailed: genewic.dm.blocked
-			},
-			returns: {
-				claimed: `%mention1 has cwaimed %mention2 for %number ${genewic.emoji.discoin}`,
-				dm: `%mention has cwaimed chu for %number ${genewic.emoji.discoin}`
-			}
-		},
-		divorce: {
-			help: {
-				usage: "[reason]",
-				description: "Divorces a user (≖︿≖✿)"
-			},
-			prompts: {
-				noWaifu: "%username, chu don't even have a waifu to divorce, siwwy biwwy",
-				dmFailed: genewic.dm.blocked
-			},
-			returns: {
-				divorced: "%tag1 has fiwed for a divorce fwom %tag2 with %reason",
-				dm: "%tag has fiwed for a divorce fwom chu with %reason"
-			}
-		},
-		gift: {
-			help: {
-				usage: "<amwount: numbwer|all|half>",
-				description: "Gifts an amwount of amandollars towoards chur waifu's price"
-			},
-			prompts: {
-				guildOnly: `%username, ${genewic.command.guildOnly}`,
-				noWaifu: "%username, chu don't even have a waifu to gift amandollars to, baka",
-				noGift: "%username, chu didn't pwovide a gift amount (◕︿◕✿)",
-				moneyInsufficient: `%username, ${genewic.command.input.insufficient} amandollars.`,
-				invalidGift: `%username, ${genewic.command.input.invalid} gift.`,
-				giftSmall: `%username, chu must gift someone at weast 1 ${genewic.emoji.discoin}`
-			},
-			returns: {
-				gifted: "%tag1 has gifted %number amandollars towoards %tag2's pwice"
 			}
 		},
 		bean: {
