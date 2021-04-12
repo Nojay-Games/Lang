@@ -21,13 +21,13 @@ undefined;
 const generic = {
 	error: "De API heeft geen gegevens teruggestuurd.",
 	dm: {
-		success: "Ik heb je een privÃ©bericht gestuurd.",
-		fail: "je moet me toestaan om je een privÃ©bericht te sturen om dat commando te laten werken. Of je hebt me geblokkeerd, of je moet privÃ©berichten van serverleden toestaan in deze server. (serverinstellingen â†’ privacy-instellingen â†’ directe berichten van serverleden toestaan).",
-		blocked: "Ik kon die persoon geen privÃ©bericht sturen. Misschien hebben ze me geblokkeerd, of misschien moeten ze privÃ©berichten in een gemeenschappelijke server aanzetten."
+		success: "Ik heb je een privébericht gestuurd.",
+		fail: "je moet me toestaan om je een privébericht te sturen om dat commando te laten werken. Of je hebt me geblokkeerd, of je moet privéberichten van serverleden toestaan in deze server. (serverinstellingen → privacy-instellingen → directe berichten van serverleden toestaan).",
+		blocked: "Ik kon die persoon geen privébericht sturen. Misschien hebben ze me geblokkeerd, of misschien moeten ze privéberichten in een gemeenschappelijke server aanzetten."
 	},
 	command: {
-		dmOnly: "dit commando kan alleen worden gebruikt in een privÃ©bericht.",
-		guildOnly: "dit commando werkt niet in een privÃ©bericht.",
+		dmOnly: "dit commando kan alleen worden gebruikt in een privébericht.",
+		guildOnly: "dit commando werkt niet in een privébericht.",
 		permPre: "Ik heb geen toestemming om",
 		permPost: "Ik werk het beste als ik alle rechten heb waar ik om gevraagd had toen je me uitnodigde. Pas alstublieft mijn rechten aan.",
 		input: {
@@ -36,7 +36,7 @@ const generic = {
 		}
 	},
 	image: {
-		dm: "Waarom zou je iemand in een privÃ©bericht willen %action",
+		dm: "Waarom zou je iemand in een privébericht willen %action",
 		noUser: "Je moet me vertellen wie je wilt %action"
 	},
 	emoji: {
@@ -97,7 +97,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				confirmation: "OkÃ©. Je wordt op de hoogte gebracht van de volgende keer dat ik herstart"
+				confirmation: "Oké. Je wordt op de hoogte gebracht van de volgende keer dat ik herstart"
 			}
 		}
 	},
@@ -118,7 +118,7 @@ module.exports = {
 			returns: {
 				lost: `Sorry. Je hebt geen match gekregen. Je bent %number ${generic.emoji.discoin} kwijt`,
 				triple: `Een triple. Je hebt %number ${generic.emoji.discoin} gewonnen`,
-				heart1: `EÃ©n :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`,
+				heart1: `Eén :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`,
 				heart2: `Wauw! Een dubbel :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`,
 				heart3: `WOAH! Een driedubbel :heart: Je hebt %number ${generic.emoji.discoin} gewonnen`
 			}
@@ -240,9 +240,9 @@ module.exports = {
 			},
 			prompts: {
 				categorySelect: "Om een categorie te selecteren, gebruik je `&trivia <naam categorie>`.",
-				dm: "%username, ik heb je een privÃ©bericht gestuurd met de lijst van categorieÃ«n.",
-				noCategory: "%username, ik vond geen categorieÃ«n met die naam. Gebruik `&trivia categories` voor de volledige lijst van categorieÃ«n.",
-				multipleCategories: "%username, er zijn meerdere categorieÃ«n met die naam: %string",
+				dm: "%username, ik heb je een privébericht gestuurd met de lijst van categorieën.",
+				noCategory: "%username, ik vond geen categorieën met die naam. Gebruik `&trivia categories` voor de volledige lijst van categorieën.",
+				multipleCategories: "%username, er zijn meerdere categorieën met die naam: %string",
 				gameInProgress: "%username, er is al een spel aan de gang voor dit kanaal.",
 				APIError: "Er was een fout van de api",
 				parsingError: "Er was een fout bij het parseren van de gegevens die de api terugstuurde",
@@ -253,7 +253,7 @@ module.exports = {
 				winners: "Winnaars",
 				noWinners: "Geen Winnaars",
 				nextRound: "Volgende Ronde",
-				categories: "CategorieÃ«n",
+				categories: "Categorieën",
 				dmError: generic.dm.fail
 			},
 			returns: {}
@@ -331,143 +331,143 @@ module.exports = {
 	couples: {
 		couple: {
 			help: {
-				usage: "[User]",
-				description: "Get couple information about a user"
+				usage: "[Gebruiker]",
+				description: "Krijg koppelinformatie over een gebruiker"
 			},
 			prompts: {
-				invalidUser: "%username, that is not a valid user.",
-				noInfo: "No couple info."
+				invalidUser: "%username, dat is geen geldige gebruiker.",
+				noInfo: "Geen koppelinfo."
 			},
 			returns: {
-				infoFor: "Couple info for %tag1 and %tag2",
-				users: "Users",
-				balance: "Balance"
+				infoFor: "Koppelinfo voor %tag1 en %tag2",
+				users: "Gebruikers",
+				balance: "Saldo"
 			}
 		},
 		marry: {
 			help: {
-				usage: "<User>",
-				description: "Propose to a user"
+				usage: "<Gebruiker>",
+				description: "Vraag een gebruiker ten huwelijk"
 			},
 			prompts: {
-				noUser: "%username, you need to provide someone to propose to.",
-				invalidUser: "%username, that is not a valid user.",
-				selfMarried: "%username, you are already married.",
-				userMarried: "%username, %user is already married.",
-				selfProposed: "%username, you are already proposed to %tag",
+				noUser: "%username, je moet iemand specificeren om ten huwelijk te vragen.",
+				invalidUser: "%username, dat is geen geldige gebruiker.",
+				selfMarried: "%username, je bent al getrouwd.",
+				userMarried: "%username, %user is al getrouwd.",
+				selfProposed: "%username, je hebt %tag al ten huwelijk gevraagd",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				proposed: "%username has successfully proposed to %tag. They can use %accept or %decline to marry or decline.",
-				dmProposed: "%tag has proposed to you. You can use %accept or %decline to marry or decline."
+				proposed: "%username heeft %tag succesvol ten huwelijk gevraagd. Diegene kan %accept of %decline gebruiken om te trouwen of te weigeren.",
+				dmProposed: "%tag heeft je ten huwelijk gevraagd. Je kunt %accept of %decline gebruiken om te trouwen of te weigeren."
 			}
 		},
 		accept: {
 			help: {
-				usage: "<User>",
-				description: "Accepts a proposal from a user."
+				usage: "<Gebruiker>",
+				description: "Accepteert een huwelijksaanzoek van een gebruiker."
 			},
 			prompts: {
-				noUser: "%username, you need to provide someone to accept their proposal.",
-				invalidUser: "%username, that is not a valid user.",
-				noProposal: "%username, %tag has not proposed to you yet.",
-				selfProposed: "%username, you cannot accept your own proposal.",
-				selfMarried: "%username, you are already married.",
-				userMarried: "%username, %user is already married.",
+				noUser: "%username, je moet iemand specificeren om hun huwelijksaanzoek te accepteren.",
+				invalidUser: "%username, dat is geen geldige gebruiker.",
+				noProposal: "%username, %tag heeft je nog niet ten huwelijk gevraagd.",
+				selfProposed: "%username, je kunt niet je eigen huwelijksaanzoek accepteren.",
+				selfMarried: "%username, je bent al getrouwd.",
+				userMarried: "%username, %user is al getrouwd.",
 			},
 			returns: {
-				married: "%tag1 is now married to %tag2"
+				married: "%tag1 is nu getrouwd met %tag2"
 			}
 		},
 		decline: {
 			help: {
-				usage: "<User>",
-				description: "Declines a proposal from a user."
+				usage: "<Gebruiker>",
+				description: "Weigert een huwelijksaanzoek van een gebruiker."
 			},
 			prompts: {
-				noUser: "%username, you need to provide someone to accept their proposal.",
-				invalidUser: "%username, that is not a valid user.",
-				noProposal: "%username, %tag has not proposed to you yet.",
-				selfProposed: "%username, you cannot decline your own proposal.",
-				selfMarried: "%username, you are already married.",
-				userMarried: "%username, %user is already married.",
+				noUser: "%username, je moet iemand specificeren om hun huwelijksaanzoek te accepteren.",
+				invalidUser: "%username, dat is geen geldige gebruiker.",
+				noProposal: "%username, %tag heeft je nog niet ten huwelijk gevraagd.",
+				selfProposed: "%username, je kunt niet je eigen huwelijksaanzoek weigeren.",
+				selfMarried: "%username, je bent al getrouwd.",
+				userMarried: "%username, %user is al getrouwd.",
 			},
 			returns: {
-				declines: "%tag1 has declined %tag2's marriage proposal."
+				declines: "%tag1 heeft %tag2's huwelijksaanzoek afgewezen."
 			}
 		},
 		divorce: {
 			help: {
-				usage: "[reason]",
-				description: "Divorces a user"
+				usage: "[reden]",
+				description: "Scheidt een gebruiker"
 			},
 			prompts: {
-				notMarried: "%username, you are not married to anyone.",
+				notMarried: "%username, je bent niet met iemand getrouwd.",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				divorced: "%tag1 has filed for a divorce from %tag2: %reason",
-				dm: "%tag has filed for a divorce from you: %reason"
+				divorced: "%tag1 heeft een echtscheiding aangevraagd van %tag2: %reason",
+				dm: "%tag heeft een echtscheiding van jou aangevraagd: %reason"
 			}
 		},
 		bank: {
 			help: {
-				usage: "[User]",
-				description: "View the balance of a couple"
+				usage: "[gebruiker]",
+				description: "Bekijk het saldo van een koppel"
 			},
 			prompts: {
-				selfNotMarried: "%username, you are not married to anyone.",
-				userNotMarried: "%username, %tag is not married to anyone.",
+				selfNotMarried: "%username, je bent niet met iemand getrouwd.",
+				userNotMarried: "%username, %tag is niet met iemand getrouwd.",
 				dmFailed: generic.dm.blocked
 			},
 			returns: {
-				balance: "Couple balance for %tag1 and %tag2"
+				balance: "Koppelsaldo voor %tag1 en %tag2"
 			}
 		},
 		withdraw: {
 			help: {
-				usage: "[amount: number|all|half]",
-				description: "Withdraw money from your couple balance"
+				usage: "[hoeveelheid: aantal|all|half]",
+				description: "Geld opnemen van je koppelsaldo"
 			},
 			prompts: {
-				notMarried: "%username, you are not married to anyone.",
-				noMoney: "%username, there is no amandollars to withdraw.",
-				invalidAmount: "%username, that is not a valid amount.",
-				amountSmall: "%username, you must provide a number greater than 0.",
-				amountLarge: "%username, you cannot withdraw more than what is in the couple balance."
+				notMarried: "%username, je bent niet met iemand getrouwd.",
+				noMoney: "%username, er zijn geen amandollars om op te nemen.",
+				invalidAmount: "%username, dat is geen geldig bedrag.",
+				amountSmall: "%username, je moet een getal geven dat groter dan 0 is.",
+				amountLarge: "%username, je kunt niet meer geld opnemen dan hoeveel koppelsaldo je hebt."
 			},
 			returns: {
-				success: "%username, successfully transacted %amount to your balance"
+				success: "%username, ik heb succesvol %amount naar je saldo overgemaakt"
 			}
 		},
 		deposit: {
 			help: {
-				usage: "[amount: number|all|half]",
-				description: "Deposit money to your couple balance"
+				usage: "[hoeveelheid: aantal|all|half]",
+				description: "Stort geld op je koppelsaldo"
 			},
 			prompts: {
-				notMarried: "%username, you are not married to anyone.",
-				noMoney: "%username, you do not have any amandollars to deposit.",
-				invalidAmount: "%username, that is not a valid amount.",
-				amountSmall: "%username, you must provide a number greater than 0.",
-				amountLarge: "%username, you do not have that many amandollars."
+				notMarried: "%username, je bent niet met iemand getrouwd.",
+				noMoney: "%username, je hebt geen amandollars om te storten.",
+				invalidAmount: "%username, dat is een ongeldige hoeveelheid.",
+				amountSmall: "%username, je moet een getal geven dat groter dan 0 is.",
+				amountLarge: "%username, je hebt niet zoveel amandollars."
 			},
 			returns: {
-				success: "%username, successfully transacted %amount from your balance"
+				success: "%username, ik heb succesvol %amount van je saldo overgemaakt"
 			}
 		},
 		coupleleaderboard: {
 			help: {
-				usage: "[local] [page: number]",
-				description: "Displays the leaderboard of the richest couples"
+				usage: "[local] [pagina: nummer]",
+				description: "Toont het leaderboard van de rijkste koppels"
 			},
 			prompts: {
 				guildOnly: `%username, ${generic.command.guildOnly}`,
-				pageLimit: "%username, you may only browse up to page %maxPages."
+				pageLimit: "%username, je mag maar tot en met pagina %maxPages bladeren."
 			},
 			returns: {
-				emptyPage: "There are only %lastPage pages to browse through.",
-				pageCurrent: "Page %current of %total"
+				emptyPage: "Er zijn maar %lastPage pagina's om door te bladeren.",
+				pageCurrent: "Pagina %current van de %total"
 			}
 		}
 	},
@@ -496,7 +496,7 @@ module.exports = {
 				description: "Verboont een gebruiker"
 			},
 			prompts: {
-				guildOnly: "%username, je kan niet iemand in een privÃ©bericht verbonen, stommerd",
+				guildOnly: "%username, je kan niet iemand in een privébericht verbonen, stommerd",
 				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
 				selfBean: "%username, je kan jezelf niet verbonen, stommerd"
 			},
@@ -527,7 +527,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
 				amanda: "auw",
@@ -542,7 +542,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
 				amanda: "**Kust %username terug** :heart:",
@@ -557,7 +557,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
 				amanda: "**Omhelst %username terug** :heart:",
@@ -572,7 +572,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
 				amanda: "Por me niet ; ^ ;",
@@ -587,7 +587,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
 				amanda: "**Slaat %username terug** Dat deed me pijn ; ^ ;",
@@ -602,7 +602,7 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
 				amanda: "Prik mijn neus niet ; ^ ;",
@@ -617,10 +617,10 @@ module.exports = {
 			prompts: {
 				dm: generic.image.dm,
 				noUser: generic.image.noUser,
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {
-				amanda: "â‰¥ w â‰¤",
+				amanda: "≥ w ≤",
 				action: "%username gaf %mention een tikje"
 			}
 		}
@@ -636,20 +636,20 @@ module.exports = {
 				slow: "Ugh. Ik haat het ook als ik traag ben"
 			},
 			returns: {
-				songsToday: "**â¯ Nummers vandaag afgespeeld:**\n%number",
-				songsQueued: "**â¯ Nummers in de wachtrij:**\n%number",
-				voiceConnections: "**â¯ Spraakverbindingen:**\n%number",
-				usersListening: "**â¯ Gebruikers die luisteren:**\n%number",
-				gamesToday: "**â¯ Spelletjes gespeeld vandaag:**\n%number",
-				gamesInProgress: "**â¯ Spelletjes in uitvoering:**\n%number",
-				usersPlaying: "**â¯ Gebruikers die spelen:**\n%number",
+				songsToday: "**❯ Nummers vandaag afgespeeld:**\n%number",
+				songsQueued: "**❯ Nummers in de wachtrij:**\n%number",
+				voiceConnections: "**❯ Spraakverbindingen:**\n%number",
+				usersListening: "**❯ Gebruikers die luisteren:**\n%number",
+				gamesToday: "**❯ Spelletjes gespeeld vandaag:**\n%number",
+				gamesInProgress: "**❯ Spelletjes in uitvoering:**\n%number",
+				usersPlaying: "**❯ Gebruikers die spelen:**\n%number",
 				heartbeat: "Hartslag",
 				latency: "Latentie",
 				uptime: "Uptime",
 				ramUsage: "RAM-gebruik",
-				userCount: "**â¯ Aantal gebruikers:**\n%number",
-				guildCount: "**â¯ Aantal servers:**\n%number",
-				channelCount: "**â¯ Aantal kanalen:**\n%number",
+				userCount: "**❯ Aantal gebruikers:**\n%number",
+				guildCount: "**❯ Aantal servers:**\n%number",
+				channelCount: "**❯ Aantal kanalen:**\n%number",
 			}
 		},
 		ping: {
@@ -660,8 +660,8 @@ module.exports = {
 			prompts: {},
 			returns: {
 				pong: "Pong!",
-				heartbeat: "â¯ Hartslag",
-				latency: "â¯ Latentie",
+				heartbeat: "❯ Hartslag",
+				latency: "❯ Latentie",
 				footer: "W-Wacht... het heet tafeltennis"
 			}
 		},
@@ -696,9 +696,9 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				intro: "Denk je eraan om te doneren? â¤",
-				description: "Ik ben opgewonden dat je geÃ¯nteresseerd bent in het ondersteunen van mijn makers!" +
-					"\n\nAls je geÃ¯nteresseerd bent in het doen van maandelijkse donaties, kan je dit doen op [Patreon](%patreon)," +
+				intro: "Denk je eraan om te doneren? ❤",
+				description: "Ik ben opgewonden dat je geïnteresseerd bent in het ondersteunen van mijn makers!" +
+					"\n\nAls je geïnteresseerd bent in het doen van maandelijkse donaties, kan je dit doen op [Patreon](%patreon)," +
 					" of als je een eenmalige donatie wilt doen, kan je doneren via [PayPal](%paypal)." +
 					"\n\nAl het gedoneerde geld gaat terug in de ontwikkeling." +
 					"\nToegang tot Amanda's functies zal niet veranderen, ongeacht je keuze," +
@@ -730,7 +730,7 @@ module.exports = {
 				description: "Geeft informatie over een gebruiker"
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {}
 		},
@@ -740,7 +740,7 @@ module.exports = {
 				description: "Krijgt de avatar van een gebruiker"
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} user.`
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`
 			},
 			returns: {}
 		},
@@ -770,7 +770,7 @@ module.exports = {
 				description: "Krijgt profielinformatie over een gebruiker"
 			},
 			prompts: {
-				invalidUser: `%username, ${generic.command.input.invalid} user.`,
+				invalidUser: `%username, ${generic.command.input.invalid} gebruiker.`,
 				permissionDenied: `${generic.command.permPre} bestanden bij te voegen. ${generic.command.permPost}`
 			},
 			returns: {}
@@ -820,7 +820,7 @@ module.exports = {
 			},
 			prompts: {},
 			returns: {
-				schedule: "Frisky Radio Â­â€” Schema",
+				schedule: "Frisky Radio ­— Schema",
 				footer: "Gebruik &frisky [zender] om een zender af te spelen"
 			}
 		},
@@ -883,7 +883,7 @@ module.exports = {
 					+ "\n- Zoektermen, zoals `despacito`"
 					+ "\n- Een YouTube-link, zoals `https://youtu.be/kJQP7kiw5Fk`"
 					+ "\n- Een SoundCloud-link, zoals `https://soundcloud.com/luisfonsiofficial/despacito`"
-					+ "\nGebruik `&help music` voor meer ideeÃ«n."
+					+ "\nGebruik `&help music` voor meer ideeën."
 			},
 			returns: {
 				queueClear: "De wachtrij is leeggehaald, %number verwijderd",
@@ -907,7 +907,7 @@ module.exports = {
 				+"%info\n\n\n\nAls je nog steeds een afspeellijst wilt importeren in Amanda, moet je het eerst een vriendelijke naam geven, zoals `bobs_songs`.",
 				playlistNameLimit: "%username, de naam van de afspeellijst moet 24 tekens of minder zijn.",
 				playlistNotExist: "%username, die afspeellijst bestaat niet. Gebruik \`&music playlist %playlist create\` om het aan te maken.",
-				databaseFixed: "%username, de database-items voor die afspeellijst zijn inconsistent. De inconsistenties zijn opgelost door de volgorde van de nummers in die afspeellijst te resetten. Afgezien van de volgorde van de nummers zijn er geen gegevens verloren gegaan. Andere afspeellijsten werden niet beÃ¯nvloed.",
+				databaseFixed: "%username, de database-items voor die afspeellijst zijn inconsistent. De inconsistenties zijn opgelost door de volgorde van de nummers in die afspeellijst te resetten. Afgezien van de volgorde van de nummers zijn er geen gegevens verloren gegaan. Andere afspeellijsten werden niet beïnvloed.",
 				usePlaylistAdd: "Gebruik het importeren van afspeellijsten niet met `playlist add`. Gebruik in plaats daarvan `playlist import`",
 				youtubeLinkInvalid: "%username, dat is geen geldige YouTube-link",
 				indexRequired: "%username, geef alstublieft de index van het item dat je wilt verwijderen",
@@ -917,16 +917,16 @@ module.exports = {
 				indexesEqual: "%username, die twee indexen zijn gelijk.",
 				playlistEmpty: "Die afspeellijst is leeg. Voeg enkele nummers toe met `&music playlist %playlist add <nummer>`!",
 				playlistImporting: "Afspeellijst aan het importeren. Dit kan even duren...\n(Nummerinformatie aan het ophalen)",
-				playlistImportAllExisting: "%username, alle video's in die afspeellijst zijn al geÃ¯mporteerd.",
+				playlistImportAllExisting: "%username, alle video's in die afspeellijst zijn al geïmporteerd.",
 				playlistImportingDatabase: "Afspeellijst aan het importeren. Dit kan even duren...\n(Database aan het bijwerken)",
 				playlistDeleteConfirm: "Deze actie zal de playlist `%playlist` permanent verwijderen."
 				+ "\nJe kunt deze actie niet ongedaan maken, en iedereen zal in staat zijn om een nieuwe afspeellijst met dezelfde aan te maken."
 				+ "\nDruk op <:bn_del:331164186790854656> om `%playlist` voor altijd te verwijderen.",
-				bulkListening: "OkÃ©, ik luister",
-				bulkDescription: "Â» Typ iets om het toe te voegen aan de afspeellijst."
-				+ `\nÂ» Commando's die beginnen met \`%prefix\` zullen alleen het commando uitvoeren.`
-				+ "\nÂ» Typ `undo` om het laatste item in de afspeellijst te verwijderen.\u2002ðŸ§¹"
-				+ "\nÂ» Typ `stop` als je klaar bent. Je kunt dingen blijven toevoegen totdat je `stop` typt.\u2002ðŸ›‘",
+				bulkListening: "Oké, ik luister",
+				bulkDescription: "» Typ iets om het toe te voegen aan de afspeellijst."
+				+ `\n» Commando's die beginnen met \`%prefix\` zullen alleen het commando uitvoeren.`
+				+ "\n» Typ `undo` om het laatste item in de afspeellijst te verwijderen.\u2002🧹"
+				+ "\n» Typ `stop` als je klaar bent. Je kunt dingen blijven toevoegen totdat je `stop` typt.\u2002🛑",
 				outOfRange: "Buiten bereik.",
 				playlistSection: "Afspeellijst sectie",
 				bulkMenuOpen: "Je hebt hier al een menu openstaan. Typ `stop` om het te stoppen.",
@@ -950,7 +950,7 @@ module.exports = {
 				description: "Biedt foutopsporingsinformatie voor als audio-commando's niet werken zoals bedoeld"
 			},
 			prompts: {
-				guildOnly: "Je kunt geen muziek debuggen in een privÃ©bericht",
+				guildOnly: "Je kunt geen muziek debuggen in een privébericht",
 				invalidChannel: "Kanaal niet gevonden"
 			},
 			returns: {
