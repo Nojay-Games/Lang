@@ -1,9 +1,9 @@
 // @ts-check
 
 /**
- * A function to replace wildcard (%string) strings with information from lang
+ * A function to replace wildcard (%variable) strings with information from runtime
  * @param {string} string The string from lang
- * @param {{[x: string]: any}} properties example: `{ "username": "PapiOphidian" }`
+ * @param {{[variable: string]: any}} properties example: `{ "username": "PapiOphidian" }`
  * @returns {string}
  */
 function replace(string, properties = {}) {

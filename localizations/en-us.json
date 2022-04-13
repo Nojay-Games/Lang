@@ -1,6 +1,4 @@
-export const en_us: Lang;
-
-export type Lang = {
+{
 	"GLOBAL": {
 		"MUSIC_DISABLED": "Music is currently disabled due to issues. A fix is currently being worked on.",
 		"GUILD_ONLY": "You can only use this command in a server.",
