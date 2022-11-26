@@ -274,62 +274,100 @@
 			}
 		]
 	},
-	"music": {
-		"name": "music",
-		"description": "The main music interface",
+	"play": {
+		"name": "play",
+		"description": "Play music from multiple sources",
 		"options": [
 			{
-				"name": "play",
-				"description": "Play music. You can do specific site searching like: yt:despacito, sc:despacito or ng:despacito."
+				"name": "track",
+				"description": "The track you'd like to play"
 			},
 			{
-				"name": "stop",
-				"description": "If the queue should stop. True to reveal you initiated the stop"
+				"name": "position",
+				"description": "1 based index to start adding tracks from"
+			}
+		]
+	},
+	"radio": {
+		"name": "radio",
+		"description": "Play from radio stations",
+		"options": [
+			{
+				"name": "station",
+				"description": "The station to play from"
 			},
 			{
-				"name": "skip",
-				"description": "Skip a number of songs in the queue"
+				"name": "position",
+				"description": "1 based index to start adding tracks from"
+			}
+		]
+	},
+	"skip": {
+		"name": "skip",
+		"description": "Skip tracks in the queue",
+		"options": [
+			{
+				"name": "start",
+				"description": "1 based index to start skipping tracks from"
+			},
+			{
+				"name": "amount",
+				"description": "The amount of tracks to skip in the queue"
+			}
+		]
+	},
+	"stop": {
+		"name": "stop",
+		"description": "Stops the queue"
+	},
+	"queue": {
+		"name": "queue",
+		"description": "Show the queue and do actions",
+		"options": [
+			{
+				"name": "page",
+				"description": "Choose what page in the queue to show"
 			},
 			{
 				"name": "volume",
 				"description": "Set the volume % of the queue"
 			},
 			{
-				"name": "queue",
-				"description": "Show the queue page"
-			},
-			{
-				"name": "auto",
-				"description": "Set the state of auto mode for the queue"
-			},
-			{
 				"name": "loop",
 				"description": "Set the state of loop mode for the queue"
 			},
 			{
-				"name": "now",
-				"description": "Show the now playing message. True to only show yourself"
-			},
-			{
-				"name": "info",
-				"description": "Shows the info about the current playing song. True to only show yourself"
-			},
-			{
 				"name": "pause",
 				"description": "Sets the paused state of the queue"
-			},
+			}
+		]
+	},
+	"nowplaying": {
+		"name": "nowplaying",
+		"description": "Show the queue now playing message"
+	},
+	"trackinfo": {
+		"name": "trackinfo",
+		"description": "Shows info about the currently playing track"
+	},
+	"lyrics": {
+		"name": "lyrics",
+		"description": "Shows the lyrics of the currently playing track"
+	},
+	"seek": {
+		"name": "seek",
+		"description": "Seek to a time in the currently playing track",
+		"options": [
 			{
-				"name": "related",
-				"description": "Shows the related songs to the current playing song. True to only show yourself"
-			},
-			{
-				"name": "lyrics",
-				"description": "Shows the lyrics of the current playing song. True to only show yourself"
-			},
-			{
-				"name": "seek",
-				"description": "Seek to the current time in the current playing song"
-			},
+				"name": "time",
+				"description": "The time in seconds to seek in the track"
+			}
+		]
+	},
+	"filters": {
+		"name": "filters",
+		"description": "Apply filters to the queue",
+		"options": [
 			{
 				"name": "pitch",
 				"description": "Sets the pitch of the queue in decibals"
@@ -337,24 +375,12 @@
 			{
 				"name": "speed",
 				"description": "Sets the speed % of the queue"
-			},
-			{
-				"name": "filters",
-				"description": "Applies pre-made filters to the queue"
-			},
-			{
-				"name": "frisky",
-				"description": "Play music from frisky.fm stations"
-			},
-			{
-				"name": "listenmoe",
-				"description": "Play music from listen.moe stations"
-			},
-			{
-				"name": "shuffle",
-				"description": "Shuffle the queue in place. True to only show yourself"
 			}
 		]
+	},
+	"shuffle": {
+		"name": "shuffle",
+		"description": "Shuffle the queue"
 	},
 	"musictoken": {
 		"name": "musictoken",
@@ -371,8 +397,28 @@
 		"description": "Manage and play Amanda playlists",
 		"options": [
 			{
-				"name": "show",
-				"description": "Shows all Amanda playlists. True to only show yourself"
+				"name": "meta",
+				"description": "Metadata commands"
+			},
+			{
+				"name": "add",
+				"description": "Adds a track to a playlist"
+			},
+			{
+				"name": "remove",
+				"description": "Removes a track from a playlist"
+			},
+			{
+				"name": "move",
+				"description": "Moves a track in a playlist from one index to another"
+			},
+			{
+				"name": "search",
+				"description": "Filters tracks in a playlist"
+			},
+			{
+				"name": "play",
+				"description": "Plays a playlist"
 			}
 		]
 	},
