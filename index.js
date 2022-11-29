@@ -1,7 +1,7 @@
 const en_us = require("./localizations/en-us.json");
-const es = require("./localizations/es.json");
+const es_es = require("./localizations/es-es.json");
 
 module.exports = {
 	en_us,
-	es
+	es_es
 }

@@ -1,5 +1,5 @@
 export const en_us: Lang;
-export const es: Lang;
+export const es_es: Lang;
 
 export type Lang = {
 	"GLOBAL": {
