@@ -11,20 +11,16 @@
 		"VC_NOT_JOINABLE": "%username, I don't have permission to join your voice channel.",
 		"NO_RESULTS": "No results.",
 		"QUEUE_STOPPED": "Queue stopped by %username.",
-		"AUTO_ON": "Auto-play has been enabled.",
-		"AUTO_OFF": "Auto-play has been disabled.",
 		"LOOP_ON": "Loop has been enabled.",
 		"LOOP_OFF": "Loop has been disabled.",
 		"NO_LYRICS": "Either there was an error fetching the lyrics, or there are none.",
 		"QUEUE_PAUSED": "The queue has been paused.",
 		"QUEUE_UNPAUSED": "The queue has been un-paused.",
-		"MUSIC_PITCH_SET": "Pitch has been set to %pitch.",
 		"TOTAL_LENGTH": "Total length: %length",
-		"QUEUE_FOR": "Queue for %server",
+		"QUEUE_FOR": "Queue for this server",
 		"TOO_MANY_SKIPS": "You cannot skip more songs than are in the queue!",
 		"SKIPPED_ALL": "All of the songs in the queue has been skipped and the queue has been destroyed.",
 		"SKIPPED_AMOUNT": "Skipped %amount songs.",
-		"QUEUE_SPEED_SET": "Queue speed has been set to %speed%",
 		"SHUFFLED": "The queue has been shuffled.",
 		"TOKENS_DELETED": "Deleted all your tokens. Use `%prefixmusictoken action:new` to generate a new one.",
 		"TOKENS_NEW": "Your existing tokens were deleted, and a new one was created.\nDo not share this token with anyone. If you do accidentally share it, you can use `%prefixmusictoken action:delete` to delete it and keep you safe.\nYou can now log in at %website",
@@ -32,7 +28,7 @@
 		"TOKENS_NONE": "You do not currently have any tokens. Use `%prefixmusictoken action:new` to generate a new one.",
 		"HEADER_UNKNOWN": "Unknown",
 		"HEADER_PLAYLIST": "Playlist",
-		"HEADER_SONGS": "Songs",
+		"HEADER_SONGS": "Tracks",
 		"HEADER_LENGTH": "Length",
 		"HEADER_PLAY_COUNT": "Plays",
 		"HEADER_AUTHOR": "Author",
@@ -41,7 +37,6 @@
 		"SONG_ERROR_EXCLAIMATION": "The internal identifier for the song was the placeholder value `!`\nThis is a bug.",
 		"SONG_ERROR_NULL": "The internal identifier for the song was `null` or `undefined`\nThis is a bug.",
 		"QUEUE_ENDED": "It looks like this queue has ended.",
-		"AUTO_NONE_LEFT": "Auto mode was on, but we ran out of related songs and had to stop.",
 		"SONG_STUCK": "The song got stuck loading.",
 		"UNKNOWN_TRACK_EXCEPTION": "There was an exception when trying to play that track. That's all I know.",
 		"NO_USERS_IN_VC": "Nobody else is in my voice channel. I will stop playing in %time seconds if nobody rejoins.",
@@ -53,10 +48,8 @@
 		"HEADER_PAUSED": "PAUSED",
 		"MISSING_TRACK": "Missing track for %id",
 		"INVIDIOUS_NO_DATA": "Invidious didn't return valid data\n%api\n%link\n%yt",
-		"NO_RELATED_CONTENT": "No related content available for the current song.",
 		"HEADER_LIVE": "LIVE",
 		"CANNOT_PAUSE_LIVE": "You cannot pause a live stream.",
-		"FRISKY_RELATED": "Try the other stations on Frisky Radio! `%prefixmusic frisky:original` `%prefixmusic frisky:deep` `%prefixmusic frisky:chill`",
 		"SONG_INFO_FETCH_FAIL": "Unfortunately, we failed to retrieve information about the current song.",
 		"HEADER_DETAILS": "Details",
 		"HEADER_EPISODE": "Episode",
@@ -65,14 +58,8 @@
 		"HEADER_STATION": "Station",
 		"HEADER_SCHEDULE": "Schedule",
 		"HEADER_TRACK_LIST": "Track list",
-		"SOUNDCLOUD_RELATED": "Try finding related songs on SoundCloud.",
 		"UNKNOWN_TRACK": "Unknown track",
-		"EXTERNAL_RELATED": "Try finding related songs on other websites.",
-		"LISTEN_MOE_RELATED": "Try the other radio stations on listen.moe",
-		"NEWGROUNDS_RELATED": "Try finding related songs on Newgrounds.",
 		"HEADER_LOADING": "LOADING",
-		"TWITTER_RELATED": "Try finding related tweets on Twitter.",
-		"ITUNES_RELATED": "Try finding related songs on iTunes.",
 		"CANNOT_EXTRACT_NEWGROUNDS": "We couldn't extract the song data from Newgrounds.",
 		"TWITTER_NO_VIDEO": "That twitter URL doesn't have a video.",
 		"TWITTER_NO_MP4": "That twitter URL doesn't have an mp4 video.",
@@ -146,7 +133,6 @@
 		"GIT_STATUS": "On branch %branch, latest commit %hash",
 		"GIT_COMMITS": "Commits (latest %amount entries)",
 		"FOOTER_HELP": "<> = required, [] = optional, | = or. Do not include <>, [] or | in your input.",
-		"HELP_PLAYLIST_DESCRIPTION": "See `%prefixhelp command:playlists`",
 		"HELP_COMMAND_BODY_LIST": "%description\n*Arguments*: %args",
 		"HELP_COMMAND_BODY": "%description\nArguments: %args\nCategory: %category",
 		"HEADER_COMMAND_CATEGORY": "Command Category: %category",
@@ -154,7 +140,41 @@
 		"HELP_INVALID_COMMAND": "**%tag**, I couldn't find the help panel for that command",
 		"HEADER_COMMAND_CATEGORIES": "Command Categories",
 		"HELP_SEE_ALL": "Type `%prefixhelp [category:category]` to see all commands in that category.\nType `%prefixhelp [command:command]` to see more information about a command.",
-		"HELP_INFO": "Type `%prefixinfo` to see general information about Amanda.\nFor more, join our support server: %link"
+		"HELP_INFO": "Type `%prefixinfo` to see general information about Amanda.\nFor more, join our support server: %link",
+		"TIMED_OUT": "Timed out",
+		"DATABASE_OFFLINE": "The database is currently not connected. This is known and a fix is being worked on",
+		"NEGATIVE_1_INDEX_IN_RADIO": "-1 index in radio",
+		"INVALID_RADIO_NAMESPACE": "Invalid radio station namespace",
+		"PAGE_X_OF_Y": "Page %current of %total",
+		"PAGE_LENGTH": "Page length: %time",
+		"VOLUME_SET": "Queue volume set to %volume%",
+		"CANNOT_SEEK_LIVE": "You cannot seek live audio",
+		"SEEK_GREATER_THAN_SONG_LENGTH": "The time you provided was longer than the track's length",
+		"SEEK_ERROR": "There was an error with seeking to that position. Your duration was parsed properly as %parsed milliseconds, but LavaLink did not seek. This is a bug. Please report this: %server",
+		"SEEKING": "Seeking to %time. Please hold",
+		"FILTERS_ERROR": "There was an error applying the filters. The connection to the LavaLink node may have been dropped?",
+		"FILTERS_APPLIED": "The filters you specified are applying now. Please hold",
+		"INVALID_PLAYLIST_NAME": "Invalid playlist name. Playlist names must not contain a link or be longer than 24 characters",
+		"DATABASE_FIXED": "The database was out of order but has been fixed. If you see this message, please report this",
+		"PLAYLIST_EMPTY": "That playlist is empty",
+		"PLAYLIST_NOT_EXIST": "That playlist does not exist",
+		"PLAYLIST_ALREADY_EXISTS": "That playlist already exists",
+		"PLAYLIST_CREATED": "Playlist created",
+		"PLAYLIST_CANNOT_MANAGE": "You are not allowed to manage this playlist",
+		"PLAYLIST_DELETED": "Playlist deleted",
+		"PLAYLIST_DUPLICATE_SONG": "You tried to add a duplicate track to your playlist",
+		"PLAYLIST_SONG_ADDED": "%title added",
+		"OUT_OF_BOUNDS": "Index out of bounds",
+		"PLAYLIST_SONG_REMOVED": "%title removed",
+		"PLAYLIST_INDEXES_EQUAL": "The from and to indexes cannot be equal",
+		"PLAYLIST_SONG_MOVED": "Track moved",
+		"TITLE_JOIN_SERVER": "Click the title to join our support server",
+		"SONG_INFO_GENERIC": "Try getting this track's info on the website you found it on",
+		"SONG_STARTED_AND_REMAINING": "started %ago ago, %remaining remaining (%percent%)",
+		"SONG_SELECTION_CANCELLED": "Track selection cancelled",
+		"NONE": "None",
+		"COMMAND_ERROR": "There was an error with the command %name. The developers have been notified. If you use this command again and you see this message, please allow a reasonable time frame for this to be fixed. Report this if it occurs again: %server",
+		"UNKNOWN_AUTHOR": "Unknown author"
 	},
 	"sit": {
 		"name": "sit",
@@ -398,27 +418,103 @@
 		"options": [
 			{
 				"name": "meta",
-				"description": "Metadata commands"
+				"description": "Metadata commands",
+				"options": [
+					{
+						"name": "show",
+						"description": "Shows all Amanda playlists. True to only show yourself"
+					},
+					{
+						"name": "info",
+						"description": "Shows info for a playlist"
+					},
+					{
+						"name": "create",
+						"description": "Creates a playlist"
+					},
+					{
+						"name": "delete",
+						"description": "Deletes a playlist"
+					}
+				]
 			},
 			{
 				"name": "add",
-				"description": "Adds a track to a playlist"
+				"description": "Adds a track to a playlist",
+				"options": [
+					{
+						"name": "playlist",
+						"description": "The name of the playlist"
+					},
+					{
+						"name": "track",
+						"description": "A resolveable track (link, name, id)"
+					}
+				]
 			},
 			{
 				"name": "remove",
-				"description": "Removes a track from a playlist"
+				"description": "Removes a track from a playlist",
+				"options": [
+					{
+						"name": "playlist",
+						"description": "The name of the playlist"
+					},
+					{
+						"name": "index",
+						"description": "The 1 based index of the track to remove"
+					}
+				]
 			},
 			{
 				"name": "move",
-				"description": "Moves a track in a playlist from one index to another"
+				"description": "Moves a track in a playlist from one index to another",
+				"options": [
+					{
+						"name": "playlist",
+						"description": "The name of the playlist"
+					},
+					{
+						"name": "from",
+						"description": "The 1 based index of the track to move"
+					},
+					{
+						"name": "to",
+						"description": "The 1 based index the track should appear at"
+					}
+				]
 			},
 			{
 				"name": "search",
-				"description": "Filters tracks in a playlist"
+				"description": "Filters tracks in a playlist",
+				"options": [
+					{
+						"name": "playlist",
+						"description": "The name of the playlist"
+					},
+					{
+						"name": "query",
+						"description": "The search term to filter by"
+					}
+				]
 			},
 			{
 				"name": "play",
-				"description": "Plays a playlist"
+				"description": "Plays a playlist",
+				"options": [
+					{
+						"name": "playlist",
+						"description": "The name of the playlist"
+					},
+					{
+						"name": "shuffle",
+						"description": "If the playlist should start shuffled"
+					},
+					{
+						"name": "start",
+						"description": "The 1 based index to start from. When shuffling, only a portion is selected and then shuffled"
+					}
+				]
 			}
 		]
 	},
